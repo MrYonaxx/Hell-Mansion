@@ -2,29 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class temporaryEntity : MonoBehaviour
+public class Entity : MonoBehaviour
 {
     public FSM stateMachine;
     public D_temporayEntity entityData;
     
     public int facingDirection { get; private set; }
-    public Rigidbody2D rb { get; private set; }
+    public Rigidbody rb { get; private set; }
     public Animator anim { get; private set; }
-    public GameObject entityGameObject { get; private set; } //la un truc spécifique au tuto à enlever après peut être, parce que juste un game object qui référence un objet dans la scène en dessous du monstre
-    private Vector2 velocityWorkSpace;
+    public GameObject aliveGameObject { get; private set; } //la un truc spécifique au tuto à enlever après peut être, parce que juste un game object qui référence un objet dans la scène en dessous du monstre
+    private Vector3 velocityWorkSpace;
     [SerializeField]
     private Transform wallCheck;
     [SerializeField]
     private Transform ledgeCheck;
+    public string name;
+    public int maxHealth;
+    public int power; //Coef de difficulté de l'ennemie
     public virtual void Start()
     {
         facingDirection = 1;
 
-        entityGameObject = transform.Find("temporaryEntity").gameObject;
-        rb = entityGameObject.GetComponent <Rigidbody2D>();
-        anim = entityGameObject.GetComponent<Animator>();
+        aliveGameObject = transform.Find("Alive").gameObject;
+        rb = aliveGameObject.GetComponent<Rigidbody>();
+        anim = aliveGameObject.GetComponent<Animator>();
 
         stateMachine = new FSM();
+
     }
 
     public virtual void update()
@@ -40,14 +44,14 @@ public class temporaryEntity : MonoBehaviour
     public virtual void setVelocity(float velocity)
     {
         //TODO: à revoir pour adapter à notre jeu
-        velocityWorkSpace.Set(facingDirection * velocity,rb.velocity.y);
+        velocityWorkSpace.Set(facingDirection * velocity,0,facingDirection*velocity);
         rb.velocity = velocityWorkSpace;
     }
 
     public virtual bool checkWall()
     {
         //TODO: à revoir pour adapter à notre jeu
-        return Physics2D.Raycast(wallCheck.position, entityGameObject.transform.right, entityData.wallCheckDistance, entityData.whatisground);
+        return Physics2D.Raycast(wallCheck.position, aliveGameObject.transform.right, entityData.wallCheckDistance, entityData.whatisground);
     }
 
     public virtual bool checkLedge()
@@ -61,6 +65,12 @@ public class temporaryEntity : MonoBehaviour
     {
         //TODO: à revoir pour adapter à notre jeu et le facing
         facingDirection *= -1;
-        entityGameObject.transform.Rotate(0f, 180f, 0f);
+        aliveGameObject.transform.Rotate(0f, 180f, 0f);
+    }
+    public virtual void Rotate(int angle)
+    {
+        facingDirection = (facingDirection + angle) % 360; // Applique la rotation
+        aliveGameObject.transform.Rotate(0f, 0f, angle); // Je suppose qu'on va tourner par rapport à l'axe z   
     }
 }
+

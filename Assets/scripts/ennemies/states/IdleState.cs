@@ -9,7 +9,7 @@ public class IdleState : State
     protected float idleTime;
     protected bool isIdleTimeOver;
     // Start is called before the first frame update
-    public IdleState(temporaryEntity entity, FSM stateMachine, string animBoolName,D_idleState stateData) : base(entity, stateMachine, animBoolName)
+    public IdleState(Entity entity, FSM stateMachine, string animBoolName,D_idleState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData=stateData;
     }

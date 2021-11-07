@@ -5,13 +5,13 @@ using UnityEngine;
 public class State 
 {
     protected FSM stateMachine;
-    protected temporaryEntity entity;
+    protected Entity entity;
 
     protected float startTime;
 
     protected string animBoolName;
 
-    public State(temporaryEntity entity,FSM stateMachine,string animBoolName)
+    public State(Entity entity,FSM stateMachine,string animBoolName)
     {
         this.stateMachine = stateMachine;
         this.entity = entity;

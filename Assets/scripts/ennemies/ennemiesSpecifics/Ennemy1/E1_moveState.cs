@@ -5,13 +5,14 @@ using UnityEngine;
 public class E1_moveState : MoveState
 {
     private Ennemy1 ennemy;
-    public E1_moveState(temporaryEntity entity, FSM stateMachine, string animBoolName, D_moveState stateData,Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, stateData)
+    public E1_moveState(Entity entity, FSM stateMachine, string animBoolName, D_moveState stateData,Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.ennemy = ennemy;
     }
 
     public override void enter()
     {
+        Debug.Log("enter in move");
         base.enter();
     }
 
@@ -23,7 +24,9 @@ public class E1_moveState : MoveState
     public override void logicUpdate()
     {
         base.logicUpdate();
-        if(isDetectingWall || !isDetectingLedge)
+        Debug.Log("do logic");
+
+        if (isDetectingWall || !isDetectingLedge || false)
         {
             ennemy.idleState.setFLipAfterIdle(true);
             stateMachine.changeState(ennemy.idleState);

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ennemy1 : temporaryEntity
+public class Ennemy1 : Entity
 {
     public E1_idleState idleState { get; private set; }
     public E1_moveState moveState { get; private set; }
@@ -15,9 +15,9 @@ public class Ennemy1 : temporaryEntity
     public override void Start()
     {
         base.Start();
-        moveState = new E1_moveState(this, stateMachine, "move", moveStateData, this);
+        //doit être le même nom dans l'animator
+        moveState = new E1_moveState(this, stateMachine, "Move", moveStateData, this);
         idleState = new E1_idleState(this, stateMachine, "idle", idleStateData, this);
-
         stateMachine.initialize(moveState);
     }
 }

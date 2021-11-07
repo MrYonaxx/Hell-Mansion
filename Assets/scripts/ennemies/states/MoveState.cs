@@ -8,7 +8,7 @@ public class MoveState : State
     protected bool isDetectingWall;
     protected bool isDetectingLedge;
 
-    public MoveState(temporaryEntity entity, FSM stateMachine, string animBoolName,D_moveState stateData) : base(entity, stateMachine, animBoolName)
+    public MoveState(Entity entity, FSM stateMachine, string animBoolName,D_moveState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
@@ -16,6 +16,7 @@ public class MoveState : State
     public override void enter()
     {
         base.enter();
+        //get a random position and walk to it
         entity.setVelocity(stateData.movementSpeed);
         isDetectingLedge = entity.checkLedge();
         isDetectingWall = entity.checkWall();
