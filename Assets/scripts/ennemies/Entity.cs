@@ -16,7 +16,7 @@ public class Entity : MonoBehaviour
     private Transform wallCheck;
     [SerializeField]
     private Transform ledgeCheck;
-    public string name;
+    public string MonsterName;
     public int maxHealth;
     public int power; //Coef de difficulté de l'ennemie
     public virtual void Start()
@@ -61,6 +61,16 @@ public class Entity : MonoBehaviour
 
     }
 
+    public virtual bool checkPlayerInMinRangeAgro()
+    {
+        return false;
+
+    }
+
+    public virtual bool checkPlayerInMaxRangeAgro()
+    {
+        return false;
+    }
     public virtual void flip()
     {
         //TODO: à revoir pour adapter à notre jeu et le facing
