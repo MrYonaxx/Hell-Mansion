@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1869639562955230420}
   m_Layer: 0
-  m_Name: RigShotGunRight
+  m_Name: RigRifleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,13 +144,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515694839815439759}
-  m_LocalRotation: {x: -0.8117471, y: 0.041995857, z: -0.041995984, w: 0.58098143}
-  m_LocalPosition: {x: 0.012, y: -0.3, z: -0.05}
+  m_LocalRotation: {x: -0.7544065, y: -0.63302225, z: -0.13302214, w: -0.11161883}
+  m_LocalPosition: {x: 0.03, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8626512282341172403}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: -110, y: -20, z: 20}
+  m_LocalEulerAnglesHint: {x: 0, y: -200, z: 100}
 --- !u!1 &537844051952069026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightGunBone: {fileID: 2501380031739927239}
-  RigShotGunRight: {fileID: 1869639562955230420}
+  rightRifleBone: {fileID: 1869639562955230420}
   arsenal:
   - name: Hand
     rightGun: {fileID: 0}
@@ -1132,9 +1132,10 @@ MonoBehaviour:
     rightGun: {fileID: 6101454178329259229, guid: 0c0199d2ce977cd41b22b1d798eb2866, type: 3}
     controller: {fileID: 9100000, guid: 5e2103517559f334c9fcabc7eeb1c048, type: 2}
   Cam: {fileID: 0}
+  alive: 1
+  audio: {fileID: 0}
   _rb: {fileID: 2910399880316869572}
   _run: 8
-  alive: 1
 --- !u!54 &2910399880316869572
 Rigidbody:
   m_ObjectHideFlags: 0

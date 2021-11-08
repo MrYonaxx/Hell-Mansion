@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 public class PlayerControl : MonoBehaviour {
 
 	public Transform rightGunBone;
-	public Transform RigShotGunRight;
+	public Transform rightRifleBone;
 	public Arsenal[] arsenal;
 	public Camera Cam;
 	public bool alive = true;
@@ -106,7 +106,7 @@ public class PlayerControl : MonoBehaviour {
 			Vector3 right = transform.right;
 			Vector3 direction = right * _input.x + forward * _input.z;
 			direction.Normalize();
-			Debug.Log(forward);
+			
 			animator.SetFloat("X", direction.x);
 			animator.SetFloat("Y", direction.z);
 
@@ -147,8 +147,8 @@ public class PlayerControl : MonoBehaviour {
 			if (hand.name == name) {
 				if (rightGunBone.childCount > 0)
 					Destroy(rightGunBone.GetChild(0).gameObject);
-				if (RigShotGunRight.childCount > 0)
-					Destroy(RigShotGunRight.GetChild(0).gameObject);
+				if (rightRifleBone.childCount > 0)
+					Destroy(rightRifleBone.GetChild(0).gameObject);
 				if (hand.name == "Gun" && hand.rightGun != null) {
 					GameObject newRightGun = (GameObject) Instantiate(hand.rightGun);
 					newRightGun.GetComponent<GunSystem>()._rb = _rb;
@@ -156,16 +156,20 @@ public class PlayerControl : MonoBehaviour {
 					newRightGun.transform.parent = rightGunBone;
 					newRightGun.transform.localPosition = Vector3.zero;
 					newRightGun.transform.localRotation = Quaternion.Euler(0, 0, 0);
+					animator.SetLayerWeight(1,1);
+					animator.SetLayerWeight(2,0);
 				}
-				if (hand.name == "Shotgun") {
-					GameObject newRightGun = (GameObject) Instantiate(hand.rightGun);
-					newRightGun.transform.parent = RigShotGunRight;
-					newRightGun.GetComponent<GunSystem>()._rb = _rb;
-					newRightGun.GetComponent<GunSystem>().anim = animator;
-					newRightGun.transform.localPosition = Vector3.zero;
-					newRightGun.transform.localRotation = Quaternion.Euler(0, 0, 0);
+				if (hand.name == "Rifle" && hand.rightGun != null) {
+					GameObject newRightRifle = (GameObject) Instantiate(hand.rightGun);
+					newRightRifle.transform.parent = rightRifleBone;
+					newRightRifle.GetComponent<GunSystem>()._rb = _rb;
+					newRightRifle.GetComponent<GunSystem>().anim = animator;
+					newRightRifle.transform.localPosition = Vector3.zero;
+					newRightRifle.transform.localRotation = Quaternion.Euler(0, 0, 0);
+					animator.SetLayerWeight(1,0);
+					animator.SetLayerWeight(2,1);
 				}
-				animator.runtimeAnimatorController = hand.controller;
+				//animator.runtimeAnimatorController = hand.controller;
 				return;
 				}
 		}
