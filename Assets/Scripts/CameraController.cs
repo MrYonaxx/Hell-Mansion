@@ -24,6 +24,12 @@ public class CameraController : MonoBehaviour
     List<TargetsCamera> targets = new List<TargetsCamera>();
 
     [Header("Object Reference")]
+    //[SerializeField]
+    private Camera cam;
+    public Camera Camera
+    {
+        get { return cam; }
+    }
     [SerializeField]
     BoxCollider boundsCamera;
 
@@ -54,11 +60,6 @@ public class CameraController : MonoBehaviour
     }
 
 
-    private Camera cam;
-    public Camera Camera
-    {
-        get { return cam; }
-    }
 
 
     private void Start()
@@ -107,7 +108,8 @@ public class CameraController : MonoBehaviour
         newPos = centerPoint + offset;
         newPos.x += x;
         newPos.y += y;
-        newPos.z = cam.transform.position.z;
+       // newPos.z = cam.transform.position.z;
+       // newPos.z += z;
 
         cameraView = bluePlane;
         cameraView.center += new Vector3(x, y);

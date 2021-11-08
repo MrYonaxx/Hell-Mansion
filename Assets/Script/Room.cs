@@ -27,6 +27,6 @@ public class Room : MonoBehaviour
 
     public virtual void EndRoom()
     {
-        eventStartRoom.Invoke();
+        eventEndRoom.Invoke();
     }
 }

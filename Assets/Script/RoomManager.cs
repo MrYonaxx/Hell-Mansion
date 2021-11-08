@@ -22,6 +22,7 @@ public class RoomManager : MonoBehaviour
     private void Start()
     {
         Initialize();
+        posX += 100;
         //CreateRoom();
     }
 
@@ -72,6 +73,7 @@ public class RoomManager : MonoBehaviour
         room.StartRoom();
 
         // Fade out
+        yield return new WaitForSeconds(1);
         animator.SetBool("Fade", false);
     }
 }

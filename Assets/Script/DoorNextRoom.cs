@@ -16,9 +16,8 @@ public class DoorNextRoom : MonoBehaviour
     {
         if(onTrigger) 
         {
-            if(Input.GetMouseButton(0))
+            if(Input.GetMouseButtonDown(0))
             {
-                Debug.Log("LetsGo");
                 eventOpen.Invoke();
             }
         }
