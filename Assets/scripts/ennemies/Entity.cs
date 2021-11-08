@@ -62,6 +62,16 @@ public class Entity : MonoBehaviour
 
     }
 
+    public virtual bool checkPlayerInMinRangeAgro()
+    {
+        return false;
+
+    }
+
+    public virtual bool checkPlayerInMaxRangeAgro()
+    {
+        return false;
+    }
     public virtual void flip()
     {
         //TODO: � revoir pour adapter � notre jeu et le facing
