@@ -22,7 +22,7 @@ public class RoomManager : MonoBehaviour
     private void Start()
     {
         Initialize();
-        CreateRoom();
+        //CreateRoom();
     }
 
     // Initialise le pool de room
@@ -49,7 +49,8 @@ public class RoomManager : MonoBehaviour
 
     public void CreateRoom()
     {
-        levelLayout[levelLayout.Count - 1].eventEndRoom.RemoveListener(CreateRoom);
+        if(levelLayout.Count>0)
+            levelLayout[levelLayout.Count - 1].eventEndRoom.RemoveListener(CreateRoom);
 
         // On instancie la room
         Room room = Instantiate(GetRoom(), new Vector3(posX, 0, 0), Quaternion.identity);

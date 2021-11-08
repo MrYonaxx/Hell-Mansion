@@ -64,6 +64,12 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
+        if (boundsCamera == null)
+        {
+            boundsCamera = this.gameObject.AddComponent<BoxCollider>();
+            boundsCamera.size = new Vector3(99999999, 99999999, 9999999);
+            //boundsCamera.bounds = new Bounds(new Vector3(0, 0, 0), new Vector3(99999999, 99999999, 9999999));
+        }
     }
 
 

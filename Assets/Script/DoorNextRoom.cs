@@ -18,6 +18,7 @@ public class DoorNextRoom : MonoBehaviour
         {
             if(Input.GetMouseButton(0))
             {
+                Debug.Log("LetsGo");
                 eventOpen.Invoke();
             }
         }
@@ -25,7 +26,7 @@ public class DoorNextRoom : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.CompareTag("Player"))
+        if (collider.CompareTag("Player"))
         {
             onTrigger = true;
         }
