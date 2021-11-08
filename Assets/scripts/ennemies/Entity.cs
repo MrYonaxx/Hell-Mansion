@@ -45,33 +45,35 @@ public class Entity : MonoBehaviour
 
     public virtual void setVelocity(float velocity)
     {
-        //TODO: à revoir pour adapter à notre jeu
-        velocityWorkSpace.Set(facingDirection * velocity,0,facingDirection*velocity);
+        //TODO: à revoir pour adapter à notre jeu, en particulier changer le set velocity pour qu'il aille toujours dans la directionde vision de l'ennemie. (forward)
+        //ajouter aussi un setPositionToGoTo pour que l'ennmie aille sur lui, ajouter un pathfinding avec un navMesh et un navMeshAgent ?
+        velocityWorkSpace=(rb.transform.forward*velocity);
         rb.velocity = velocityWorkSpace;
     }
 
     public virtual bool checkWall()
     {
-        //TODO: à revoir pour adapter à notre jeu
+        //TODO: à revoir pour adapter à notre jeu, pas un physcis 2d pour le raycast 
         return Physics2D.Raycast(wallCheck.position, aliveGameObject.transform.right, entityData.wallCheckDistance, entityData.whatisground);
     }
 
     public virtual bool checkLedge()
     {
-        //TODO: à revoir pour adapter à notre jeu
+        //TODO: à revoir pour adapter à notre jeu, voir même à enlever si on ajoute pas de fossée.
         return Physics2D.Raycast(ledgeCheck.position,Vector2.down, entityData.ledgeCheckDistance, entityData.whatisground);
 
     }
 
     public virtual bool checkPlayerInMinRangeAgro()
     {
-        //TODO: à revoir pour adapter la détéction à notre jeu peut être pas un raycast d'ailleurs
+        //TODO: à revoir pour adapter la détéction à notre jeu peut être pas un raycast d'ailleurs, utiliser le field of view de martin.
         return Physics2D.Raycast(playerCheck.position, aliveGameObject.transform.right, entityData.minAgroDistance, entityData.whatIsPlayer);
 
     }
 
     public virtual bool checkPlayerInMaxRangeAgro()
     {
+        //TODO: à revoir pour adapter la détéction à notre jeu, utiliser le field of view de martin
         return Physics2D.Raycast(playerCheck.position, aliveGameObject.transform.right, entityData.maxAgroDistance, entityData.whatIsPlayer);
     }
     public virtual void flip()
