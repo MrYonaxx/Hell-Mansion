@@ -15,9 +15,9 @@ public class Ennemy1 : Entity
     public override void Start()
     {
         base.Start();
-        //doit être le même nom dans l'animator
+        //doit ï¿½tre le mï¿½me nom dans l'animator
         moveState = new E1_moveState(this, stateMachine, "Move", moveStateData, this);
         idleState = new E1_idleState(this, stateMachine, "idle", idleStateData, this);
-        stateMachine.initialize(moveState);
+        stateMachine.initialize(idleState);
     }
 }

@@ -3,7 +3,12 @@ guid: c56ee3b584029a5488fbf96ea0d057a6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - entityData: {fileID: 11400000, guid: d393a128e2900564c881412ea55a7237, type: 2}
+  - wallCheck: {instanceID: 0}
+  - ledgeCheck: {instanceID: 0}
+  - idleStateData: {fileID: 11400000, guid: 0cbfe07a4c1e5944ca7a1836f28aa165, type: 2}
+  - moveStateData: {fileID: 11400000, guid: fd28d91d53ed5c442b7f47b29eb88498, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

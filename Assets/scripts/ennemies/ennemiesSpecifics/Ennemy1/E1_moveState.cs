@@ -24,13 +24,6 @@ public class E1_moveState : MoveState
     public override void logicUpdate()
     {
         base.logicUpdate();
-        Debug.Log("do logic");
-
-        if (isDetectingWall || !isDetectingLedge || false)
-        {
-            ennemy.idleState.setFLipAfterIdle(true);
-            stateMachine.changeState(ennemy.idleState);
-        }
     }
 
     public override void physicsUpdate()

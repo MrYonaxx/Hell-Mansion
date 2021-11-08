@@ -16,23 +16,28 @@ public class IdleState : State
 
     public override void enter()
     {
+        Debug.Log("idle");
         base.enter();
         entity.setVelocity(0f);
         isIdleTimeOver = false;
         setRandomIdleTime();
+        Debug.Log(idleTime);
     }
 
     public override void exit()
     {
         base.exit();
+        /*
         if(flipAfterIdle)
         {
             entity.flip();
         }
+        */
     }
 
     public override void logicUpdate()
     {
+
         base.logicUpdate();
         if(Time.time>=startTime + idleTime)
         {

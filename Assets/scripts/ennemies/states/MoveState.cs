@@ -15,6 +15,7 @@ public class MoveState : State
 
     public override void enter()
     {
+        Debug.Log("Move");
         base.enter();
         //get a random position and walk to it
         entity.setVelocity(stateData.movementSpeed);

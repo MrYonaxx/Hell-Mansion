@@ -7,12 +7,12 @@ public class VirtualEnnemies : MonoBehaviour
     
     public D_VirtualEnnemies virtualEnneiesData; 
     public FSM stateMachine;
-    public Rigidbody2D rb {get; private set; }
+    public Rigidbody rb {get; private set; }
     public Animator anim {get; private set; }
     public GameObject aliveGO {get; private set; }
     
     public int facingDirection {get; private set; } //Orientation de l'ennemie
-    private Vector2 velocityWorkSpace;
+    private Vector3 velocityWorkSpace;
     public string name;
     
     [SerializeField]
@@ -26,7 +26,7 @@ public class VirtualEnnemies : MonoBehaviour
     public virtual void Start()
     {
         aliveGO = transform.Find("Alive").gameObject;
-        rb = aliveGO.GetComponent<Rigidbody2D>();
+        rb = aliveGO.GetComponent<Rigidbody>();
         anim = aliveGO.GetComponent<Animator>();
     }
 
@@ -42,7 +42,7 @@ public class VirtualEnnemies : MonoBehaviour
 
     public virtual void SetVelocity(float velocity)
     {
-        velocityWorkSpace.Set(Mathf.Cos(facingDirection) * velocity, Mathf.Sin(facingDirection) * velocity); // A voir comment ça réagit
+        velocityWorkSpace.Set(Mathf.Cos(facingDirection) * velocity, Mathf.Sin(facingDirection) * velocity, 0); // A voir comment ça réagit
         rb.velocity = velocityWorkSpace;
     }
 

@@ -13,6 +13,7 @@ public class E1_idleState : IdleState
     public override void enter()
     {
         base.enter();
+        
     }
 
     public override void exit()
@@ -25,6 +26,7 @@ public class E1_idleState : IdleState
         base.logicUpdate();
         if(isIdleTimeOver)
         {
+            Debug.Log("test");
             stateMachine.changeState(ennemy.moveState);
         }
     }
