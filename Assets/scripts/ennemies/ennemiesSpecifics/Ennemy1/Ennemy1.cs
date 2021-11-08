@@ -23,12 +23,12 @@ public class Ennemy1 : Entity
     public override void Start()
     {
         base.Start();
-        //doit être le même nom dans l'animator
+        //doit Ãªtre le mÃªme nom dans l'animator
         moveState = new E1_moveState(this, stateMachine, "Move", moveStateData, this);
         idleState = new E1_idleState(this, stateMachine, "idle", idleStateData, this);
         playerDetectedState = new E1_playerDetectedState(this, stateMachine, "playerDetected", playerDetectedStateData, this);
         chargeState = new E1_chargeState(this, stateMachine, "charge",chargeStateData,this);
         lookForPlayerState = new E1_lookForPlayerState(this, stateMachine, "look", lookForPlayerStateData, this);
-        stateMachine.initialize(moveState);
+        stateMachine.initialize(idleState);
     }
 }

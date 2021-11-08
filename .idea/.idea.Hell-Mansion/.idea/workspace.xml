@@ -21,12 +21,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/ennemies/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfViewEditor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Script/Weapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/GunSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/Health.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/Entity.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfViewEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfView.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Ennemy1.cs" />
+      <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
     </changedPaths>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

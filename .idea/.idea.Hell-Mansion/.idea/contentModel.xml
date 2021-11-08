@@ -6,18 +6,6 @@
     <e p="D:\Martin\UQAC\MaitriseJeu\ConceptionJeuVidéo\Git Mansion\Hell-Mansion" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="BigRookGames" t="Include">
-          <e p="_AssetPacks" t="Include">
-            <e p="Stylized Weapon Pack" t="Include">
-              <e p="M4 Scoped Assault Rifle" t="Include">
-                <e p="Readme.txt" t="Include" />
-                <e p="Scripts" t="Include">
-                  <e p="GunfireController.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="Script" t="Include">
           <e p="FlashObject.cs" t="Include" />
           <e p="GunSystem.cs" t="Include" />
@@ -27,6 +15,44 @@
           <e p="PlayerControl.cs" t="Include" />
           <e p="SimulateEnnemy.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="ennemies" t="Include">
+            <e p="ennemiesSpecifics" t="Include">
+              <e p="Ennemy1" t="Include">
+                <e p="E1_chargeState.cs" t="Include" />
+                <e p="E1_idleState.cs" t="Include" />
+                <e p="E1_lookForPlayerState.cs" t="Include" />
+                <e p="E1_moveState.cs" t="Include" />
+                <e p="E1_playerDetectedState.cs" t="Include" />
+                <e p="Ennemy1.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Entity.cs" t="Include" />
+            <e p="FieldOfView.cs" t="Include" />
+            <e p="FieldOfViewEditor.cs" t="Include" />
+            <e p="FiniteStateMachine" t="Include">
+              <e p="FSM.cs" t="Include" />
+              <e p="state.cs" t="Include" />
+            </e>
+            <e p="states" t="Include">
+              <e p="ChargeState.cs" t="Include" />
+              <e p="data" t="Include">
+                <e p="D_chargeState.cs" t="Include" />
+                <e p="D_idleState.cs" t="Include" />
+                <e p="D_LookForPlayerState.cs" t="Include" />
+                <e p="D_moveState.cs" t="Include" />
+                <e p="D_PlayerDetected.cs" t="Include" />
+                <e p="D_temporayEntity.cs" t="Include" />
+                <e p="D_VirtualEnnemies.cs" t="Include" />
+              </e>
+              <e p="IdleState.cs" t="Include" />
+              <e p="LookForPlayerState.cs" t="Include" />
+              <e p="MoveState.cs" t="Include" />
+              <e p="PlayerDetectedState.cs" t="Include" />
+            </e>
+            <e p="VirtualEnnemies.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Hell-Mansion.sln" t="IncludeFlat" />

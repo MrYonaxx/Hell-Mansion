@@ -169,7 +169,6 @@ public class PlayerControl : MonoBehaviour {
 					animator.SetLayerWeight(1,0);
 					animator.SetLayerWeight(2,1);
 				}
-				//animator.runtimeAnimatorController = hand.controller;
 				return;
 				}
 		}
@@ -187,6 +186,5 @@ public class PlayerControl : MonoBehaviour {
 	public struct Arsenal {
 		public string name;
 		public GameObject rightGun;
-		public RuntimeAnimatorController controller;
 	}
 }
