@@ -29,6 +29,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        Debug.Log("damage  Take");
         currentHealth -= amount;
         if (GetComponent<PlayerControl>())
         {

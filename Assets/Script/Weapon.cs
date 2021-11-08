@@ -7,7 +7,7 @@ public enum WeaponType
     {
         Hand,
         Gun,
-        Shotgun
+        Rifle
     }
 public class Weapon : MonoBehaviour
 {
@@ -27,8 +27,8 @@ public class Weapon : MonoBehaviour
                 case WeaponType.Gun:
                     Player.SetArsenal("Gun");
                     break;
-                case WeaponType.Shotgun:
-                    Player.SetArsenal("Shotgun");
+                case WeaponType.Rifle:
+                    Player.SetArsenal("Rifle");
                     break;
             }
             

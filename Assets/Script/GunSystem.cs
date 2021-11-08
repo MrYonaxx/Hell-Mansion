@@ -54,13 +54,13 @@ public class GunSystem : MonoBehaviour
             else
                 shooting = Input.GetButtonDown("Fire1");
             // Reload
-            if (Input.GetButtonDown("Reload") && bulletLeft < magazineSize && !reloading)
+            if (Input.GetButton("Reload") && bulletLeft < magazineSize && !reloading)
                 Reload();
 
             //Shoot
             if (readyToShoot && shooting && !reloading && bulletLeft > 0)
             {
-                anim.SetLayerWeight(1, 1);
+                //anim.SetLayerWeight(1, 1);
                 Shoot();
                 Debug.Log("Shoot");
             }
@@ -69,6 +69,7 @@ public class GunSystem : MonoBehaviour
 
     private void Reload()
     {
+        Debug.Log("reload en cours");
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
     }
@@ -82,7 +83,11 @@ public class GunSystem : MonoBehaviour
     private void Shoot()
     {
         readyToShoot = false;
-        var flash = Instantiate(muzzlePrefab, muzzlePosition.transform);
+        if (muzzlePosition != null)
+        {
+            var flash = Instantiate(muzzlePrefab, muzzlePosition.transform);
+        }
+        
         //Raycast
         if (Physics.Raycast(_rb.transform.position, _rb.transform.forward, out rayHit, range))
         {
@@ -114,6 +119,7 @@ public class GunSystem : MonoBehaviour
             
         }
         bulletLeft--;
+        anim.SetBool("Fire", true);
         Invoke("ResetShoot", timeBetweenShooting);
         
     }
@@ -139,7 +145,7 @@ public class GunSystem : MonoBehaviour
     private void ResetShoot()
     {
         readyToShoot = true;
-        anim.SetLayerWeight(1, 0);
+        anim.SetBool("Fire", false);
     }
     
 }
