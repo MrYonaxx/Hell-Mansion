@@ -16,10 +16,10 @@ public class DoorNextRoom : MonoBehaviour
     {
         if(onTrigger) 
         {
-            if(Input.GetMouseButtonDown(0))
+            /*if(Input.GetMouseButtonDown(0))
             {
                 eventOpen.Invoke();
-            }
+            }*/
         }
     }
 
@@ -27,6 +27,7 @@ public class DoorNextRoom : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            eventOpen.Invoke();
             onTrigger = true;
         }
     }
