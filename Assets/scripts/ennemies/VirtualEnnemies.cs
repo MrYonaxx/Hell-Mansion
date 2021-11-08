@@ -13,7 +13,7 @@ public class VirtualEnnemies : MonoBehaviour
     
     public int facingDirection {get; private set; } //Orientation de l'ennemie
     private Vector2 velocityWorkSpace;
-    public string name;
+    public string MonsterName;
     
     [SerializeField]
     private Transform wallCheck;

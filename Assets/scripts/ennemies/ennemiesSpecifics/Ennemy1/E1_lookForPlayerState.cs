@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E1_idleState : IdleState
+public class E1_lookForPlayerState : LookForPlayerState
 {
     private Ennemy1 ennemy;
-    public E1_idleState(Entity entity, FSM stateMachine, string animBoolName, D_idleState stateData,Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, stateData)
+    public E1_lookForPlayerState(Entity entity, FSM stateMachine, string animBoolName, D_LookForPlayerState stateData,Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, stateData)
     {
-        this.ennemy = ennemy;
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
     }
 
     public override void enter()
@@ -23,11 +27,10 @@ public class E1_idleState : IdleState
     public override void logicUpdate()
     {
         base.logicUpdate();
-        if(isPlayerInMinAgroRange)
+        if(isPlayerinMinAgroRange)
         {
             stateMachine.changeState(ennemy.playerDetectedState);
-        }
-        else if(isIdleTimeOver)
+        } else if(isAllturnsTimeDone)
         {
             stateMachine.changeState(ennemy.moveState);
         }

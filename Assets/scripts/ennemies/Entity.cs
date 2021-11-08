@@ -16,6 +16,8 @@ public class Entity : MonoBehaviour
     private Transform wallCheck;
     [SerializeField]
     private Transform ledgeCheck;
+    [SerializeField]
+    private Transform playerCheck;
     public string MonsterName;
     public int maxHealth;
     public int power; //Coef de difficulté de l'ennemie
@@ -31,12 +33,12 @@ public class Entity : MonoBehaviour
 
     }
 
-    public virtual void update()
+    public virtual void Update()
     {
         stateMachine.currentState.logicUpdate();
     }
 
-    public virtual void fixedUpdate()
+    public virtual void FixedUpdate()
     {
         stateMachine.currentState.physicsUpdate();
     }
@@ -63,13 +65,14 @@ public class Entity : MonoBehaviour
 
     public virtual bool checkPlayerInMinRangeAgro()
     {
-        return false;
+        //TODO: à revoir pour adapter la détéction à notre jeu peut être pas un raycast d'ailleurs
+        return Physics2D.Raycast(playerCheck.position, aliveGameObject.transform.right, entityData.minAgroDistance, entityData.whatIsPlayer);
 
     }
 
     public virtual bool checkPlayerInMaxRangeAgro()
     {
-        return false;
+        return Physics2D.Raycast(playerCheck.position, aliveGameObject.transform.right, entityData.maxAgroDistance, entityData.whatIsPlayer);
     }
     public virtual void flip()
     {

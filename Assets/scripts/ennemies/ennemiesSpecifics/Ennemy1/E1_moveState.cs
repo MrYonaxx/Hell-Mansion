@@ -12,7 +12,6 @@ public class E1_moveState : MoveState
 
     public override void enter()
     {
-        Debug.Log("enter in move");
         base.enter();
     }
 
@@ -24,10 +23,14 @@ public class E1_moveState : MoveState
     public override void logicUpdate()
     {
         base.logicUpdate();
-        Debug.Log("do logic");
 
-        if (isDetectingWall || !isDetectingLedge || false)
+        if(isPlayerInMinAgroRange)
         {
+            stateMachine.changeState(ennemy.playerDetectedState);
+        }
+        else if ((isDetectingWall || !isDetectingLedge) && false)
+        {
+            Debug.Log("changeToIdle");
             ennemy.idleState.setFLipAfterIdle(true);
             stateMachine.changeState(ennemy.idleState);
         }

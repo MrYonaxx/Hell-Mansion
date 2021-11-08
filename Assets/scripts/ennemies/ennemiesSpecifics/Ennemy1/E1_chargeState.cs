@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E1_playerDetectedState : PlayerDetectedState
+public class E1_chargeState : ChargeState
 {
     private Ennemy1 ennemy;
-    public E1_playerDetectedState(Entity entity, FSM stateMachine, string animBoolName, D_PlayerDetected stateData, Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, stateData)
+    public E1_chargeState(Entity entity, FSM stateMachine, string animBoolName, D_chargeState stateData, Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.ennemy = ennemy;
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
     }
 
     public override void enter()
@@ -23,12 +28,16 @@ public class E1_playerDetectedState : PlayerDetectedState
     public override void logicUpdate()
     {
         base.logicUpdate();
-        if(performLongRangeAction)
-        {
-            stateMachine.changeState(ennemy.chargeState);
-        } else if (!isPlayerInMaxAgroRange)
+        if(!isDetectingLedge||isDetectingWall)
         {
             stateMachine.changeState(ennemy.lookForPlayerState);
+        }
+        else if(isChargeTimeOver)
+        {
+            if(isPlayerInMinAgroRange)
+            {
+                stateMachine.changeState(ennemy.playerDetectedState);
+            }
         }
     }
 
@@ -36,6 +45,4 @@ public class E1_playerDetectedState : PlayerDetectedState
     {
         base.physicsUpdate();
     }
-
-    // Start is called before the first frame update
 }

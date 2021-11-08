@@ -8,15 +8,23 @@ public class IdleState : State
     protected bool flipAfterIdle;
     protected float idleTime;
     protected bool isIdleTimeOver;
+    protected bool isPlayerInMinAgroRange;
     // Start is called before the first frame update
     public IdleState(Entity entity, FSM stateMachine, string animBoolName,D_idleState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData=stateData;
     }
 
+    public override void DoChecks()
+    {
+        base.DoChecks();
+        isPlayerInMinAgroRange = entity.checkPlayerInMinRangeAgro();
+    }
+
     public override void enter()
     {
         base.enter();
+        Debug.Log("enter idle");
         entity.setVelocity(0f);
         isIdleTimeOver = false;
         setRandomIdleTime();

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveState : State
+public class ChargeState : State
 {
-    protected D_moveState stateData;
-    protected bool isDetectingWall;
-    protected bool isDetectingLedge;
+    protected D_chargeState stateData;
     protected bool isPlayerInMinAgroRange;
-
-    public MoveState(Entity entity, FSM stateMachine, string animBoolName,D_moveState stateData) : base(entity, stateMachine, animBoolName)
+    protected bool isDetectingLedge;
+    protected bool isDetectingWall;
+    protected bool isChargeTimeOver;
+    public ChargeState(Entity entity, FSM stateMachine, string animBoolName, D_chargeState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
@@ -17,19 +17,16 @@ public class MoveState : State
     public override void DoChecks()
     {
         base.DoChecks();
+        isPlayerInMinAgroRange = entity.checkPlayerInMinRangeAgro();
         isDetectingLedge = entity.checkLedge();
         isDetectingWall = entity.checkWall();
-        isPlayerInMinAgroRange = entity.checkPlayerInMinRangeAgro();
     }
 
     public override void enter()
     {
         base.enter();
-        Debug.Log("enter move");
-
-        //get a random position and walk to it
-        entity.setVelocity(stateData.movementSpeed);
-
+        entity.setVelocity(stateData.chargeSpeed);
+        isChargeTimeOver = false;
     }
 
     public override void exit()
@@ -40,12 +37,14 @@ public class MoveState : State
     public override void logicUpdate()
     {
         base.logicUpdate();
+        if(Time.time >=startTime+stateData.chargeTime)
+        {
+            isChargeTimeOver = true;
+        }
     }
 
     public override void physicsUpdate()
     {
         base.physicsUpdate();
     }
-
-    // Start is called before the first frame update
 }
