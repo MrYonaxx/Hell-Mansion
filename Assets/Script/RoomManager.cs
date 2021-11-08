@@ -10,6 +10,10 @@ public class RoomManager : MonoBehaviour
     [SerializeField]
     GameObject player = null;
 
+    [Space]
+    [SerializeField]
+    Animator animator = null;
+
     List<Room> levelLayout = new List<Room>();
     List<Room> roomPool = new List<Room>();
 
@@ -59,6 +63,7 @@ public class RoomManager : MonoBehaviour
     private IEnumerator CreateRoomCoroutine(Room room)
     {
         // Fade in
+        animator.SetBool("Fade", true);
         yield return new WaitForSeconds(1);
 
         // On initialise tout ni vu ni connu
@@ -66,6 +71,6 @@ public class RoomManager : MonoBehaviour
         room.StartRoom();
 
         // Fade out
-        yield return new WaitForSeconds(1);
+        animator.SetBool("Fade", false);
     }
 }
