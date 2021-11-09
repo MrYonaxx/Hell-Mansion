@@ -1618,6 +1618,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0019222797
       objectReference: {fileID: 0}
+    - target: {fileID: 6217767947882803004, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
+      propertyPath: Cam
+      value: 
+      objectReference: {fileID: 963194227}
     - target: {fileID: 6256634600695244910, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.000000310014
@@ -2565,6 +2569,10 @@ PrefabInstance:
     - target: {fileID: 1139491881219482579, guid: cd29c9dd60692754eac4bcc55763c025, type: 3}
       propertyPath: m_Name
       value: RoomTest (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1139491881438481244, guid: cd29c9dd60692754eac4bcc55763c025, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1139491882174324391, guid: cd29c9dd60692754eac4bcc55763c025, type: 3}
       propertyPath: eventOpen.m_PersistentCalls.m_Calls.Array.data[0].m_Target

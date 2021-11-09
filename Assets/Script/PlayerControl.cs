@@ -111,16 +111,17 @@ public class PlayerControl : MonoBehaviour {
 			animator.SetFloat("Y", direction.z);
 
 
-			if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") != 0)
+			if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
 			{
 				transform.position = transform.position +
 				                     _input * (_input.magnitude * _run  * Time.deltaTime);
-				//_rb.MovePosition(transform.position + transform.forward * (_input.magnitude * _run/1.5f * Time.deltaTime));
+				//_rb.velocity = _input * (_input.magnitude * _run * Time.deltaTime); //(transform.position + transform.forward * (_input.magnitude * _run/1.5f * Time.deltaTime));
 			}
 			else
 			{
 				transform.position =
 					transform.position + _input * (_input.magnitude * _run / 2f * Time.deltaTime);
+				//_rb.velocity = new Vector3(0, 0, 0); // _input * (_input.magnitude * _run * Time.deltaTime); //
 				//_rb.MovePosition(transform.position + transform.forward * (_input.magnitude * _run * Time.deltaTime));
 			}
 		}

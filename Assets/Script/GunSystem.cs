@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Audio;
 
 public class GunSystem : MonoBehaviour
 {
@@ -103,8 +104,9 @@ public class GunSystem : MonoBehaviour
         // --- Handle Audio ---
         if (source != null)
         {
+            AudioManager.Instance?.PlaySound(GunShotClip, 1, audioPitch.x, audioPitch.y);
             // --- Instantiate prefab for audio, delete after a few seconds ---
-            AudioSource newAS = Instantiate(source);
+            /*AudioSource newAS = Instantiate(source);
             
                 // --- Change pitch to give variation to repeated shots ---
                 newAS.outputAudioMixerGroup.audioMixer.SetFloat("Pitch", Random.Range(audioPitch.x, audioPitch.y));
@@ -114,7 +116,7 @@ public class GunSystem : MonoBehaviour
                 newAS.PlayOneShot(GunShotClip);
 
                 // --- Remove after a few seconds. Test script only. When using in project I recommend using an object pool ---
-                Destroy(newAS.gameObject, timeBetweenShooting);
+                Destroy(newAS.gameObject, timeBetweenShooting);*/
             
             
         }
