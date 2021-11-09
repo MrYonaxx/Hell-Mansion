@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum FieldOfViewMinOrMax{
+    isMinFieldOfView,
+    isMaxFieldOfView
+} 
 public class FieldOfView : MonoBehaviour
 {
     public float viewRadius;
@@ -11,7 +15,7 @@ public class FieldOfView : MonoBehaviour
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
- 
+    public FieldOfViewMinOrMax fieldOfViewMinOrMax=FieldOfViewMinOrMax.isMinFieldOfView; //nécéssaire pour les différencier lorsque qu'on utilise plusieurs field of view dans 
     public List<Transform> visibleTargets = new List<Transform>();
 
     private void Start()
@@ -28,7 +32,7 @@ public class FieldOfView : MonoBehaviour
         }
     }
 
-    void FindVisibleTargets()
+    public void FindVisibleTargets() //was private
     {
         visibleTargets.Clear();
         Collider[] targetInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);

@@ -28,7 +28,7 @@ public class E1_chargeState : ChargeState
     public override void logicUpdate()
     {
         base.logicUpdate();
-        if(!isDetectingLedge||isDetectingWall)
+        if(isDetectingWall)
         {
             stateMachine.changeState(ennemy.lookForPlayerState);
         }
@@ -37,6 +37,9 @@ public class E1_chargeState : ChargeState
             if(isPlayerInMinAgroRange)
             {
                 stateMachine.changeState(ennemy.playerDetectedState);
+            } else
+            {
+                stateMachine.changeState(ennemy.lookForPlayerState);
             }
         }
     }

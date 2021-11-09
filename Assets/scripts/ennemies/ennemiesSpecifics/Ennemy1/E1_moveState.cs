@@ -26,9 +26,10 @@ public class E1_moveState : MoveState
 
         if(isPlayerInMinAgroRange)
         {
+            Debug.Log("playerDetectedState");
             stateMachine.changeState(ennemy.playerDetectedState);
         }
-        else if ((isDetectingWall || !isDetectingLedge) && false)
+        else if ((isDetectingWall)) //(isDetectingWall || !isDetectingLedge)
         {
             Debug.Log("changeToIdle");
             ennemy.idleState.setFLipAfterIdle(true);

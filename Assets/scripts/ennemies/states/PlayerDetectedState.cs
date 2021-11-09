@@ -25,6 +25,8 @@ public class PlayerDetectedState : State
     {
         base.enter();
         entity.setVelocity(0f);
+        //orienter le forward vers le joueur
+        entity.RotateToFacePlayer();
         performLongRangeAction = false;
 
     }
@@ -46,5 +48,6 @@ public class PlayerDetectedState : State
     public override void physicsUpdate()
     {
         base.physicsUpdate();
+        entity.RotateToFacePlayer();
     }
 }

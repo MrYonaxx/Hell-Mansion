@@ -29,6 +29,6 @@ public class Ennemy1 : Entity
         playerDetectedState = new E1_playerDetectedState(this, stateMachine, "playerDetected", playerDetectedStateData, this);
         chargeState = new E1_chargeState(this, stateMachine, "charge",chargeStateData,this);
         lookForPlayerState = new E1_lookForPlayerState(this, stateMachine, "look", lookForPlayerStateData, this);
-        stateMachine.initialize(idleState);
+        stateMachine.initialize(moveState);
     }
 }

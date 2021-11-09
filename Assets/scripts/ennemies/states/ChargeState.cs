@@ -25,6 +25,7 @@ public class ChargeState : State
     public override void enter()
     {
         base.enter();
+        this.entity.RotateToFacePlayer();
         entity.setVelocity(stateData.chargeSpeed);
         isChargeTimeOver = false;
     }
@@ -46,5 +47,9 @@ public class ChargeState : State
     public override void physicsUpdate()
     {
         base.physicsUpdate();
+        if(isPlayerInMinAgroRange)
+        {
+            this.entity.RotateToFacePlayer();
+        }
     }
 }

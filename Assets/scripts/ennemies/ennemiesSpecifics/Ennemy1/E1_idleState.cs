@@ -29,6 +29,7 @@ public class E1_idleState : IdleState
         }
         else if(isIdleTimeOver)
         {
+            //setFLipAfterIdle(true);
             stateMachine.changeState(ennemy.moveState);
         }
     }
