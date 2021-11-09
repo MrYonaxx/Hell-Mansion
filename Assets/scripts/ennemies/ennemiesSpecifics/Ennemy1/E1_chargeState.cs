@@ -37,7 +37,7 @@ public class E1_chargeState : ChargeState
             if(isPlayerInMinAgroRange)
             {
                 stateMachine.changeState(ennemy.playerDetectedState);
-            } else
+            } else if (!isPlayerInMaxAgroRange)
             {
                 stateMachine.changeState(ennemy.lookForPlayerState);
             }
