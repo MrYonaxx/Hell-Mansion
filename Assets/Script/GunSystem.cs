@@ -104,7 +104,7 @@ public class GunSystem : MonoBehaviour
         // --- Handle Audio ---
         if (source != null)
         {
-            AudioManager.Instance?.PlaySound(GunShotClip, 1, audioPitch.x, audioPitch.y);
+            AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
             // --- Instantiate prefab for audio, delete after a few seconds ---
             /*AudioSource newAS = Instantiate(source);
             

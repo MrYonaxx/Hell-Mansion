@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -398,11 +398,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
---- !u!137 &1144498930 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5597113867290821413, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
-  m_PrefabInstance: {fileID: 2007000048}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1297261040
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +683,24 @@ Transform:
   m_Father: {fileID: 1297261041}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1916003189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5102228498571682737, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
+  m_PrefabInstance: {fileID: 1009744964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1916003196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916003189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed878085be7b0147bd12970c83cca68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1974369225
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 10
+  hitSound: {fileID: 0}
 --- !u!114 &1974369227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed878085be7b0147bd12970c83cca68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!65 &1974369228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1189,6 +1204,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 9200848833962237648, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 275e6d428d02ccb418e92b5b45d3578d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
 --- !u!1 &2037054621 stripped
@@ -1196,23 +1215,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4416926081852918481, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
   m_PrefabInstance: {fileID: 2007000048}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2037054622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037054621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb0629ae55db9b845a22c886ff1c9885, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NormalColour: {r: 1, g: 1, b: 1, a: 1}
-  FlashColour: {r: 1, g: 0, b: 0, a: 1}
-  GameMesh: {fileID: 1144498930}
-  FlashDelay: 0.025
-  TimesToFlash: 3
 --- !u!82 &2037054629
 AudioSource:
   m_ObjectHideFlags: 0

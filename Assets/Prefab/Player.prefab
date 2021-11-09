@@ -1157,6 +1157,7 @@ GameObject:
   - component: {fileID: 2910399880316869572}
   - component: {fileID: 9200848833962237648}
   - component: {fileID: 1962066730974797882}
+  - component: {fileID: 2878456552209112815}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1226,7 +1227,7 @@ MonoBehaviour:
   alive: 1
   audio: {fileID: 0}
   _rb: {fileID: 2910399880316869572}
-  _run: 8
+  _run: 3
 --- !u!54 &2910399880316869572
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1255,7 +1256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0df8bf01653e446986495627bdeb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 3
+  maxHealthPoints: 10
+  hitSound: {fileID: 8300000, guid: 275e6d428d02ccb418e92b5b45d3578d, type: 3}
 --- !u!136 &1962066730974797882
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1270,6 +1272,23 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2878456552209112815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0629ae55db9b845a22c886ff1c9885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalColour: {r: 1, g: 1, b: 1, a: 1}
+  FlashColour: {r: 1, g: 0, b: 0, a: 1}
+  GameMesh: {fileID: 5597113867290821413}
+  FlashDelay: 0.025
+  TimesToFlash: 3
 --- !u!1 &4523139366846529165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,7 +2201,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.9684855, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
