@@ -6,6 +6,7 @@ public class ChargeState : State
 {
     protected D_chargeState stateData;
     protected bool isPlayerInMinAgroRange;
+    protected bool isPlayerInMaxAgroRange;
     protected bool isDetectingLedge;
     protected bool isDetectingWall;
     protected bool isChargeTimeOver;
@@ -18,6 +19,7 @@ public class ChargeState : State
     {
         base.DoChecks();
         isPlayerInMinAgroRange = entity.checkPlayerInMinRangeAgro();
+        isPlayerInMaxAgroRange = entity.checkPlayerInMaxRangeAgro();
         isDetectingLedge = entity.checkLedge();
         isDetectingWall = entity.checkWall();
     }
@@ -25,6 +27,7 @@ public class ChargeState : State
     public override void enter()
     {
         base.enter();
+        this.entity.RotateToFacePlayer();
         entity.setVelocity(stateData.chargeSpeed);
         isChargeTimeOver = false;
     }
@@ -46,5 +49,9 @@ public class ChargeState : State
     public override void physicsUpdate()
     {
         base.physicsUpdate();
+        if(isPlayerInMinAgroRange)
+        {
+            this.entity.RotateToFacePlayer();
+        }
     }
 }

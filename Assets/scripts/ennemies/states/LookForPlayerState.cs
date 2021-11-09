@@ -53,6 +53,7 @@ public override void DoChecks()
         }
         else if(Time.time>=lastTurnTime+stateData.timeBetweenTurns &&  !isAllTurnsDone)
         {
+            //TODO : mieux gérer la rotation de l'ennemie que juste flip
             entity.flip();
             lastTurnTime = Time.time;
             amountOfTurnsDone++;

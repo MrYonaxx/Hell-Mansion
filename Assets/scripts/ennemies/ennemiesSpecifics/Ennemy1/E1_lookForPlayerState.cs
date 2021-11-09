@@ -7,6 +7,7 @@ public class E1_lookForPlayerState : LookForPlayerState
     private Ennemy1 ennemy;
     public E1_lookForPlayerState(Entity entity, FSM stateMachine, string animBoolName, D_LookForPlayerState stateData,Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, stateData)
     {
+        this.ennemy = ennemy;
     }
 
     public override void DoChecks()
