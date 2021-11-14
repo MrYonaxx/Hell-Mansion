@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: c56ee3b584029a5488fbf96ea0d057a6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - entityData: {instanceID: 0}
+  - wallCheck: {instanceID: 0}
+  - ledgeCheck: {instanceID: 0}
+  - playerCheck: {instanceID: 0}
+  - idleStateData: {instanceID: 0}
+  - moveStateData: {instanceID: 0}
+  - playerDetectedStateData: {instanceID: 0}
+  - chargeStateData: {instanceID: 0}
+  - lookForPlayerStateData: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
