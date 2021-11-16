@@ -143,16 +143,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  timeBetweenShooting: 0.4
+  timeBetweenShooting: 0.2
   spread: 0
   range: 5000
-  reloadTime: 3
+  reloadTime: 5
   timeBetweenShots: 0
-  magazineSize: 30
-  BulletsPerTap: 0
-  allowButtonHold: 0
+  magazineSizeInitial: 30
+  AmmoReserve: 0
+  allowButtonHold: 1
+  infiniteAmmo: 0
   _rb: {fileID: 0}
   anim: {fileID: 0}
+  _hud: {fileID: 0}
   GunShotClip: {fileID: 8300000, guid: e11d017d710f98b479474c22f9eca32c, type: 3}
   source: {fileID: 7981648180587831684}
   audioPitch: {x: 0.9, y: 1.1}
