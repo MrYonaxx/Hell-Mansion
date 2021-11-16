@@ -2,6 +2,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Xml.Serialization;
+using UnityEngine.UI;
+
 
 [RequireComponent (typeof (Animator))]
 public class PlayerControl : MonoBehaviour {
@@ -17,8 +19,12 @@ public class PlayerControl : MonoBehaviour {
 	private Vector3 _input;
 	private Vector3 _mousePos;
 	private Animator animator;
-
 	
+	
+	public Image [] Amo;
+	public Sprite amo;
+
+
 	public bool getAlive()
 	{
 		return alive;
@@ -37,13 +43,30 @@ public class PlayerControl : MonoBehaviour {
 			SetArsenal (arsenal[0].name);
 		//action.Stay();
 		
+		
 	}
 	
 	private void Update()
 	{
 		GatherInput();
 		Look();
-		
+
+//		for (int i = 0; i < Amo.Length; i++)
+//        {
+//            if(arsenal.Length > 0){
+//				if (i< arsenal[0].bulletLeft)
+//               		Amo[i].sprite = amo;
+//				else 
+//					Amo[i].sprite = empty;
+//				
+//				if(i < arsenal[0].rightGun.GetComponent<GunSystem>().bulletLeft)
+//                	Amo[i].enabled = true;
+//            	else
+//                	Amo[i].enabled = false;
+//            }		
+//            
+//        }
+//		
 	}
 	
 	void FixedUpdate()
@@ -198,6 +221,6 @@ public class PlayerControl : MonoBehaviour {
 	[System.Serializable]
 	public struct Arsenal {
 		public string name;
-		public GameObject rightGun;
-	}
+		public GameObject rightGun; 
+	} 
 }
