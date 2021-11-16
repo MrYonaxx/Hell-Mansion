@@ -4,6 +4,7 @@ using System.Collections;
 using System.Xml.Serialization;
 using Audio;
 using UnityEditor;
+using UnityEngine.UI;
 
 
 [RequireComponent (typeof (Animator))]
