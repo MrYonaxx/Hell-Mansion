@@ -146,7 +146,7 @@ MonoBehaviour:
   timeBetweenShooting: 0.2
   spread: 0
   range: 5000
-  reloadTime: 5
+  reloadTime: 2.5
   timeBetweenShots: 0
   magazineSizeInitial: 30
   AmmoReserve: 0

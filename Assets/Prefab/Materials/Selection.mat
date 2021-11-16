@@ -79,7 +79,7 @@ Material:
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
     - _Cull: 2
-    - _Cutoff: 0.5
+    - _Cutoff: 0.01
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
@@ -110,7 +110,8 @@ Material:
     - _BaseScale: {r: 1, g: 1, b: 1, a: 0}
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 0.49411768, b: 0, a: 1}
-    - _EmissionColor: {r: 0.21960784, g: 0.0627451, b: 0, a: 1}
+    - _EmissionColor: {r: 1, g: 0.30256066, b: 0.023584902, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 1, g: 0.43300718, b: 0, a: 1}
+  m_BuildTextureStacks: []
