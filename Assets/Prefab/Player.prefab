@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283877300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4999998, z: 0.25}
+  m_LocalPosition: {x: 0, y: 1.4999998, z: 0.838}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3893294197879345259}
@@ -237,13 +237,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515694839815439759}
-  m_LocalRotation: {x: -0.7544065, y: -0.63302225, z: -0.13302214, w: -0.11161883}
-  m_LocalPosition: {x: 0.03, y: -0.1, z: 0}
+  m_LocalRotation: {x: -0.88501513, y: -0.45685142, z: -0.0023777115, w: -0.08960695}
+  m_LocalPosition: {x: 0.042, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8626512282341172403}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: -200, z: 100}
+  m_LocalEulerAnglesHint: {x: 9, y: -185, z: 125}
 --- !u!1 &537844051952069026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,8 +1217,6 @@ MonoBehaviour:
   rightGunBone: {fileID: 2501380031739927239}
   rightRifleBone: {fileID: 1869639562955230420}
   arsenal:
-  - name: Hand
-    rightGun: {fileID: 0}
   - name: Gun
     rightGun: {fileID: 1364704855717136, guid: b4508b3b1777c35438388c2099c98491, type: 3}
   - name: Rifle
@@ -1258,6 +1256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthPoints: 10
   hitSound: {fileID: 8300000, guid: 275e6d428d02ccb418e92b5b45d3578d, type: 3}
+  currentHealth: 0
+  hideOnDeath: 0
 --- !u!136 &1962066730974797882
 CapsuleCollider:
   m_ObjectHideFlags: 0

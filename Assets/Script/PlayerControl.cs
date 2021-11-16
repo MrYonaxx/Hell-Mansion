@@ -2,6 +2,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Xml.Serialization;
+using Audio;
+using UnityEditor;
 
 [RequireComponent (typeof (Animator))]
 public class PlayerControl : MonoBehaviour {
@@ -9,13 +11,17 @@ public class PlayerControl : MonoBehaviour {
 	public Transform rightGunBone;
 	public Transform rightRifleBone;
 	public Arsenal[] arsenal;
+	public AudioSource audiosource;
 	public Camera Cam;
 	public bool alive = true;
-	public AudioSource audio;
+	public Texture2D cursor;
+	public Texture2D cursorAim;
+	public HUDController hud;
+	
 	[SerializeField] private Rigidbody _rb;
 	[SerializeField] private float _run = 6;
 	private Vector3 _input;
-	private Vector3 _mousePos;
+	private Ray AimingRay;
 	private Animator animator;
 
 	
@@ -31,12 +37,12 @@ public class PlayerControl : MonoBehaviour {
 	
 	void Awake()
 	{
-		audio = GetComponent<AudioSource>();
+		audiosource = GetComponent<AudioSource>();
 		animator = GetComponent<Animator> ();
 		if (arsenal.Length > 0)
 			SetArsenal (arsenal[0].name);
-		//action.Stay();
-		
+		Debug.Log(arsenal[0].name);
+		ChangeCursor(cursor);
 	}
 	
 	private void Update()
@@ -49,7 +55,7 @@ public class PlayerControl : MonoBehaviour {
 	void FixedUpdate()
 	{
 		Move();
-		FireGun();
+		
 	}
 	void GatherInput()
 	{
@@ -77,20 +83,36 @@ public class PlayerControl : MonoBehaviour {
 			Debug.Log("revive");
 			GetComponent<Health>().Revive();
 		}
+		
 	}
 
 	void Look()
 	{
 
 		float rayLength;
-		Ray cameraRay = Cam.ScreenPointToRay(Input.mousePosition);
+		AimingRay = Cam.ScreenPointToRay(Input.mousePosition);
 		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-		if (groundPlane.Raycast(cameraRay, out rayLength) && alive)
+		if (groundPlane.Raycast(AimingRay, out rayLength) && alive)
 		{
-			Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-			Debug.DrawLine(cameraRay.origin, pointToLook, Color.cyan);
-
-			transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+			Vector3 pointToLook = AimingRay.GetPoint(rayLength);
+			//Debug.DrawLine(cameraRay.origin, pointToLook, Color.cyan);
+			RaycastHit rayHit;
+			if (Physics.Raycast(AimingRay, out rayHit))
+			{
+				if (rayHit.collider.CompareTag("Enemy"))
+				{
+					ChangeCursor(cursorAim);
+					transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+				}
+				else
+				{
+					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+					ChangeCursor(cursor);
+				}
+					
+			}
+			
+			
 		}
 	}
 	// ReSharper disable Unity.PerformanceAnalysis
@@ -117,19 +139,23 @@ public class PlayerControl : MonoBehaviour {
 				//                     _input * (_input.magnitude * _run  * Time.deltaTime);
 				//_rb.velocity = _input * (_input.magnitude * _run * Time.deltaTime); //(transform.position + transform.forward * (_input.magnitude * _run/1.5f * Time.deltaTime));
 				CharacterController c = GetComponent<CharacterController>();
-				c.Move(_input * (_input.magnitude * _run * Time.deltaTime));
+				c.Move(_input * (_input.magnitude * _run*1.5f * Time.deltaTime));
 				//_rb.AddForce(_input * (_input.magnitude * _run * Time.deltaTime), ForceMode.Force);
 			}
-			else if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) // 1 Direction
+			else if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") == 0) // 1 Direction
 			{
 				//transform.position =
 				//	transform.position + _input * (_input.magnitude * _run / 2f * Time.deltaTime);
 				//_rb.velocity = _input * (_input.magnitude * _run / 2f * Time.deltaTime); // _input * (_input.magnitude * _run * Time.deltaTime); //
 				//_rb.AddForce(_input * (_input.magnitude * _run  * Time.deltaTime), ForceMode.Force);
 				CharacterController c = GetComponent<CharacterController>();
+				c.Move(_input * (_input.magnitude * _run /1.5f * Time.deltaTime));
+			}
+			else if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") != 0)
+			{
+				CharacterController c = GetComponent<CharacterController>();
 				c.Move(_input * (_input.magnitude * _run * Time.deltaTime));
 			}
-			//_rb.MovePosition(transform.position + transform.forward * (_input.magnitude * _run * Time.deltaTime));
 			else // rien à l'arrêt
             {
 				CharacterController c = GetComponent<CharacterController>();
@@ -142,29 +168,39 @@ public class PlayerControl : MonoBehaviour {
 			animator.SetBool("Running", false);
 		}
 	}
-	public void FireGun()
-	{
-		/*if (Input.GetButton("Fire1") && alive )
-		{
-			animator.SetLayerWeight(1, 1);
-		}
-		else
-		{
-			animator.SetLayerWeight(1, 0);
-		}*/
-	}
-	
 
+
+
+	
 	public void SetArsenal(string name) {
-		foreach (Arsenal hand in arsenal) {
-			if (hand.name == name) {
+		for (int i = 0; i < arsenal.Length; i++)
+		{
+			if (arsenal[i].name != name)
+			{
+				arsenal[i].IsEquip = false; 
+			}
+			else if (arsenal[i].IsEquip)
+			{
+				GetComponentInChildren<GunSystem>().AmmoReserve +=
+					GetComponentInChildren<GunSystem>().magazineSizeInitial;
+				return;
+			}
+			else{
 				if (rightGunBone.childCount > 0)
+				{ 
 					Destroy(rightGunBone.GetChild(0).gameObject);
+				}
 				if (rightRifleBone.childCount > 0)
+				{
 					Destroy(rightRifleBone.GetChild(0).gameObject);
-				if (hand.name == "Gun" && hand.rightGun != null) {
-					GameObject newRightGun = (GameObject) Instantiate(hand.rightGun);
+				}
+					
+				if (name == "Gun" && arsenal[i].rightGun != null)
+				{
+					arsenal[i].IsEquip = true;
+					GameObject newRightGun = (GameObject) Instantiate(arsenal[i].rightGun);
 					newRightGun.GetComponent<GunSystem>()._rb = _rb;
+					newRightGun.GetComponent<GunSystem>()._hud = hud;
 					newRightGun.GetComponent<GunSystem>().anim = animator;
 					newRightGun.transform.parent = rightGunBone;
 					newRightGun.transform.localPosition = Vector3.zero;
@@ -172,32 +208,46 @@ public class PlayerControl : MonoBehaviour {
 					animator.SetLayerWeight(1,1);
 					animator.SetLayerWeight(2,0);
 				}
-				if (hand.name == "Rifle" && hand.rightGun != null) {
-					GameObject newRightRifle = (GameObject) Instantiate(hand.rightGun);
-					newRightRifle.transform.parent = rightRifleBone;
+				if (name == "Rifle" && arsenal[i].rightGun != null)
+				{
+					arsenal[i].IsEquip = true;
+					GameObject newRightRifle = (GameObject) Instantiate(arsenal[i].rightGun);
 					newRightRifle.GetComponent<GunSystem>()._rb = _rb;
+					newRightRifle.GetComponent<GunSystem>()._hud = hud;
 					newRightRifle.GetComponent<GunSystem>().anim = animator;
+					newRightRifle.transform.parent = rightRifleBone;
 					newRightRifle.transform.localPosition = Vector3.zero;
 					newRightRifle.transform.localRotation = Quaternion.Euler(0, 0, 0);
 					animator.SetLayerWeight(1,0);
 					animator.SetLayerWeight(2,1);
 				}
-				return;
-				}
+				
+			}
 		}
 	}
+
+
+	
 	
 	public void OnDrawGizmos()
 	{
-		float MaxDistance = 10f;
-		Gizmos.color= Color.green;
-		//Gizmos.DrawRay(transform.position, transform.forward * MaxDistance);
+		Gizmos.color= Color.red;
+		Gizmos.DrawRay(AimingRay);
 	}
+	
+	private void ChangeCursor(Texture2D cursorType)
+	{
+		Vector2 hotspot = new Vector2(cursorType.width / 2, cursorType.height / 2);
+		Cursor.SetCursor(cursorType, hotspot, CursorMode.Auto);
+        
+	}
+
 
 	
 	[System.Serializable]
 	public struct Arsenal {
 		public string name;
 		public GameObject rightGun;
+		public bool IsEquip;
 	}
 }

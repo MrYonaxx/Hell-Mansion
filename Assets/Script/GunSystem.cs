@@ -9,12 +9,13 @@ public class GunSystem : MonoBehaviour
 {
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
-    public int magazineSize, BulletsPerTap;
-    public bool allowButtonHold;
+    public int magazineSizeInitial;
+    public int AmmoReserve = 0 ;
+    public bool allowButtonHold, infiniteAmmo;
     public Rigidbody _rb ;
     public Animator anim;
     public RaycastHit rayHit;
-        
+    public HUDController _hud;
     // --- Audio ---
     public AudioClip GunShotClip;
     public AudioSource source;
@@ -37,13 +38,17 @@ public class GunSystem : MonoBehaviour
     private void Awake()
     {
         if(source != null) source.clip = GunShotClip;
-        bulletLeft = magazineSize;
+        
+        bulletLeft = magazineSizeInitial;
         readyToShoot = true;
+        
+        //Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void Update()
     {
         MyInput();
+        
     }
 
     private void MyInput()
@@ -55,15 +60,16 @@ public class GunSystem : MonoBehaviour
             else
                 shooting = Input.GetButtonDown("Fire1");
             // Reload
-            if (Input.GetButton("Reload") && bulletLeft < magazineSize && !reloading)
+            if (Input.GetButton("Reload") && bulletLeft < magazineSizeInitial && !reloading && AmmoReserve > 0)
+            {
                 Reload();
+            }
 
             //Shoot
-            if (readyToShoot && shooting && !reloading && bulletLeft > 0)
+            if (readyToShoot && shooting && !reloading && (bulletLeft > 0 || infiniteAmmo ))
             {
                 //anim.SetLayerWeight(1, 1);
                 Shoot();
-                Debug.Log("Shoot");
             }
         }
     }
@@ -71,13 +77,24 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         Debug.Log("reload en cours");
+        StartCoroutine(_hud.StartReload(reloadTime));
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
     }
 
     private void ReloadFinished()
     {
-        bulletLeft = magazineSize;
+        int bulletReload = magazineSizeInitial - bulletLeft;
+        if (AmmoReserve > bulletReload)
+        {
+            bulletLeft += bulletReload;
+            AmmoReserve -= bulletReload;
+        }
+        else 
+        {
+            bulletLeft += AmmoReserve;
+            AmmoReserve -= AmmoReserve;
+        }
         reloading = false;
     }
 
@@ -90,7 +107,7 @@ public class GunSystem : MonoBehaviour
         }
         
         //Raycast
-        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward, out rayHit, range))
+        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward, out rayHit,range))
         {
             Debug.Log(rayHit.collider.name);
             if (rayHit.collider.CompareTag("Enemy"))
@@ -105,22 +122,13 @@ public class GunSystem : MonoBehaviour
         if (source != null)
         {
             AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
-            // --- Instantiate prefab for audio, delete after a few seconds ---
-            /*AudioSource newAS = Instantiate(source);
-            
-                // --- Change pitch to give variation to repeated shots ---
-                newAS.outputAudioMixerGroup.audioMixer.SetFloat("Pitch", Random.Range(audioPitch.x, audioPitch.y));
-                newAS.pitch = Random.Range(audioPitch.x, audioPitch.y);
 
-                // --- Play the gunshot sound ---
-                newAS.PlayOneShot(GunShotClip);
-
-                // --- Remove after a few seconds. Test script only. When using in project I recommend using an object pool ---
-                Destroy(newAS.gameObject, timeBetweenShooting);*/
-            
-            
         }
-        bulletLeft--;
+
+        if (!infiniteAmmo)
+        {
+            bulletLeft--;
+        }
         anim.SetBool("Fire", true);
         Invoke("ResetShoot", timeBetweenShooting);
         
@@ -146,8 +154,17 @@ public class GunSystem : MonoBehaviour
 
     private void ResetShoot()
     {
-        readyToShoot = true;
-        anim.SetBool("Fire", false);
+        if (bulletLeft <= 0 && AmmoReserve <= 0)
+        {
+            GetComponentInParent<PlayerControl>().SetArsenal("Gun");
+        }
+        else
+        {
+            readyToShoot = true;
+        }
+        
+        
     }
+    
     
 }
