@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E1_chargeState : ChargeState
+public class E1_MeleeAttackState : MeleeAttackState
 {
     private Ennemy1 ennemy;
-    public E1_chargeState(Entity entity, FSM stateMachine, string animBoolName, D_chargeState stateData, Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, stateData)
+    public E1_MeleeAttackState(Entity entity, FSM stateMachine, string animBoolName, Transform attackPosition, D_meleeAttackState stateDate,Ennemy1 ennemy) : base(entity, stateMachine, animBoolName, attackPosition, stateDate)
     {
         this.ennemy = ennemy;
     }
@@ -25,23 +25,20 @@ public class E1_chargeState : ChargeState
         base.exit();
     }
 
+    public override void finishAttack()
+    {
+        base.finishAttack();
+    }
+
     public override void logicUpdate()
     {
         base.logicUpdate();
-        if (performCloseRangeAction)
-        {
-            stateMachine.changeState(ennemy.meleeAttackState);
-        }
-        else if (isDetectingWall)
-        {
-            stateMachine.changeState(ennemy.lookForPlayerState);
-        }
-        else if(isChargeTimeOver)
+        if(isAnimationFinished)
         {
             if(isPlayerInMinAgroRange)
             {
                 stateMachine.changeState(ennemy.playerDetectedState);
-            } else if (!isPlayerInMaxAgroRange)
+            } else
             {
                 stateMachine.changeState(ennemy.lookForPlayerState);
             }
@@ -51,5 +48,10 @@ public class E1_chargeState : ChargeState
     public override void physicsUpdate()
     {
         base.physicsUpdate();
+    }
+
+    public override void triggerAttack()
+    {
+        base.triggerAttack();
     }
 }

@@ -10,6 +10,7 @@ public class Ennemy1 : Entity
     public E1_chargeState chargeState { get; private set; }
     public E1_lookForPlayerState lookForPlayerState { get; private set; }
 
+    public E1_MeleeAttackState meleeAttackState { get; private set; }
     [SerializeField]
     private D_idleState idleStateData;
     [SerializeField]
@@ -20,6 +21,10 @@ public class Ennemy1 : Entity
     private D_chargeState chargeStateData;
     [SerializeField]
     private D_LookForPlayerState lookForPlayerStateData;
+    [SerializeField]
+    private D_meleeAttackState meleeAttackStateDate;
+    [SerializeField]
+    private Transform meleeAttackPosition;
     public override void Start()
     {
         base.Start();
@@ -29,6 +34,8 @@ public class Ennemy1 : Entity
         playerDetectedState = new E1_playerDetectedState(this, stateMachine, "playerDetected", playerDetectedStateData, this);
         chargeState = new E1_chargeState(this, stateMachine, "charge",chargeStateData,this);
         lookForPlayerState = new E1_lookForPlayerState(this, stateMachine, "look", lookForPlayerStateData, this);
+        meleeAttackState = new E1_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateDate, this);
         stateMachine.initialize(moveState);
     }
+
 }

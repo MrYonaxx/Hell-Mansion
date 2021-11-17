@@ -8,6 +8,7 @@ public class PlayerDetectedState : State
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
     protected bool performLongRangeAction;
+    protected bool performCloseRangeAction;
 
     public PlayerDetectedState(Entity entity, FSM stateMachine, string animBoolName, D_PlayerDetected stateData) : base(entity, stateMachine, animBoolName)
     {
@@ -19,6 +20,7 @@ public class PlayerDetectedState : State
         base.DoChecks();
         isPlayerInMinAgroRange = entity.checkPlayerInMinRangeAgro();
         isPlayerInMaxAgroRange = entity.checkPlayerInMaxRangeAgro();
+        performCloseRangeAction = entity.checkPlayerInCloseRangeAction();
     }
 
     public override void enter()

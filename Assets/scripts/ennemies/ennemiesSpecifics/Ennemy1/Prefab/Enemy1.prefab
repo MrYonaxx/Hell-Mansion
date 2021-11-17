@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &516493308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516493309}
+  m_Layer: 6
+  m_Name: meleeAttackPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516493309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516493308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5102228498571682736}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5102228497112299442
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +72,7 @@ GameObject:
   - component: {fileID: 5102228497727078914}
   m_Layer: 6
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,14 +108,13 @@ MonoBehaviour:
   wallCheck: {fileID: 5102228498481703646}
   ledgeCheck: {fileID: 5102228498010914501}
   playerCheck: {fileID: 5102228497112299445}
-  MonsterName: nom
-  maxHealth: 15
-  power: 15
   idleStateData: {fileID: 11400000, guid: 0cbfe07a4c1e5944ca7a1836f28aa165, type: 2}
   moveStateData: {fileID: 11400000, guid: fd28d91d53ed5c442b7f47b29eb88498, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 1aa39ab2e5b8f01418c76d2de5aeeb7c, type: 2}
   chargeStateData: {fileID: 11400000, guid: eb62ea4ba90ad6e4780dec8744839c6a, type: 2}
   lookForPlayerStateData: {fileID: 11400000, guid: 192b1603608c5b649ab214d363e19f6b, type: 2}
+  meleeAttackStateDate: {fileID: 11400000, guid: fac28146b91a47a49948bb200560847d, type: 2}
+  meleeAttackPosition: {fileID: 516493309}
 --- !u!1 &5102228498010914498
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +190,8 @@ GameObject:
   - component: {fileID: 1074407038}
   - component: {fileID: 1074407039}
   - component: {fileID: 6385737096177543060}
+  - component: {fileID: 333185601}
+  - component: {fileID: 333185594}
   m_Layer: 6
   m_Name: Alive
   m_TagString: Enemy
@@ -183,6 +214,7 @@ Transform:
   - {fileID: 5102228498481703646}
   - {fileID: 5102228498010914501}
   - {fileID: 5102228498901273601}
+  - {fileID: 516493309}
   m_Father: {fileID: 5102228497727078917}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -288,6 +320,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ed878085be7b0147bd12970c83cca68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &333185601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102228498571682737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0df8bf01653e446986495627bdeb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 3
+  hitSound: {fileID: 8300000, guid: 2ca086f91493d7b4f9dfe833e9dcb056, type: 3}
+  currentHealth: 0
+  hideOnDeath: 1
+--- !u!114 &333185594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102228498571682737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64645ed36cca2446abbb16d8a61badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5102228498901407431
