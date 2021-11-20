@@ -21,9 +21,11 @@ public class Health : MonoBehaviour
     public Sprite shield;
     public Sprite shieldEmpty;
     public Image [] Heart;
-    public Image [] Border;
     public Image [] Shield;
 
+    private bool isVulnerable;
+    public float invulnerailityTime;
+    
     [Header("Debug")]
     public bool hideOnDeath = false;
 
@@ -58,41 +60,22 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealthPoints;
-        
-        
+        isVulnerable = true;
         animator = GetComponent<Animator> ();
-        if (GetComponent<PlayerControl>())
-        {
-            currentShield = maxShieldPoints; // Attribue du shield qu'au héro
-            //HealthBar.setMaxHealthPoints(maxHealthPoints);
-        }
-      
+        currentShield = maxShieldPoints;
     }
-    void Update()
+
+    public void UpdateSprite()
     {
         for (int i = 0; i < Heart.Length; i++)
         {
-            if(i< currentShield){
-                Shield[i].sprite = shield;
-            }
-            else{
-                Shield[i].sprite = shieldEmpty;
-            }
-
             if(i< currentHealth){
-                Heart[i].sprite = fullHeart;
-            }
-            else{
-                Heart[i].sprite = emptyHeart;
-            }
-
-            if(i< maxHealthPoints){
                 Heart[i].enabled = true;
             }
             else{
                 Heart[i].enabled = false;
             }
-             if(i< maxShieldPoints){
+            if(i< currentShield){
                 Shield[i].enabled = true;
             }
             else{
@@ -100,34 +83,32 @@ public class Health : MonoBehaviour
             }
         }
     }
-
     public void TakeDamage(int amount)
     {
 
         if (currentHealth <= 0)
         return;
 
-        Debug.Log("damage  Take");
         
-        if(currentShield > 0)
-        { // Gestion du bouclier
-            currentShield -= amount;
-            if (currentShield<0)
-            {
-                currentHealth += currentShield;
-                currentShield = 0;
+        if(isVulnerable)
+        {
+            Debug.Log("damage  Take");
+            if(currentShield > 0)
+            { // Gestion du bouclier
+                currentShield -= amount;
+                if (currentShield < 0)
+                {
+                    currentHealth += currentShield;
+                    currentShield = 0;
+                }
             }
-
-        }
-        else
-        {
-            currentHealth -= amount;
-        }
-        
-        AudioManager.Instance?.PlaySound(hitSound, 2);
-        if (GetComponent<PlayerControl>())
-        {
-
+            else
+            {
+                currentHealth -= amount;
+            }
+            
+            AudioManager.Instance?.PlaySound(hitSound, 2);
+            UpdateSprite();
             //HealthBar.setHealth(currentHealth); // Actualise la barre de vie
             GetComponent<FlashObject>().Flash();
             //GetComponent<PlayerControl>().audio.Play();
@@ -138,26 +119,25 @@ public class Health : MonoBehaviour
                 GetComponent<PlayerControl>().setAlive(false);
                 //GetComponent<PlayerControl>().gameObject.SetActive(false);
             }
-        } 
-        else
-        {
-            if (currentHealth <= 0)
+            else
             {
-                if (hideOnDeath)
-                    this.gameObject.SetActive(false);
+                isVulnerable = false;
+                Invoke("ResetInvulnerability", invulnerailityTime);
             }
         }
+     
     }
     
+    public void ResetInvulnerability()
+    {
+        isVulnerable = true;
+    }
 
     public void Revive()
     {
         setCurrentHealth(maxHealthPoints);
-        if (GetComponent<PlayerControl>())
-        {
-            animator.SetBool("Die", false);
-            GetComponent<PlayerControl>().setAlive(true);
-            //GetComponent<PlayerControl>().gameObject.SetActive(false);
-        }
+        UpdateSprite();
+        animator.SetBool("Die", false);
+        GetComponent<PlayerControl>().setAlive(true);
     }
 }

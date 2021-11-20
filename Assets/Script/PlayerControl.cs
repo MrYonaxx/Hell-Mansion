@@ -34,8 +34,8 @@ public class PlayerControl : MonoBehaviour
 	
 	
 	public Image[] ListGun;
-	public Image [] Amo;
-	public Sprite amo;
+//	public Image [] Amo;
+//	public Sprite amo;
 	public TextController TextBox;
 
 
