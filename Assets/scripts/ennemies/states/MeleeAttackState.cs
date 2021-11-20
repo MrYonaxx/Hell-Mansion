@@ -53,7 +53,8 @@ public class MeleeAttackState : AttackState
 
         foreach(Collider2D collider in detectedObjects)
         {
-            collider.transform.SendMessage("Damage",attackDetails); //TODO : à revoir pour adapter au player de martin
+            collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount); //TODO : à revoir pour adapter au player de martin
+
         }
     }
 }

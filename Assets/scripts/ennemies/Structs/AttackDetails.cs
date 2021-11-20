@@ -6,4 +6,5 @@ public struct AttackDetails
 {
     public Vector2 position; //TODO modif to vector3
     public float damageAmount;
+    public float stunDamageAmount;
 }

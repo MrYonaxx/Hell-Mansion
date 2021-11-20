@@ -12,11 +12,16 @@ public class D_temporayEntity : ScriptableObject
 
     public float wallCheckDistance=0.2f; //a set dans l'inspecteur
     public float ledgeCheckDistance=0.4f;
-
-    public float minAgroDistance = 3f;//use field of view in the editor
-    public float maxAgroDistance=4f;
+    public float groundCheckRadius = 0.2f;
+    //public float minAgroDistance = 3f;//use field of view in the editor
+    //public float maxAgroDistance=4f;
 
     public float closeRangeActionDistance=1f;
+
+    public float stunResistance = 3f;
+    public float stunRecoveryTime = 2f;
+
+    public GameObject hitParticule;
 
     public LayerMask whatisground;
     public LayerMask whatIsPlayer;

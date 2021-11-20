@@ -22,18 +22,25 @@ public class Entity : MonoBehaviour
     private Transform ledgeCheck;
     [SerializeField]
     private Transform playerCheck;
-    private int lastDamageDirection;
+    [SerializeField]
+    private Transform groundCheck;
+    protected bool isStunned;
+    protected bool isDead;
+    public int lastDamageDirection { get; private set; }
     private float currentHealth;
+    private float currentStunResistance;
+    private float lastDamageTime;
     public virtual void Start()
     {
         facingDirection = 1;
         this.currentHealth = this.entityData.maxHealth;
-
+        isStunned = false;
         aliveGameObject = transform.Find("Alive").gameObject;
         rb = aliveGameObject.GetComponent<Rigidbody>();
         anim = aliveGameObject.GetComponent<Animator>();
         atsm = aliveGameObject.GetComponent<animationToStateMachine>();
         stateMachine = new FSM();
+        currentStunResistance = entityData.stunResistance;
         FieldOfView[] fieldOfViews = aliveGameObject.GetComponents<FieldOfView>();
         foreach(FieldOfView fieldOfView in fieldOfViews)
         {
@@ -51,6 +58,11 @@ public class Entity : MonoBehaviour
     public virtual void Update()
     {
         stateMachine.currentState.logicUpdate();
+
+        if(Time.time>=lastDamageTime+entityData.stunRecoveryTime)
+        {
+            resetStunResistance();
+        }
     }
 
     public virtual void FixedUpdate()
@@ -99,7 +111,12 @@ public class Entity : MonoBehaviour
 
     public virtual bool checkPlayerInCloseRangeAction() //check juste devant lui
     {
+        //TODO : à transformer en field of view ici
         return Physics.Raycast(playerCheck.position, aliveGameObject.transform.forward, entityData.closeRangeActionDistance, entityData.whatIsPlayer);
+    }
+    public virtual bool checkGround()
+    {
+        return Physics.OverlapSphere(groundCheck.position, entityData.groundCheckRadius, entityData.whatisground).Length>0;
     }
     public virtual void flip()
     {
@@ -123,13 +140,26 @@ public class Entity : MonoBehaviour
 
     public virtual void DamageHop(float velocity)
     {
-        velocityWorkSpace = -rb.transform.forward * velocity; //we do not need lastDamageDirection for now
+        velocityWorkSpace = -rb.transform.forward * velocity; //we do not need lastDamageDirection for now 
+        rb.velocity = velocityWorkSpace;
+        //alors la faudrait juste qu'il saute un peu et c'est tout.
+    }
+
+    public virtual void resetStunResistance()
+    {
+        isStunned = false;
+        currentStunResistance = entityData.stunResistance;
     }
 
     public virtual void Damage(AttackDetails attackDetails)
     {
+        lastDamageTime = Time.time;
+
         this.currentHealth -= attackDetails.damageAmount;
+        this.currentStunResistance -= attackDetails.stunDamageAmount;
         DamageHop(entityData.damageHopSpeed);
+        //TODO : voir pour partiules quand il est endommagé
+        //Instantiate(entityData.hitParticule, aliveGameObject.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360)));
         if(attackDetails.position.x>aliveGameObject.transform.position.x)
         {
             lastDamageDirection = -1; //TODO : changer la direction du knockback,la c'est vers la droite; nous ça sera juste -aliveGameObject.transform.forward
@@ -138,6 +168,22 @@ public class Entity : MonoBehaviour
         {
             lastDamageDirection = 1;
         }
+        if(currentStunResistance<=0)
+        {
+            isStunned = true;
+        }
+        if(currentHealth<=0)
+        {
+            isDead = true;
+        }
+    }
+
+    public virtual void SetVelocity(float velocity,Vector2 angle,int direction)
+    {
+        //TODO : faire entrer en jeu l'angle pour qu'il saute un peu en l'air
+        angle.Normalize();
+        velocityWorkSpace = direction*rb.transform.forward * velocity;
+        rb.velocity = velocityWorkSpace;
     }
 }
 
