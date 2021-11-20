@@ -10,6 +10,7 @@ public class ChargeState : State
     protected bool isDetectingLedge;
     protected bool isDetectingWall;
     protected bool isChargeTimeOver;
+    protected bool performCloseRangeAction;
     public ChargeState(Entity entity, FSM stateMachine, string animBoolName, D_chargeState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -22,6 +23,7 @@ public class ChargeState : State
         isPlayerInMaxAgroRange = entity.checkPlayerInMaxRangeAgro();
         isDetectingLedge = entity.checkLedge();
         isDetectingWall = entity.checkWall();
+        performCloseRangeAction = entity.checkPlayerInCloseRangeAction();
     }
 
     public override void enter()

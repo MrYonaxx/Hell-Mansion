@@ -10,19 +10,6 @@ public class DoorNextRoom : MonoBehaviour
     bool onTrigger = false;
 
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(onTrigger) 
-        {
-            /*if(Input.GetMouseButtonDown(0))
-            {
-                eventOpen.Invoke();
-            }*/
-        }
-    }
-
     void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
