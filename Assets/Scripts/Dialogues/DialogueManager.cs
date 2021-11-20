@@ -18,8 +18,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     Animator animatorFade;
     [SerializeField]
-    string sceneName;
-    [SerializeField]
     private UnityEvent eventPlayer;
 
     // Start is called before the first frame update
@@ -81,14 +79,17 @@ public class DialogueManager : MonoBehaviour
     {
         StopAllCoroutines();
         eventPlayer.Invoke();
-        //StartCoroutine(EndDialogueCoroutine());
     }
 
-    // debug
-    private IEnumerator EndDialogueCoroutine()
+    private IEnumerator EndDialogueCoroutine(string nomScene)
     {
         animatorFade.SetBool("Fade", true);
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(nomScene);
+    }
+
+    public void LoadScene(string nomScene)
+    {
+        StartCoroutine(EndDialogueCoroutine(nomScene));
     }
 }
