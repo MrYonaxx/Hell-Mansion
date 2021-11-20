@@ -49,11 +49,11 @@ public class MeleeAttackState : AttackState
     {
         base.triggerAttack();
 
-        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPosition.position, stateDate.attackRadius,stateDate.whatIsPlayer);
+        Collider[] detectedObjects = Physics.OverlapSphere(attackPosition.position, stateDate.attackRadius,stateDate.whatIsPlayer);
 
-        foreach(Collider2D collider in detectedObjects)
+        foreach(Collider collider in detectedObjects)
         {
-            collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount); //TODO : à revoir pour adapter au player de martin
+            collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount);
 
         }
     }
