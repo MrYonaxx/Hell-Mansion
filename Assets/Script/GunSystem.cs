@@ -27,7 +27,7 @@ public class GunSystem : MonoBehaviour
     public GameObject muzzlePosition;
 
     
-    private int bulletLeft, bulletsShot;
+    public int bulletLeft, bulletsShot;
     private bool shooting, readyToShoot, reloading;
    
     

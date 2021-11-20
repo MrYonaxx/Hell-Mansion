@@ -33,8 +33,10 @@ public class PlayerControl : MonoBehaviour
 	private Animator animator;
 	
 	
+	public Image[] ListGun;
 	public Image [] Amo;
 	public Sprite amo;
+	public TextController TextBox;
 
 
 	public bool getAlive()
@@ -60,6 +62,12 @@ public class PlayerControl : MonoBehaviour
 	{
 		GatherInput();
 		Look();
+		if(GetComponentInChildren<GunSystem>().infiniteAmmo){
+			TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, -1);
+		}
+		else{
+			TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
+		}
 	}
 	
 	void FixedUpdate()
@@ -202,6 +210,8 @@ public class PlayerControl : MonoBehaviour
 			{
 				
 				arsenal[i].IsEquip = false;
+				ListGun[i].enabled = false;
+
 				if (arsenal[i].PlayerBones.childCount > 0)
 				{
 					Debug.Log("destroy");
@@ -216,7 +226,10 @@ public class PlayerControl : MonoBehaviour
 			}
 			else
 			{
+				Debug.Log(arsenal[i].name);
 				arsenal[i].IsEquip = true;
+				ListGun[i].enabled = true;
+				Debug.Log(ListGun[i].enabled);
 			}
 		}
 		if (arsenalEquip.rightGun != null && arsenalEquip.PlayerBones != null && !arsenalEquip.IsEquip )
