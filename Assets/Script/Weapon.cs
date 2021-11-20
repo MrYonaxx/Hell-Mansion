@@ -7,7 +7,10 @@ using Random = UnityEngine.Random;
 public enum WeaponType
     {
         Gun,
-        Rifle
+        Rifle,
+        Rifle3,
+        Shotgun,
+        smg
     }
 public class Weapon : MonoBehaviour
 {
@@ -23,11 +26,21 @@ public class Weapon : MonoBehaviour
             switch (Typeweapon)
             {
                 case WeaponType.Gun:
-                    playerTrigger.SetArsenal("Gun");
+                    playerTrigger.SetArsenal(playerTrigger.arsenal[0]);
                     break;
                 case WeaponType.Rifle:
-                    playerTrigger.SetArsenal("Rifle");
+                    playerTrigger.SetArsenal(playerTrigger.arsenal[1]);
                     break;
+                case WeaponType.Rifle3:
+                    playerTrigger.SetArsenal(playerTrigger.arsenal[2]);
+                    break;
+                case WeaponType.Shotgun:
+                    playerTrigger.SetArsenal(playerTrigger.arsenal[3]);
+                    break;
+                case WeaponType.smg:
+                    playerTrigger.SetArsenal(playerTrigger.arsenal[4]);
+                    break;
+                
             }
             if (playerTrigger != null)
             {

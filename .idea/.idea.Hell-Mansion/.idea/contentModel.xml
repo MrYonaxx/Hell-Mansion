@@ -11,6 +11,11 @@
             <e p="License.txt" t="Include" />
           </e>
         </e>
+        <e p="Beautiful Progress Bar Free - CYKO" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="SliderScripts.cs" t="Include" />
+          </e>
+        </e>
         <e p="Script" t="Include">
           <e p="BoardManager.cs" t="Include" />
           <e p="DoorNextRoom.cs" t="Include" />
@@ -82,6 +87,9 @@
             <e p="IMotionSpeed.cs" t="Include" />
             <e p="Shake.cs" t="Include" />
             <e p="ShakeSprite.cs" t="Include" />
+          </e>
+          <e p="GUI" t="Include">
+            <e p="HealthGUI.cs" t="Include" />
           </e>
           <e p="Misc" t="Include">
             <e p="Comment.cs" t="Include" />

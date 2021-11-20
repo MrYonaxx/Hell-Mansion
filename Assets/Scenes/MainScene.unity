@@ -2023,7 +2023,7 @@ MonoBehaviour:
     priority: 0
   boundsCamera: {fileID: 0}
   offset: {x: -7, y: 10, z: -7}
-  smoothTime: 0.5
+  smoothTime: 0.2
   bonusSmoothTime: 0
 --- !u!1 &980516436
 GameObject:

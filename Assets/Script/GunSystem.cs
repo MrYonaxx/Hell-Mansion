@@ -9,7 +9,8 @@ public class GunSystem : MonoBehaviour
 {
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
-    public int magazineSizeInitial;
+    public int magazineSizeInitial, bulletsPerTap;
+    private int bulletShoot;
     public int AmmoReserve = 0 ;
     public bool allowButtonHold, infiniteAmmo;
     public Rigidbody _rb ;
@@ -30,15 +31,8 @@ public class GunSystem : MonoBehaviour
     private bool shooting, readyToShoot, reloading;
    
     
-    //parent.GetComponent<Animator>().SetBool("Fire", false);
-    public bool GetReloading()
-    {
-        return reloading;
-    } 
     private void Awake()
     {
-        if(source != null) source.clip = GunShotClip;
-        
         bulletLeft = magazineSizeInitial;
         readyToShoot = true;
         
@@ -68,7 +62,13 @@ public class GunSystem : MonoBehaviour
             //Shoot
             if (readyToShoot && shooting && !reloading && (bulletLeft > 0 || infiniteAmmo ))
             {
-                //anim.SetLayerWeight(1, 1);
+                
+                bulletShoot = bulletsPerTap;
+                if (source != null)
+                {
+                    AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
+
+                }
                 Shoot();
             }
         }
@@ -106,8 +106,15 @@ public class GunSystem : MonoBehaviour
             var flash = Instantiate(muzzlePrefab, muzzlePosition.transform);
         }
         
+        // spread 
+
+        var x = Random.Range(-spread, spread);
+        var z = Random.Range(-spread, spread);
+        Vector3 direction = new Vector3(x, 0, z);
+        
+        
         //Raycast
-        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward, out rayHit,range))
+        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward + direction, out rayHit,range))
         {
             Debug.Log(rayHit.collider.name);
             if (rayHit.collider.CompareTag("Enemy"))
@@ -118,53 +125,55 @@ public class GunSystem : MonoBehaviour
         {
             Debug.Log(" No hit");
         }
-        // --- Handle Audio ---
-        if (source != null)
-        {
-            AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
-
-        }
-
+        
         if (!infiniteAmmo)
         {
             bulletLeft--;
+            
         }
-        anim.SetBool("Fire", true);
-        Invoke("ResetShoot", timeBetweenShooting);
+
+        bulletShoot--;
+        if (bulletShoot > 0 && bulletLeft > 0)
+        {
+            Invoke("Shoot", timeBetweenShots);
+        }
+        else if (bulletLeft > 0 && bulletLeft == 0)
+        {
+            Invoke("ResetShoot", timeBetweenShooting);
+        }
+        else
+        {
+            Invoke("ResetShoot", timeBetweenShooting);
+        }
         
     }
 
     private void OnDrawGizmos()
     {
+     
         bool isHit = Physics.Raycast(_rb.transform.position, _rb.transform.forward, out rayHit, range);
-        float MaxDistance = 10f;
+       
         if (isHit)
         {
             Gizmos.color= Color.red;
-            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward * rayHit.distance);
-            
+            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward  * rayHit.distance);
         }  
         else
         {
             Gizmos.color= Color.blue;
-            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward * MaxDistance);
-            
-        }  
+            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward * range);
+        }
     }
 
     private void ResetShoot()
     {
         if (bulletLeft <= 0 && AmmoReserve <= 0)
         {
-            GetComponentInParent<PlayerControl>().SetArsenal("Gun");
+            GetComponentInParent<PlayerControl>().resetArsenal();
         }
         else
         {
             readyToShoot = true;
         }
-        
-        
     }
-    
-    
 }

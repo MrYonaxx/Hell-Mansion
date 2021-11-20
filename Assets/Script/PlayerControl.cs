@@ -1,23 +1,29 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Numerics;
 using System.Xml.Serialization;
 using Audio;
 using UnityEditor;
 using UnityEngine.UI;
+using Plane = UnityEngine.Plane;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 
 [RequireComponent (typeof (Animator))]
-public class PlayerControl : MonoBehaviour {
+public class PlayerControl : MonoBehaviour
+{
 
-	public Transform rightGunBone;
-	public Transform rightRifleBone;
+	public Transform[] rightBone;
 	public Arsenal[] arsenal;
 	public AudioSource audiosource;
 	public Camera Cam;
 	public bool alive = true;
 	public Texture2D cursor;
 	public Texture2D cursorAim;
+	public Texture2D cursorReady;
 	public HUDController hud;
 	
 	[SerializeField] private Rigidbody _rb;
@@ -43,11 +49,10 @@ public class PlayerControl : MonoBehaviour {
 	
 	void Awake()
 	{
-		audiosource = GetComponent<AudioSource>();
+		//audiosource = GetComponent<AudioSource>();
 		animator = GetComponent<Animator> ();
 		if (arsenal.Length > 0)
-			SetArsenal (arsenal[0].name);
-		Debug.Log(arsenal[0].name);
+			resetArsenal();
 		ChangeCursor(cursor);
 	}
 	
@@ -55,23 +60,6 @@ public class PlayerControl : MonoBehaviour {
 	{
 		GatherInput();
 		Look();
-
-//		for (int i = 0; i < Amo.Length; i++)
-//        {
-//            if(arsenal.Length > 0){
-//				if (i< arsenal[0].bulletLeft)
-//               		Amo[i].sprite = amo;
-//				else 
-//					Amo[i].sprite = empty;
-//				
-//				if(i < arsenal[0].rightGun.GetComponent<GunSystem>().bulletLeft)
-//                	Amo[i].enabled = true;
-//            	else
-//                	Amo[i].enabled = false;
-//            }		
-//            
-//        }
-//		
 	}
 	
 	void FixedUpdate()
@@ -121,15 +109,25 @@ public class PlayerControl : MonoBehaviour {
 			RaycastHit rayHit;
 			if (Physics.Raycast(AimingRay, out rayHit))
 			{
-				if (rayHit.collider.CompareTag("Enemy"))
+				var distanceFromEnnemy = Vector3.Distance(
+             						new Vector3(rayHit.collider.transform.position.x, transform.position.y,
+             							rayHit.collider.transform.position.z), transform.position);
+				
+				if (rayHit.collider.CompareTag("Enemy") && distanceFromEnnemy <= GetComponentInChildren<GunSystem>().range)
+				{
+					ChangeCursor(cursorReady);
+                    transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+				}
+				else if (rayHit.collider.CompareTag("Enemy"))
 				{
 					ChangeCursor(cursorAim);
-					transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
 				}
 				else
 				{
-					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
 					ChangeCursor(cursor);
+					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+					
 				}
 					
 			}
@@ -191,61 +189,52 @@ public class PlayerControl : MonoBehaviour {
 		}
 	}
 
-
-
-	
-	public void SetArsenal(string name) {
+	// function for reEquip Gun
+	public void resetArsenal()
+	{
+		SetArsenal(arsenal[0]);
+	}
+	// Function for equip new weapon
+	public void SetArsenal(Arsenal arsenalEquip) {
 		for (int i = 0; i < arsenal.Length; i++)
 		{
-			if (arsenal[i].name != name)
+			if (arsenal[i].name != arsenalEquip.name)
 			{
-				arsenal[i].IsEquip = false; 
+				
+				arsenal[i].IsEquip = false;
+				if (arsenal[i].PlayerBones.childCount > 0)
+				{
+					Debug.Log("destroy");
+					Destroy(arsenal[i].PlayerBones.GetChild(0).gameObject);
+				}
+					
 			}
-			else if (arsenal[i].IsEquip)
+			else if (arsenal[i].name == arsenalEquip.name && arsenal[i].IsEquip)
 			{
 				GetComponentInChildren<GunSystem>().AmmoReserve +=
 					GetComponentInChildren<GunSystem>().magazineSizeInitial;
-				return;
 			}
-			else{
-				if (rightGunBone.childCount > 0)
-				{ 
-					Destroy(rightGunBone.GetChild(0).gameObject);
-				}
-				if (rightRifleBone.childCount > 0)
-				{
-					Destroy(rightRifleBone.GetChild(0).gameObject);
-				}
-					
-				if (name == "Gun" && arsenal[i].rightGun != null)
-				{
-					arsenal[i].IsEquip = true;
-					GameObject newRightGun = (GameObject) Instantiate(arsenal[i].rightGun);
-					newRightGun.GetComponent<GunSystem>()._rb = _rb;
-					newRightGun.GetComponent<GunSystem>()._hud = hud;
-					newRightGun.GetComponent<GunSystem>().anim = animator;
-					newRightGun.transform.parent = rightGunBone;
-					newRightGun.transform.localPosition = Vector3.zero;
-					newRightGun.transform.localRotation = Quaternion.Euler(0, 0, 0);
-					animator.SetLayerWeight(1,1);
-					animator.SetLayerWeight(2,0);
-				}
-				if (name == "Rifle" && arsenal[i].rightGun != null)
-				{
-					arsenal[i].IsEquip = true;
-					GameObject newRightRifle = (GameObject) Instantiate(arsenal[i].rightGun);
-					newRightRifle.GetComponent<GunSystem>()._rb = _rb;
-					newRightRifle.GetComponent<GunSystem>()._hud = hud;
-					newRightRifle.GetComponent<GunSystem>().anim = animator;
-					newRightRifle.transform.parent = rightRifleBone;
-					newRightRifle.transform.localPosition = Vector3.zero;
-					newRightRifle.transform.localRotation = Quaternion.Euler(0, 0, 0);
-					animator.SetLayerWeight(1,0);
-					animator.SetLayerWeight(2,1);
-				}
-				
+			else
+			{
+				arsenal[i].IsEquip = true;
 			}
 		}
+		if (arsenalEquip.rightGun != null && arsenalEquip.PlayerBones != null && !arsenalEquip.IsEquip )
+		{
+			GameObject newRightWeapon=  (GameObject) Instantiate(arsenalEquip.rightGun);
+            newRightWeapon.GetComponent<GunSystem>()._rb = _rb;
+            newRightWeapon.GetComponent<GunSystem>()._hud = hud;
+            newRightWeapon.GetComponent<GunSystem>().anim = animator;
+            newRightWeapon.transform.parent = arsenalEquip.PlayerBones;
+            newRightWeapon.transform.localPosition = Vector3.zero;
+            newRightWeapon.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            for(int i=1;i< animator.layerCount;i++)
+            {
+	            animator.SetLayerWeight(i, 0);
+            }
+            animator.SetLayerWeight( animator.GetLayerIndex(arsenalEquip.name),1);
+		}
+			
 	}
 
 
@@ -271,5 +260,6 @@ public class PlayerControl : MonoBehaviour {
 		public string name;
 		public GameObject rightGun;
 		public bool IsEquip;
+		public Transform PlayerBones;
 	}
 }
