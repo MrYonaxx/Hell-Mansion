@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4413000737782205568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98e0efef69666d4458b83646e79ede18, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ac6133a4c1912445bea422fb70de552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TextBox: {fileID: 4413000737782205581}
@@ -1920,6 +1920,14 @@ PrefabInstance:
     - target: {fileID: 224324607374595238, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726484719294127520, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111333917349386598, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}

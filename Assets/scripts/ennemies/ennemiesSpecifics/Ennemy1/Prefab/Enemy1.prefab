@@ -222,8 +222,6 @@ GameObject:
   - component: {fileID: 739966658632248459}
   - component: {fileID: 1074407038}
   - component: {fileID: 1074407039}
-  - component: {fileID: 6385737096177543060}
-  - component: {fileID: 333185601}
   - component: {fileID: 333185594}
   m_Layer: 6
   m_Name: Alive
@@ -344,35 +342,6 @@ MonoBehaviour:
     m_Bits: 128
   fieldOfViewMinOrMax: 1
   visibleTargets: []
---- !u!114 &6385737096177543060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5102228498571682737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ed878085be7b0147bd12970c83cca68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
---- !u!114 &333185601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5102228498571682737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0df8bf01653e446986495627bdeb5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealthPoints: 3
-  hitSound: {fileID: 8300000, guid: 2ca086f91493d7b4f9dfe833e9dcb056, type: 3}
-  currentHealth: 0
-  hideOnDeath: 1
 --- !u!114 &333185594
 MonoBehaviour:
   m_ObjectHideFlags: 0

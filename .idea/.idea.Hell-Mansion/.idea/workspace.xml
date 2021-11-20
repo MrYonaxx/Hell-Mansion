@@ -5,37 +5,19 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Gunplay.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Gunplay.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@IdleShotgun.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@IdleShotgun.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Run Backward Shotgun.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Run Backward Shotgun.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Run Forward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Run Forward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Run Left Shotgun.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Run Left Shotgun.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Run Right Shotgun.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation Mixamo/Shotgun/Armature@Run Right Shotgun.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animator/PlayerAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/PlayerAnimatorController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sound/gunshot.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Sound/gunshot.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/American Pistol.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/American Pistol.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Assault_Rifle_M4.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Assault_Rifle_M4.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Gun.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Gun.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GunMuzzle Flash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/GunMuzzle Flash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GUI/HUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI/HUD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Guns/American Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Guns/American Pistol.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Rifle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Rifle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/VFX_M4 Muzzle Flash.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/VFX_M4 Muzzle Flash.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HUD.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HUD.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovementMartin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MovementMartin.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GunSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GunSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/Structs/AttackDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/Structs/AttackDetails.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Data/E1_BaseData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Data/E1_BaseData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Data/E1_MeleeAttackStateData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Data/E1_MeleeAttackStateData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/EnnemyController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/EnnemyController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Prefab/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Prefab/Enemy1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/states/MeleeAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/states/MeleeAttackState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +35,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/Entity.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfViewEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfView.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Ennemy1.cs" />
@@ -63,6 +44,9 @@
       <option value="$PROJECT_DIR$/Assets/Script/HUDController.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/Weapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/states/MeleeAttackState.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/Entity.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/Structs/AttackDetails.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/GunSystem.cs" />
     </changedPaths>
   </component>
@@ -110,6 +94,7 @@
       <workItem from="1636844017039" duration="13763000" />
       <workItem from="1637010865343" duration="22423000" />
       <workItem from="1637253784506" duration="18816000" />
+      <workItem from="1637445060547" duration="2393000" />
     </task>
     <servers />
   </component>

@@ -160,14 +160,7 @@ public class Entity : MonoBehaviour
         DamageHop(entityData.damageHopSpeed);
         //TODO : voir pour partiules quand il est endommagé
         //Instantiate(entityData.hitParticule, aliveGameObject.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360)));
-        if(attackDetails.position.x>aliveGameObject.transform.position.x)
-        {
-            lastDamageDirection = -1; //TODO : changer la direction du knockback,la c'est vers la droite; nous ça sera juste -aliveGameObject.transform.forward
-        }
-        else
-        {
-            lastDamageDirection = 1;
-        }
+
         if(currentStunResistance<=0)
         {
             isStunned = true;

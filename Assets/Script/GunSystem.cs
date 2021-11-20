@@ -118,7 +118,14 @@ public class GunSystem : MonoBehaviour
         {
             Debug.Log(rayHit.collider.name);
             if (rayHit.collider.CompareTag("Enemy"))
-                rayHit.collider?.GetComponent<Health>()?.TakeDamage(damage);
+            {
+                AttackDetails currentdamage;
+                currentdamage.position = rayHit.collider.transform.position;
+                currentdamage.damageAmount = damage;
+                currentdamage.stunDamageAmount = 1;
+                rayHit.collider.GetComponentInParent<Ennemy1>().Damage(currentdamage);
+            }
+               
             Debug.Log("hit");
         }
         else

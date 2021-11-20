@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3fb7ac75f469a409c4cc2e56359101, type: 3}
   m_Name: E1_BaseData
   m_EditorClassIdentifier: 
+  maxHealth: 5
+  damageHopSpeed: 3
+  MonsterName: Bouboule
+  power: 1
   wallCheckDistance: 0.2
   ledgeCheckDistance: 0.4
-  minAgroDistance: 3
-  maxAgroDistance: 4
+  groundCheckRadius: 0.2
+  closeRangeActionDistance: 0.5
+  stunResistance: 3
+  stunRecoveryTime: 2
+  hitParticule: {fileID: 0}
   whatisground:
     serializedVersion: 2
     m_Bits: 136

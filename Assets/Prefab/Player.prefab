@@ -1185,9 +1185,8 @@ GameObject:
   - component: {fileID: 6982812146204527121}
   - component: {fileID: 6217767947882803004}
   - component: {fileID: 2910399880316869572}
-  - component: {fileID: 9200848833962237648}
-  - component: {fileID: 1962066730974797882}
   - component: {fileID: 2878456552209112815}
+  - component: {fileID: 6578426709639074132}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1280,8 +1279,10 @@ MonoBehaviour:
   hud: {fileID: 0}
   _rb: {fileID: 2910399880316869572}
   _run: 3
+  ListGun: []
   Amo: []
   amo: {fileID: 0}
+  TextBox: {fileID: 0}
 --- !u!54 &2910399880316869572
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1298,46 +1299,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &9200848833962237648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4416926081852918481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0df8bf01653e446986495627bdeb5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxShieldPoints: 3
-  maxHealthPoints: 10
-  hitSound: {fileID: 8300000, guid: 275e6d428d02ccb418e92b5b45d3578d, type: 3}
-  HealthBar: {fileID: 0}
-  currentHealth: 0
-  currentShield: 0
-  fullHeart: {fileID: 0}
-  emptyHeart: {fileID: 0}
-  shield: {fileID: 0}
-  shieldEmpty: {fileID: 0}
-  Heart: []
-  Border: []
-  Shield: []
-  hideOnDeath: 0
---- !u!136 &1962066730974797882
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4416926081852918481}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2878456552209112815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,6 +1316,41 @@ MonoBehaviour:
   GameMesh: {fileID: 5597113867290821413}
   FlashDelay: 0.025
   TimesToFlash: 3
+--- !u!114 &6578426709639074132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0df8bf01653e446986495627bdeb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxShieldPoints: 3
+  maxHealthPoints: 3
+  hitSound: {fileID: 8300000, guid: 275e6d428d02ccb418e92b5b45d3578d, type: 3}
+  HealthBar: {fileID: 0}
+  currentHealth: 0
+  currentShield: 0
+  fullHeart: {fileID: 21300000, guid: cde3691618c5d1846a58b183b29f6837, type: 3}
+  emptyHeart: {fileID: 3744937252751613447, guid: e59d09f371ce4a040856624d847f6f24, type: 3}
+  shield: {fileID: -1954536876058183986, guid: 1b8b84053707d69459efe2ca8d75b7e1, type: 3}
+  shieldEmpty: {fileID: 3744937252751613447, guid: e59d09f371ce4a040856624d847f6f24, type: 3}
+  Heart:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Border:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Shield:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  hideOnDeath: 0
 --- !u!1 &4523139366846529165
 GameObject:
   m_ObjectHideFlags: 0
