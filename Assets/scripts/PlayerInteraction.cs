@@ -14,7 +14,16 @@ public class PlayerInteraction : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && objInteractable != null)
+        {
             objInteractable.Interact(player);
+
+            if (objInteractable.OnlyOnce())
+            {
+                objInteractable.CanInteract(false);
+                interactables.Remove(objInteractable);
+                CheckShortestInteractable();
+            }
+        }
     }
 
 
