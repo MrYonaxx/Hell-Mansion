@@ -94,8 +94,8 @@ public class Entity : MonoBehaviour
     {
         //TODO: à revoir pour adapter la détéction à notre jeu peut être pas un raycast d'ailleurs
         this.minFieldOfView.FindVisibleTargets();
-        Debug.Log("minFieldOfView");
-        Debug.Log(minFieldOfView.visibleTargets.Count);
+        //Debug.Log("minFieldOfView");
+        //Debug.Log(minFieldOfView.visibleTargets.Count);
         return minFieldOfView.visibleTargets.Count > 0;
         //return Physics2D.Raycast(playerCheck.position, aliveGameObject.transform.right, entityData.minAgroDistance, entityData.whatIsPlayer);
     }
@@ -103,8 +103,8 @@ public class Entity : MonoBehaviour
     public virtual bool checkPlayerInMaxRangeAgro()
     {
         this.maxFieldOfView.FindVisibleTargets();
-        Debug.Log("maxFieldOfView");
-        Debug.Log(maxFieldOfView.visibleTargets.Count);
+       //Debug.Log("maxFieldOfView");
+        //Debug.Log(maxFieldOfView.visibleTargets.Count);
         return maxFieldOfView.visibleTargets.Count > 0;
         //return Physics2D.Raycast(playerCheck.position, aliveGameObject.transform.forward, entityData.maxAgroDistance, entityData.whatIsPlayer);
     }

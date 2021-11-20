@@ -117,35 +117,22 @@ public class Health : MonoBehaviour
                 currentHealth += currentShield;
                 currentShield = 0;
             }
-
         }
         else
         {
             currentHealth -= amount;
         }
-        
         AudioManager.Instance?.PlaySound(hitSound, 2);
-        if (GetComponent<PlayerControl>())
+        //HealthBar.setHealth(currentHealth); // Actualise la barre de vie
+        GetComponent<FlashObject>().Flash();
+        //GetComponent<PlayerControl>().audio.Play();
+        if (currentHealth <= 0)
         {
-
-            //HealthBar.setHealth(currentHealth); // Actualise la barre de vie
-            GetComponent<FlashObject>().Flash();
-            //GetComponent<PlayerControl>().audio.Play();
-            if (currentHealth <= 0)
-            {
-                // we're dead
-                animator.SetBool("Die", true);
-                GetComponent<PlayerControl>().setAlive(false);
-                //GetComponent<PlayerControl>().gameObject.SetActive(false);
-            }
-        } 
-        else
-        {
-            if (currentHealth <= 0)
-            {
-                if (hideOnDeath)
-                    this.gameObject.SetActive(false);
-            }
+            // we're dead
+            animator.SetBool("Die", true);
+            GetComponent<PlayerControl>().setAlive(false);
+            Destroy(GetComponent<CharacterController>());
+            //GetComponent<PlayerControl>().gameObject.SetActive(false);
         }
     }
     
@@ -157,6 +144,8 @@ public class Health : MonoBehaviour
         {
             animator.SetBool("Die", false);
             GetComponent<PlayerControl>().setAlive(true);
+            gameObject.AddComponent<CharacterController>();
+            GetComponent<CharacterController>().center = Vector3.up;
             //GetComponent<PlayerControl>().gameObject.SetActive(false);
         }
     }

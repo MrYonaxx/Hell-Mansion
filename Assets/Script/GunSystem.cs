@@ -116,7 +116,6 @@ public class GunSystem : MonoBehaviour
         //Raycast
         if (Physics.Raycast(_rb.transform.position, _rb.transform.forward + direction, out rayHit,range))
         {
-            Debug.Log(rayHit.collider.name);
             if (rayHit.collider.CompareTag("Enemy"))
             {
                 AttackDetails currentdamage;
@@ -124,9 +123,9 @@ public class GunSystem : MonoBehaviour
                 currentdamage.damageAmount = damage;
                 currentdamage.stunDamageAmount = 1;
                 rayHit.collider.GetComponentInParent<Ennemy1>().Damage(currentdamage);
+                Debug.Log("hit");
             }
-               
-            Debug.Log("hit");
+            
         }
         else
         {

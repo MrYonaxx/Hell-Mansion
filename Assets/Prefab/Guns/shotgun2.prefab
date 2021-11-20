@@ -255,7 +255,7 @@ MonoBehaviour:
   reloadTime: 1
   timeBetweenShots: 0
   magazineSizeInitial: 35
-  bulletsPerTap: 5
+  bulletsPerTap: 2
   AmmoReserve: 20
   allowButtonHold: 0
   infiniteAmmo: 0
@@ -267,3 +267,5 @@ MonoBehaviour:
   audioPitch: {x: 0.9, y: 1.1}
   muzzlePrefab: {fileID: 1336949550903370, guid: b7d944e2852026f459b30e8b54fab523, type: 3}
   muzzlePosition: {fileID: 6932632590366743825}
+  bulletLeft: 0
+  bulletsShot: 0
