@@ -42,6 +42,16 @@ public class InteractionBase : MonoBehaviour, IInteractable
         eventPlayer.Invoke(player);
     }
 
+    public void StopInputPlayer(PlayerControl player)
+    {
+        player.CanInputPlayer(false);
+    }
+
+    public void StartInputPlayer(PlayerControl player)
+    {
+        player.CanInputPlayer(true);
+    }
+
     public void PlaySound(AudioClip clip)
     {
         AudioManager.Instance.PlaySound(clip, 1);

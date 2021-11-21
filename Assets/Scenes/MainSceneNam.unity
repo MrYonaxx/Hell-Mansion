@@ -595,10 +595,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0df8bf01653e446986495627bdeb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxShieldPoints: 3
   maxHealthPoints: 3
   hitSound: {fileID: 8300000, guid: 2ca086f91493d7b4f9dfe833e9dcb056, type: 3}
   currentHealth: 0
-  hideOnDeath: 1
+  currentShield: 0
+  Heart: []
+  Shield: []
+  invulnerailityTime: 0
 --- !u!1001 &531961393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -637,6 +641,10 @@ PrefabInstance:
     - target: {fileID: 283877302, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118732589665450416, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1962066730974797882, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
       propertyPath: m_Enabled
@@ -726,23 +734,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4862998115708995265, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6217767947882803004, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
       propertyPath: Cam
       value: 
       objectReference: {fileID: 963194227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
---- !u!114 &531961394 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6217767947882803004, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
-  m_PrefabInstance: {fileID: 531961393}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542459608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a19fe8b8d835c46bc1d182f409d65c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &571925778 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5443356325260342783, guid: cd29c9dd60692754eac4bcc55763c025, type: 3}
@@ -1621,6 +1622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Typeweapon: 2
+  ElementToRotate: {fileID: 0}
 --- !u!135 &1204871007
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1824,64 +1826,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1522763247
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1522763248}
-  - component: {fileID: 1522763250}
-  - component: {fileID: 1522763249}
-  m_Layer: 10
-  m_Name: Interaction
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1522763248
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522763247}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1542459614}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1522763249
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522763247}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0.7}
---- !u!114 &1522763250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522763247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9e85a7cf00e894bb1a0acbb4f5d616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 531961394}
 --- !u!1 &1542459608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4416926081852918481, guid: 78a2a4f7ce7b39a4fa9b23265e9cf49f, type: 3}
@@ -2385,6 +2329,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onlyOnce: 0
 --- !u!65 &2138785867
 BoxCollider:
   m_ObjectHideFlags: 0

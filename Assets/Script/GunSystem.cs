@@ -30,6 +30,7 @@ public class GunSystem : MonoBehaviour
     
     public int bulletLeft, bulletsShot;
     private bool shooting, readyToShoot, reloading;
+    public bool CanInput = true;
    
     
     private void Awake()
@@ -42,8 +43,8 @@ public class GunSystem : MonoBehaviour
 
     private void Update()
     {
-        MyInput();
-        
+        if(CanInput)
+            MyInput();    
     }
 
     private void MyInput()

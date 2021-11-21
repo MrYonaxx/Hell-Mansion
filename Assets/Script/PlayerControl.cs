@@ -38,6 +38,7 @@ public class PlayerControl : MonoBehaviour
 //	public Sprite amo;
 	public TextController TextBox;
 
+	private bool canInput = true;
 
 	public bool getAlive()
 	{
@@ -48,7 +49,13 @@ public class PlayerControl : MonoBehaviour
 	{
 		alive = state;
 	}
-	
+
+	public void CanInputPlayer(bool b)
+	{
+		canInput = b;
+		GetComponentInChildren<GunSystem>().CanInput = b;
+	}
+
 	void Awake()
 	{
 		//audiosource = GetComponent<AudioSource>();
@@ -60,21 +67,28 @@ public class PlayerControl : MonoBehaviour
 	
 	private void Update()
 	{
-		GatherInput();
-		Look();
-		if(GetComponentInChildren<GunSystem>().infiniteAmmo){
-			TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, -1);
-		}
-		else{
-			TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
+		if (canInput)
+		{
+			GatherInput();
+			Look();
+			if (GetComponentInChildren<GunSystem>().infiniteAmmo)
+			{
+				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, -1);
+			}
+			else
+			{
+				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
+			}
 		}
 	}
 	
 	void FixedUpdate()
 	{
-		Move();
+		if(canInput)
+			Move();
 		
 	}
+
 	void GatherInput()
 	{
 		if (Input.GetAxisRaw("Horizontal") == -1 && Input.GetAxisRaw("Vertical") == -1)
