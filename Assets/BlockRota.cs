@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class BlockRota : MonoBehaviour
 {
-    private Quaternion iniRot;
+    [SerializeField]
+    private Camera main_cam;
  
-    void Start()
+    void Update()
     {
-        iniRot = transform.rotation;
-    }
- 
-    void LateUpdate()
-    {
-     transform.rotation = iniRot;
+        transform.LookAt(transform.position + main_cam.transform.rotation * Vector3.forward, main_cam.transform.rotation * Vector3.up);
     }
 }

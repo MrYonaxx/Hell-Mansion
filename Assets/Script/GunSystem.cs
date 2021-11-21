@@ -76,7 +76,7 @@ public class GunSystem : MonoBehaviour
 
     private void Reload()
     {
-        Debug.Log("reload en cours");
+        _hud.CloseMessagePanelReload();
         StartCoroutine(_hud.StartReload(reloadTime));
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
@@ -137,13 +137,13 @@ public class GunSystem : MonoBehaviour
         {
             Invoke("Shoot", timeBetweenShots);
         }
-        else if (bulletLeft > 0 && bulletLeft == 0)
-        {
-            Invoke("ResetShoot", timeBetweenShooting);
-        }
         else
         {
             Invoke("ResetShoot", timeBetweenShooting);
+        }
+        if(bulletLeft == 0 && AmmoReserve > 0)
+        {
+            _hud.OpenMessagePanelReload();
         }
         
     }
