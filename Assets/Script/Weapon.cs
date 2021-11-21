@@ -68,7 +68,7 @@ public class Weapon : MonoBehaviour
             
         if (playerTrigger != null)
         {
-            playerTrigger.hud.OpenMessagePanel("");
+            playerTrigger.hud.OpenMessagePanel();
             pickingItem = true;
         };
     }

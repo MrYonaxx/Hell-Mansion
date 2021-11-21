@@ -16,6 +16,7 @@ using Vector3 = UnityEngine.Vector3;
 public class PlayerControl : MonoBehaviour
 {
 
+	public Transform cameraTransform;
 	public Transform[] rightBone;
 	public Arsenal[] arsenal;
 	public AudioSource audiosource;
@@ -37,6 +38,8 @@ public class PlayerControl : MonoBehaviour
 //	public Image [] Amo;
 //	public Sprite amo;
 	public TextController TextBox;
+
+	public AudioClip audioFootstep;
 
 	CharacterController characterController;
 	private bool canInput = true;
@@ -139,9 +142,10 @@ public class PlayerControl : MonoBehaviour
 		float rayLength;
 		AimingRay = Cam.ScreenPointToRay(Input.mousePosition);
 		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+		Vector3 pointToLook;
 		if (groundPlane.Raycast(AimingRay, out rayLength) && alive)
 		{
-			Vector3 pointToLook = AimingRay.GetPoint(rayLength);
+			pointToLook = AimingRay.GetPoint(rayLength);
 			//Debug.DrawLine(cameraRay.origin, pointToLook, Color.cyan);
 			RaycastHit rayHit;
 			if (Physics.Raycast(AimingRay, out rayHit))
@@ -168,10 +172,35 @@ public class PlayerControl : MonoBehaviour
 				}
 					
 			}
-			
-			
+			else // Si on pointe sur du vide on regarde dans la direction de la souris
+			{
+				transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+			}
+
+			// Set Camera Transform
+			float distanceMin = 8;
+			float distanceMax = 40;
+			float elasticity = 3f;
+			float distance = (pointToLook - this.transform.position).sqrMagnitude;
+			if (distance > distanceMin)
+			{
+				float pos = elasticity * Mathf.Clamp((distance - distanceMin) / (distanceMax - distanceMin), 0, 1);
+				cameraTransform.localPosition = new Vector3(0, 0, pos);
+
+			}
+			else
+			{
+				cameraTransform.localPosition = Vector3.zero;
+			}
+
 		}
+
+
+
 	}
+
+
+
 	// ReSharper disable Unity.PerformanceAnalysis
 	void Move()
 	{
@@ -186,8 +215,8 @@ public class PlayerControl : MonoBehaviour
 			Vector3 direction = right * _input.x + forward * _input.z;
 			direction.Normalize();
 			
-			animator.SetFloat("X", direction.x);
-			animator.SetFloat("Y", direction.z);
+			animator.SetFloat("X", direction.z);
+			animator.SetFloat("Y", direction.x);
 
 
 			if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) // 2 Direction
@@ -277,6 +306,11 @@ public class PlayerControl : MonoBehaviour
 			
 	}
 
+
+	public void PlayFootstep()
+    {
+		AudioManager.Instance?.PlaySound(audioFootstep, 0.1f, 0.9f, 1.1f);
+	}
 
 	
 	
