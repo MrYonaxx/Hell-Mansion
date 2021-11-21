@@ -251,7 +251,7 @@ MonoBehaviour:
   damage: 8
   timeBetweenShooting: 1.5
   spread: 0
-  range: 7
+  range: 5
   reloadTime: 1
   timeBetweenShots: 0
   magazineSizeInitial: 35
@@ -265,6 +265,9 @@ MonoBehaviour:
   GunShotClip: {fileID: 8300000, guid: 0947d6b23fe3ca149b4a55c4e7906d78, type: 3}
   source: {fileID: 6435902773844557145}
   audioPitch: {x: 0.9, y: 1.1}
+  LayerMaskRaycast:
+    serializedVersion: 2
+    m_Bits: 192
   muzzlePrefab: {fileID: 1336949550903370, guid: b7d944e2852026f459b30e8b54fab523, type: 3}
   muzzlePosition: {fileID: 6932632590366743825}
   bulletLeft: 0

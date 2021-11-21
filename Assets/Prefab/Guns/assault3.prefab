@@ -265,5 +265,10 @@ MonoBehaviour:
   GunShotClip: {fileID: 8300000, guid: a83a161037fdfa64d8627102ca967e91, type: 3}
   source: {fileID: 7085868623961867005}
   audioPitch: {x: 0.9, y: 1.1}
+  LayerMaskRaycast:
+    serializedVersion: 2
+    m_Bits: 192
   muzzlePrefab: {fileID: 1336949550903370, guid: 301cd398d6932ac40ae61100c3ae39d9, type: 3}
   muzzlePosition: {fileID: 4493621932611087144}
+  bulletLeft: 0
+  bulletsShot: 0

@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
     public int facingDirection { get; private set; } //is useless for now but maybe useful
     public Rigidbody rb { get; private set; }
     public RaycastHit rayHit;
+    public HealthGUI healthBar;
     public Animator anim { get; private set; }
     public GameObject aliveGameObject { get; private set; } //la un truc spécifique au tuto à enlever après peut être, parce que juste un game object qui référence un objet dans la scène en dessous du monstre
     public FieldOfView minFieldOfView { get; private set; } //maybe two of them for min and max agro range
@@ -33,7 +34,8 @@ public class Entity : MonoBehaviour
     public virtual void Start()
     {
         facingDirection = 1;
-        this.currentHealth = this.entityData.maxHealth;
+        currentHealth = entityData.maxHealth;
+        healthBar.setMaxHealthPoints(entityData.maxHealth);
         isStunned = false;
         aliveGameObject = transform.Find("Alive").gameObject;
         rb = aliveGameObject.GetComponent<Rigidbody>();
@@ -155,9 +157,10 @@ public class Entity : MonoBehaviour
     {
         lastDamageTime = Time.time;
 
-        this.currentHealth -= attackDetails.damageAmount;
-        this.currentStunResistance -= attackDetails.stunDamageAmount;
+        currentHealth -= attackDetails.damageAmount;
+        currentStunResistance -= attackDetails.stunDamageAmount;
         DamageHop(entityData.damageHopSpeed);
+        healthBar.setHealth(currentHealth);
         //TODO : voir pour partiules quand il est endommagé
         //Instantiate(entityData.hitParticule, aliveGameObject.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360)));
 
