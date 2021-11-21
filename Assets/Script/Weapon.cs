@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.Events;
 
 public enum WeaponType
     {
@@ -19,6 +20,9 @@ public class Weapon : MonoBehaviour
     private bool pickingItem;
     private PlayerControl playerTrigger;
     [SerializeField] private Rigidbody ElementToRotate;
+
+    [SerializeField]
+    private UnityEvent events;
     private void Update()
     {
         if (pickingItem && Input.GetButton("Pick"))
@@ -46,7 +50,9 @@ public class Weapon : MonoBehaviour
             {
                  playerTrigger.hud.CloseMessagePanel();
             }
-           
+
+            events.Invoke();
+
             Destroy(gameObject);
         }
     }
