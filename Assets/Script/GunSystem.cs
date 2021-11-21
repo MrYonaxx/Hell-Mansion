@@ -9,12 +9,14 @@ public class GunSystem : MonoBehaviour
 {
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
-    public int magazineSize, BulletsPerTap;
-    public bool allowButtonHold;
+    public int magazineSizeInitial, bulletsPerTap;
+    private int bulletShoot;
+    public int AmmoReserve = 0 ;
+    public bool allowButtonHold, infiniteAmmo;
     public Rigidbody _rb ;
     public Animator anim;
     public RaycastHit rayHit;
-        
+    public HUDController _hud;
     // --- Audio ---
     public AudioClip GunShotClip;
     public AudioSource source;
@@ -25,25 +27,22 @@ public class GunSystem : MonoBehaviour
     public GameObject muzzlePosition;
 
     
-    private int bulletLeft, bulletsShot;
+    public int bulletLeft, bulletsShot;
     private bool shooting, readyToShoot, reloading;
    
     
-    //parent.GetComponent<Animator>().SetBool("Fire", false);
-    public bool GetReloading()
-    {
-        return reloading;
-    } 
     private void Awake()
     {
-        if(source != null) source.clip = GunShotClip;
-        bulletLeft = magazineSize;
+        bulletLeft = magazineSizeInitial;
         readyToShoot = true;
+        
+        //Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void Update()
     {
         MyInput();
+        
     }
 
     private void MyInput()
@@ -55,15 +54,22 @@ public class GunSystem : MonoBehaviour
             else
                 shooting = Input.GetButtonDown("Fire1");
             // Reload
-            if (Input.GetButton("Reload") && bulletLeft < magazineSize && !reloading)
+            if (Input.GetButton("Reload") && bulletLeft < magazineSizeInitial && !reloading && AmmoReserve > 0)
+            {
                 Reload();
+            }
 
             //Shoot
-            if (readyToShoot && shooting && !reloading && bulletLeft > 0)
+            if (readyToShoot && shooting && !reloading && (bulletLeft > 0 || infiniteAmmo ))
             {
-                //anim.SetLayerWeight(1, 1);
+                
+                bulletShoot = bulletsPerTap;
+                if (source != null)
+                {
+                    AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
+
+                }
                 Shoot();
-                Debug.Log("Shoot");
             }
         }
     }
@@ -71,13 +77,24 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         Debug.Log("reload en cours");
+        StartCoroutine(_hud.StartReload(reloadTime));
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
     }
 
     private void ReloadFinished()
     {
-        bulletLeft = magazineSize;
+        int bulletReload = magazineSizeInitial - bulletLeft;
+        if (AmmoReserve > bulletReload)
+        {
+            bulletLeft += bulletReload;
+            AmmoReserve -= bulletReload;
+        }
+        else 
+        {
+            bulletLeft += AmmoReserve;
+            AmmoReserve -= AmmoReserve;
+        }
         reloading = false;
     }
 
@@ -89,65 +106,80 @@ public class GunSystem : MonoBehaviour
             var flash = Instantiate(muzzlePrefab, muzzlePosition.transform);
         }
         
+        // spread 
+
+        var x = Random.Range(-spread, spread);
+        var z = Random.Range(-spread, spread);
+        Vector3 direction = new Vector3(x, 0, z);
+        
+        
         //Raycast
-        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward, out rayHit, range))
+        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward + direction, out rayHit,range))
         {
-            Debug.Log(rayHit.collider.name);
             if (rayHit.collider.CompareTag("Enemy"))
-                rayHit.collider?.GetComponent<Health>()?.TakeDamage(damage);
-            Debug.Log("hit");
+            {
+                AttackDetails currentdamage;
+                currentdamage.position = rayHit.collider.transform.position;
+                currentdamage.damageAmount = damage;
+                currentdamage.stunDamageAmount = 1;
+                rayHit.collider.GetComponentInParent<Ennemy1>().Damage(currentdamage);
+                Debug.Log("hit");
+            }
+            
         }
         else
         {
             Debug.Log(" No hit");
         }
-        // --- Handle Audio ---
-        if (source != null)
+        
+        if (!infiniteAmmo)
         {
-            AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
-            // --- Instantiate prefab for audio, delete after a few seconds ---
-            /*AudioSource newAS = Instantiate(source);
-            
-                // --- Change pitch to give variation to repeated shots ---
-                newAS.outputAudioMixerGroup.audioMixer.SetFloat("Pitch", Random.Range(audioPitch.x, audioPitch.y));
-                newAS.pitch = Random.Range(audioPitch.x, audioPitch.y);
-
-                // --- Play the gunshot sound ---
-                newAS.PlayOneShot(GunShotClip);
-
-                // --- Remove after a few seconds. Test script only. When using in project I recommend using an object pool ---
-                Destroy(newAS.gameObject, timeBetweenShooting);*/
-            
+            bulletLeft--;
             
         }
-        bulletLeft--;
-        anim.SetBool("Fire", true);
-        Invoke("ResetShoot", timeBetweenShooting);
+
+        bulletShoot--;
+        if (bulletShoot > 0 && bulletLeft > 0)
+        {
+            Invoke("Shoot", timeBetweenShots);
+        }
+        else if (bulletLeft > 0 && bulletLeft == 0)
+        {
+            Invoke("ResetShoot", timeBetweenShooting);
+        }
+        else
+        {
+            Invoke("ResetShoot", timeBetweenShooting);
+        }
         
     }
 
     private void OnDrawGizmos()
     {
+     
         bool isHit = Physics.Raycast(_rb.transform.position, _rb.transform.forward, out rayHit, range);
-        float MaxDistance = 10f;
+       
         if (isHit)
         {
             Gizmos.color= Color.red;
-            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward * rayHit.distance);
-            
+            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward  * rayHit.distance);
         }  
         else
         {
             Gizmos.color= Color.blue;
-            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward * MaxDistance);
-            
-        }  
+            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward * range);
+        }
     }
 
     private void ResetShoot()
     {
-        readyToShoot = true;
-        anim.SetBool("Fire", false);
+        if (bulletLeft <= 0 && AmmoReserve <= 0)
+        {
+            GetComponentInParent<PlayerControl>().resetArsenal();
+        }
+        else
+        {
+            readyToShoot = true;
+        }
     }
-    
 }

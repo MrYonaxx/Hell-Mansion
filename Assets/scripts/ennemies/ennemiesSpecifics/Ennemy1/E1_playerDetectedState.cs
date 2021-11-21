@@ -23,13 +23,18 @@ public class E1_playerDetectedState : PlayerDetectedState
     public override void logicUpdate()
     {
         base.logicUpdate();
-        if(performLongRangeAction)
+        if(performCloseRangeAction)
+        {
+            stateMachine.changeState(ennemy.meleeAttackState);
+        }
+        else if(performLongRangeAction)
         {
             stateMachine.changeState(ennemy.chargeState);
         } else if (!isPlayerInMaxAgroRange)
         {
             stateMachine.changeState(ennemy.lookForPlayerState);
         }
+
     }
 
     public override void physicsUpdate()

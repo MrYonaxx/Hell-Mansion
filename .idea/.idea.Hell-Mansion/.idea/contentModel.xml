@@ -6,25 +6,62 @@
     <e p="D:\Martin\UQAC\MaitriseJeu\ConceptionJeuVidéo\Git Mansion\Hell-Mansion" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="3dassets" t="Include">
+          <e p="kenney_platformerkit2" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Beautiful Progress Bar Free - CYKO" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="SliderScripts.cs" t="Include" />
+          </e>
+        </e>
+        <e p="GUI" t="Include">
+          <e p="Emerald Treasure" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Script" t="Include">
+          <e p="BoardManager.cs" t="Include" />
+          <e p="DoorNextRoom.cs" t="Include" />
           <e p="FlashObject.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="GunSystem.cs" t="Include" />
           <e p="Health.cs" t="Include" />
           <e p="Helpers.cs" t="Include" />
+          <e p="HUDController.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="PlayerControl.cs" t="Include" />
+          <e p="Room.cs" t="Include" />
+          <e p="RoomDatabase.cs" t="Include" />
+          <e p="RoomManager.cs" t="Include" />
           <e p="SimulateEnnemy.cs" t="Include" />
+          <e p="TextController.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Audio" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+          </e>
+          <e p="CameraController.cs" t="Include" />
+          <e p="CharacterStat.cs" t="Include" />
+          <e p="Dialogues" t="Include">
+            <e p="Dialogue.cs" t="Include" />
+            <e p="DialogueManager.cs" t="Include" />
+          </e>
           <e p="ennemies" t="Include">
             <e p="ennemiesSpecifics" t="Include">
               <e p="Ennemy1" t="Include">
                 <e p="E1_chargeState.cs" t="Include" />
+                <e p="E1_deathState.cs" t="Include" />
                 <e p="E1_idleState.cs" t="Include" />
                 <e p="E1_lookForPlayerState.cs" t="Include" />
+                <e p="E1_MeleeAttackState.cs" t="Include" />
                 <e p="E1_moveState.cs" t="Include" />
                 <e p="E1_playerDetectedState.cs" t="Include" />
+                <e p="E1_stunState.cs" t="Include" />
                 <e p="Ennemy1.cs" t="Include" />
               </e>
             </e>
@@ -32,26 +69,99 @@
             <e p="FieldOfView.cs" t="Include" />
             <e p="FieldOfViewEditor.cs" t="Include" />
             <e p="FiniteStateMachine" t="Include">
+              <e p="animationToStateMachine.cs" t="Include" />
               <e p="FSM.cs" t="Include" />
               <e p="state.cs" t="Include" />
             </e>
             <e p="states" t="Include">
+              <e p="AttackState.cs" t="Include" />
               <e p="ChargeState.cs" t="Include" />
               <e p="data" t="Include">
                 <e p="D_chargeState.cs" t="Include" />
+                <e p="D_deathState.cs" t="Include" />
                 <e p="D_idleState.cs" t="Include" />
                 <e p="D_LookForPlayerState.cs" t="Include" />
+                <e p="D_meleeAttackState.cs" t="Include" />
                 <e p="D_moveState.cs" t="Include" />
                 <e p="D_PlayerDetected.cs" t="Include" />
+                <e p="D_StunState.cs" t="Include" />
                 <e p="D_temporayEntity.cs" t="Include" />
-                <e p="D_VirtualEnnemies.cs" t="Include" />
               </e>
+              <e p="DeathState.cs" t="Include" />
               <e p="IdleState.cs" t="Include" />
               <e p="LookForPlayerState.cs" t="Include" />
+              <e p="MeleeAttackState.cs" t="Include" />
               <e p="MoveState.cs" t="Include" />
               <e p="PlayerDetectedState.cs" t="Include" />
+              <e p="StunState.cs" t="Include" />
             </e>
-            <e p="VirtualEnnemies.cs" t="Include" />
+            <e p="Structs" t="Include">
+              <e p="AttackDetails.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Feedback" t="Include">
+            <e p="AfterImageEffect.cs" t="Include" />
+            <e p="AnimationEvent.cs" t="Include" />
+            <e p="BlinkScript.cs" t="Include" />
+            <e p="FeedbackManager.cs" t="Include" />
+            <e p="IMotionSpeed.cs" t="Include" />
+            <e p="Shake.cs" t="Include" />
+            <e p="ShakeSprite.cs" t="Include" />
+          </e>
+          <e p="GUI" t="Include">
+            <e p="HealthGUI.cs" t="Include" />
+          </e>
+          <e p="IInteractable.cs" t="Include" />
+          <e p="InteractionBase.cs" t="Include" />
+          <e p="Misc" t="Include">
+            <e p="Comment.cs" t="Include" />
+            <e p="HideAtStartup.cs" t="Include" />
+            <e p="TriggerEvent.cs" t="Include" />
+          </e>
+          <e p="PlayerInteraction.cs" t="Include" />
+          <e p="Stats" t="Include">
+            <e p="ElementalResistance.cs" t="Include" />
+            <e p="Stat.cs" t="Include" />
+            <e p="StatEnum.cs" t="Include" />
+            <e p="StatModifier.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="TileSet" t="Include">
+          <e p="Isometric_Tiles_Pixel_Art_v01_2_DevilsworkShop" t="Include">
+            <e p="Isometric_Tiles_Pixel_Art" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
           </e>
         </e>
       </e>
