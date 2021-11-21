@@ -7,4 +7,6 @@ public class D_deathState : ScriptableObject
 {
     public GameObject deathChunckParticules;
     public GameObject deathBloodParticules;
+    [SerializeField]
+    public DropStruct[] drops; 
 }
