@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class HUDController : MonoBehaviour
 {
     public GameObject MessagePanel;
+	public GameObject MessagePanelReload;
     public GameObject reloadGameObject;
     public Slider reloadSlider;
-    public void OpenMessagePanel(string Text)
+    public void OpenMessagePanel()
     {
 	    MessagePanel.SetActive(true);
 	    //set text when we will custom 
@@ -18,7 +19,17 @@ public class HUDController : MonoBehaviour
     {
 		MessagePanel.SetActive(false);
     }
-
+	public void OpenMessagePanelReload()
+    {
+	    MessagePanelReload.SetActive(true);
+	    //set text when we will custom 
+    }
+	
+    public void CloseMessagePanelReload()
+    {
+		MessagePanelReload.SetActive(false);
+    }
+	
     public IEnumerator StartReload(float reloadtime)
     {
 	    Debug.Log("anim reload");
