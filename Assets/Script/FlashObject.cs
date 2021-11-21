@@ -9,19 +9,19 @@ public class FlashObject : MonoBehaviour
     public Color FlashColour = Color.red;
 
     public Renderer GameMesh;
-    public float FlashDelay = 0.25f;
+    public float FlashDelay = 0.5f;
     public int TimesToFlash = 3;
 
-    public void Flash(){
+    public void Flash(float duration){
 
-        StartCoroutine(OnCollisionEnter());
+        StartCoroutine(Coroutinedamage(duration));
     }
 
-    private IEnumerator  OnCollisionEnter() {
+    private IEnumerator  Coroutinedamage(float duration) {
         var renderer = GameMesh; 
         if (renderer != null) {  
 
-            for (int i = 1; i <= TimesToFlash; i++) {
+            for (int i = 1; i <= duration/(FlashDelay * 2); i++) {
                 foreach (var mat in renderer.materials)
                 {
                     mat.color = FlashColour; 

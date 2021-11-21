@@ -28,7 +28,11 @@ public class E1_chargeState : ChargeState
     public override void logicUpdate()
     {
         base.logicUpdate();
-        if(isDetectingWall)
+        if (performCloseRangeAction)
+        {
+            stateMachine.changeState(ennemy.meleeAttackState);
+        }
+        else if (isDetectingWall)
         {
             stateMachine.changeState(ennemy.lookForPlayerState);
         }

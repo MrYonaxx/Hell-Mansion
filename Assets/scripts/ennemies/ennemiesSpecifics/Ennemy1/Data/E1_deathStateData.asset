@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff324a6faa3d1a4e8b0df1fc2567406, type: 3}
+  m_Name: E1_deathStateData
+  m_EditorClassIdentifier: 
+  deathChunckParticules: {fileID: 0}
+  deathBloodParticules: {fileID: 0}
+  drops:
+  - drop: {fileID: 287090012035998203, guid: 777060a5a5f57cb4fa9b4380f9f619b0, type: 3}
+    dropChance: 10
+  - drop: {fileID: 287090012035998203, guid: 54970d69518ff4242a352322dba07d11, type: 3}
+    dropChance: 20
+  - drop: {fileID: 287090012035998203, guid: db685b5d7965d854eb376aba8b8b478d, type: 3}
+    dropChance: 30
+  - drop: {fileID: 287090012035998203, guid: 0411c8c2f2e6207478ca827b8668b0e9, type: 3}
+    dropChance: 50
