@@ -39,6 +39,8 @@ public class PlayerControl : MonoBehaviour
 //	public Sprite amo;
 	public TextController TextBox;
 
+	public AudioClip audioFootstep;
+
 	CharacterController characterController;
 	private bool canInput = true;
 
@@ -213,8 +215,8 @@ public class PlayerControl : MonoBehaviour
 			Vector3 direction = right * _input.x + forward * _input.z;
 			direction.Normalize();
 			
-			animator.SetFloat("X", direction.x);
-			animator.SetFloat("Y", direction.z);
+			animator.SetFloat("X", direction.z);
+			animator.SetFloat("Y", direction.x);
 
 
 			if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) // 2 Direction
@@ -304,6 +306,11 @@ public class PlayerControl : MonoBehaviour
 			
 	}
 
+
+	public void PlayFootstep()
+    {
+		AudioManager.Instance?.PlaySound(audioFootstep, 0.1f, 0.7f, 1.1f);
+	}
 
 	
 	

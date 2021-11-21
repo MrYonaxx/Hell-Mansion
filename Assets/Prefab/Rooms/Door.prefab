@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3926384158696394010}
   - component: {fileID: 4583699562340399025}
   - component: {fileID: 4409825408538066538}
+  - component: {fileID: 8873471135495280647}
   m_Layer: 11
   m_Name: Door
   m_TagString: Untagged
@@ -76,6 +77,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8873471135495280647}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onlyOnce: 0
 --- !u!114 &4409825408538066538
 MonoBehaviour:
@@ -91,6 +104,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   doorOpen: {fileID: 6889384585145907324}
+--- !u!95 &8873471135495280647
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130423821956855845}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2b57215926abc54a9d8cb359d3d4e20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2755745052826337436
 GameObject:
   m_ObjectHideFlags: 0

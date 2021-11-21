@@ -1496,23 +1496,7 @@ PrefabInstance:
       objectReference: {fileID: 1542459608}
     - target: {fileID: 2962719169207884287, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3221559977783659237, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6838822
-      objectReference: {fileID: 0}
-    - target: {fileID: 3221559977783659237, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3221559977783659237, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3221559977783659237, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7295925
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3221559977783659237, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1564,7 +1548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630741188311842628, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7554293270177571653, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: m_Name
@@ -1573,6 +1557,10 @@ PrefabInstance:
     - target: {fileID: 7554293270177571653, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136025619982721191, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
