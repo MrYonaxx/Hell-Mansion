@@ -66,7 +66,7 @@ public class GunSystem : MonoBehaviour
             {
                 
                 bulletShoot = bulletsPerTap;
-                if (source != null)
+                if (GunShotClip != null)
                 {
                     AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
 
