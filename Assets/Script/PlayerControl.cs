@@ -309,7 +309,7 @@ public class PlayerControl : MonoBehaviour
 
 	public void PlayFootstep()
     {
-		AudioManager.Instance?.PlaySound(audioFootstep, 0.1f, 0.7f, 1.1f);
+		AudioManager.Instance?.PlaySound(audioFootstep, 0.1f, 0.9f, 1.1f);
 	}
 
 	
