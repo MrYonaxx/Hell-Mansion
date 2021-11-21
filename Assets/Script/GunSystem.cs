@@ -22,6 +22,7 @@ public class GunSystem : MonoBehaviour
     public AudioSource source;
     public Vector2 audioPitch = new Vector2(.9f, 1.1f);
 
+    public LayerMask LayerMaskRaycast;
     // --- Muzzle ---
     public GameObject muzzlePrefab;
     public GameObject muzzlePosition;
@@ -114,15 +115,17 @@ public class GunSystem : MonoBehaviour
         
         
         //Raycast
-        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward + direction, out rayHit,range))
+        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward + direction, out rayHit,range,LayerMaskRaycast))
         {
-            if (rayHit.collider.CompareTag("Enemy"))
+            Entity ennemyHit = rayHit.collider.GetComponentInParent<Entity>();
+            Debug.Log(rayHit.collider.name);
+            if (ennemyHit)
             {
                 AttackDetails currentdamage;
                 currentdamage.position = rayHit.collider.transform.position;
                 currentdamage.damageAmount = damage;
                 currentdamage.stunDamageAmount = 1;
-                rayHit.collider.GetComponentInParent<Ennemy1>().Damage(currentdamage);
+                ennemyHit.Damage(currentdamage);
                 Debug.Log("hit");
             }
             

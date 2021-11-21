@@ -16,6 +16,7 @@
             <e p="SliderScripts.cs" t="Include" />
           </e>
         </e>
+        <e p="BlockRota.cs" t="Include" />
         <e p="GUI" t="Include">
           <e p="Emerald Treasure" t="Include">
             <e p="Fonts" t="Include">
@@ -26,6 +27,7 @@
         <e p="Script" t="Include">
           <e p="BoardManager.cs" t="Include" />
           <e p="DoorNextRoom.cs" t="Include" />
+          <e p="EnnemySpawner.cs" t="Include" />
           <e p="FlashObject.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GunSystem.cs" t="Include" />
@@ -97,6 +99,7 @@
             </e>
             <e p="Structs" t="Include">
               <e p="AttackDetails.cs" t="Include" />
+              <e p="DropStruct.cs" t="Include" />
             </e>
           </e>
           <e p="Feedback" t="Include">

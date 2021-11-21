@@ -10,24 +10,16 @@ public class Health : MonoBehaviour
     public int maxShieldPoints = 3;
     public int maxHealthPoints = 3;
     public AudioClip hitSound;
-
-    public HealthGUI HealthBar;
     public int currentHealth;
     public int currentShield;
     private Animator animator;
-
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
-    public Sprite shield;
-    public Sprite shieldEmpty;
+    
     public Image [] Heart;
     public Image [] Shield;
 
     private bool isVulnerable;
     public float invulnerailityTime;
     
-    [Header("Debug")]
-    public bool hideOnDeath = false;
 
     public int getCurrentHealth()
     {
@@ -106,22 +98,24 @@ public class Health : MonoBehaviour
             {
                 currentHealth -= amount;
             }
-        }
-        else
-        {
-            currentHealth -= amount;
-        }
-        AudioManager.Instance?.PlaySound(hitSound, 2);
-        //HealthBar.setHealth(currentHealth); // Actualise la barre de vie
-        GetComponent<FlashObject>().Flash();
-        //GetComponent<PlayerControl>().audio.Play();
-        if (currentHealth <= 0)
-        {
-            // we're dead
-            animator.SetBool("Die", true);
-            GetComponent<PlayerControl>().setAlive(false);
-            Destroy(GetComponent<CharacterController>());
-            //GetComponent<PlayerControl>().gameObject.SetActive(false);
+            
+            AudioManager.Instance?.PlaySound(hitSound, 2);
+            UpdateSprite();
+            //HealthBar.setHealth(currentHealth); // Actualise la barre de vie
+            GetComponent<FlashObject>().Flash(invulnerailityTime);
+            //GetComponent<PlayerControl>().audio.Play();
+            if (currentHealth <= 0)
+            {
+                // we're dead
+                animator.SetBool("Die", true);
+                GetComponent<PlayerControl>().setAlive(false);
+                //GetComponent<PlayerControl>().gameObject.SetActive(false);
+            }
+            else
+            {
+                isVulnerable = false;
+                Invoke("ResetInvulnerability", invulnerailityTime);
+            }
         }
      
     }
@@ -134,13 +128,8 @@ public class Health : MonoBehaviour
     public void Revive()
     {
         setCurrentHealth(maxHealthPoints);
-        if (GetComponent<PlayerControl>())
-        {
-            animator.SetBool("Die", false);
-            GetComponent<PlayerControl>().setAlive(true);
-            gameObject.AddComponent<CharacterController>();
-            GetComponent<CharacterController>().center = Vector3.up;
-            //GetComponent<PlayerControl>().gameObject.SetActive(false);
-        }
+        UpdateSprite();
+        animator.SetBool("Die", false);
+        GetComponent<PlayerControl>().setAlive(true);
     }
 }

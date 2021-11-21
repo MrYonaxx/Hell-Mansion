@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,9 +11,13 @@ public class EnnemySpawner : MonoBehaviour
     public float spawnTime;
     public float spawnDelay;
 
+    private void Start()
+    {
+        InvokeRepeating("spawnEnnemy", spawnTime, spawnDelay);
+    }
+
     public void spawnEnnemy()
     {
-
         Instantiate(ennemyPrefab, transform.position, ennemyPrefab.transform.rotation);
         if(stopSpawning)
         {
@@ -20,7 +25,7 @@ public class EnnemySpawner : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+   /* private void OnTriggerEnter(Collider other)
     {
         if(other.GetComponent<PlayerControl>())
         {
@@ -35,5 +40,5 @@ public class EnnemySpawner : MonoBehaviour
         {
             stopSpawning = true;
         }
-    }
+    }*/
 }

@@ -9,11 +9,11 @@ public class HealthGUI : MonoBehaviour
     
     // Start is called before the first frame update
    
-    public void setHealth(int health)
+    public void setHealth(float health)
     {
         slider.value = health;
     }
-    public void setMaxHealthPoints(int health)
+    public void setMaxHealthPoints(float health)
     {
         slider.maxValue = health;
         slider.value = health;
