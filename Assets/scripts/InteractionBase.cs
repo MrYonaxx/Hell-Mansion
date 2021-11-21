@@ -19,6 +19,9 @@ public class InteractionBase : MonoBehaviour, IInteractable
     [SerializeField]
     private UnityEventPlayer eventPlayer;
 
+    [SerializeField]
+    private bool onlyOnce;
+
     public Vector3 GetPos()
     {
         return this.transform.position;
@@ -27,6 +30,11 @@ public class InteractionBase : MonoBehaviour, IInteractable
     public void CanInteract(bool b)
     {
         mouseIcon.SetActive(b);
+    }
+
+    public bool OnlyOnce()
+    {
+        return onlyOnce;
     }
 
     public void Interact(PlayerControl player)

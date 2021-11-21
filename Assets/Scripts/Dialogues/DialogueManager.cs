@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     Animator animatorFade;
     [SerializeField]
-    string sceneName;
+    private UnityEvent eventPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -76,15 +77,19 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        //TODO
-        StartCoroutine(EndDialogueCoroutine());
+        StopAllCoroutines();
+        eventPlayer.Invoke();
     }
 
-    // debug
-    private IEnumerator EndDialogueCoroutine()
+    private IEnumerator EndDialogueCoroutine(string nomScene)
     {
         animatorFade.SetBool("Fade", true);
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(nomScene);
+    }
+
+    public void LoadScene(string nomScene)
+    {
+        StartCoroutine(EndDialogueCoroutine(nomScene));
     }
 }
