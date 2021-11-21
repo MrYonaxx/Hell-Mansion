@@ -8,7 +8,7 @@ public class Door : MonoBehaviour
     [SerializeField]
     bool open = false;
     [SerializeField]
-    GameObject doorRenderer = null;
+    GameObject doorOpen = null;
 
     Collider interactionCollider = null;
 
@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
 
     public void OpenDoor(bool b)
     {
-        doorRenderer.SetActive(b);
+        doorOpen.SetActive(b);
         interactionCollider.enabled = b;
         open = b;
     }

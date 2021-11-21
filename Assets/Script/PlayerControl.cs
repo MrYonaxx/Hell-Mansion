@@ -38,6 +38,8 @@ public class PlayerControl : MonoBehaviour
 //	public Sprite amo;
 	public TextController TextBox;
 
+	CharacterController characterController;
+	private bool canInput = true;
 
 	public bool getAlive()
 	{
@@ -48,9 +50,16 @@ public class PlayerControl : MonoBehaviour
 	{
 		alive = state;
 	}
-	
+
+	public void CanInputPlayer(bool b)
+	{
+		canInput = b;
+		GetComponentInChildren<GunSystem>().CanInput = b;
+	}
+
 	void Awake()
 	{
+		characterController = GetComponent<CharacterController>();
 		//audiosource = GetComponent<AudioSource>();
 		animator = GetComponent<Animator> ();
 		if (arsenal.Length > 0)
@@ -60,24 +69,41 @@ public class PlayerControl : MonoBehaviour
 	
 	private void Update()
 	{
-		GatherInput();
-		Look();
-		if(GetComponentInChildren<GunSystem>().infiniteAmmo){
-			TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, -1);
-		}
-		else{
-			TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
+		if (canInput)
+		{
+			GatherInput();
+			Look();
+			if (GetComponentInChildren<GunSystem>().infiniteAmmo)
+			{
+				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, -1);
+			}
+			else
+			{
+				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
+			}
 		}
 	}
 	
 	void FixedUpdate()
 	{
-		Move();
+		if(canInput)
+			Move();
 		
 	}
+
 	void GatherInput()
 	{
-		if (Input.GetAxisRaw("Horizontal") == -1 && Input.GetAxisRaw("Vertical") == -1)
+		_input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+
+		// On calcul input en fonction de la rotation de la camera
+		Vector3 forward = Cam.transform.forward;
+		forward.y = 0;
+		forward.Normalize();
+		Vector3 right = Cam.transform.right;
+		_input = right * _input.x + forward * _input.z;
+		_input.Normalize();
+
+		/*if (Input.GetAxisRaw("Horizontal") == -1 && Input.GetAxisRaw("Vertical") == -1)
         	_input = new Vector3(-1,0,0);
 		if (Input.GetAxisRaw("Horizontal") == -1 && Input.GetAxisRaw("Vertical") == 0)
 			_input = new Vector3(-1,0,1);
@@ -92,7 +118,10 @@ public class PlayerControl : MonoBehaviour
 		if (Input.GetAxisRaw("Horizontal") == 1 && Input.GetAxisRaw("Vertical") == -1)
 			_input = new Vector3(0,0,-1);
 		if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == -1)
-			_input = new Vector3(-1,0,-1);
+			_input = new Vector3(-1,0,-1);*/
+
+
+
 		//Debug.Log(Input.GetAxisRaw("Vertical"));
 		//Debug.Log(Input.GetAxisRaw("Horizontal"));
 		//_input = new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical"));
@@ -161,16 +190,16 @@ public class PlayerControl : MonoBehaviour
 			animator.SetFloat("Y", direction.z);
 
 
-			if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") != 0) // 2 Direction
+			if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) // 2 Direction
 			{
 				//transform.position = transform.position +
 				//                     _input * (_input.magnitude * _run  * Time.deltaTime);
 				//_rb.velocity = _input * (_input.magnitude * _run * Time.deltaTime); //(transform.position + transform.forward * (_input.magnitude * _run/1.5f * Time.deltaTime));
-				CharacterController c = GetComponent<CharacterController>();
-				c.Move(_input * (_input.magnitude * _run*1.5f * Time.deltaTime));
+				//CharacterController c = GetComponent<CharacterController>();
+				characterController.Move(_input * _run * Time.deltaTime);
 				//_rb.AddForce(_input * (_input.magnitude * _run * Time.deltaTime), ForceMode.Force);
 			}
-			else if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") == 0) // 1 Direction
+			/*else if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") == 0) // 1 Direction
 			{
 				//transform.position =
 				//	transform.position + _input * (_input.magnitude * _run / 2f * Time.deltaTime);
@@ -182,13 +211,11 @@ public class PlayerControl : MonoBehaviour
 			else if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") != 0)
 			{
 				CharacterController c = GetComponent<CharacterController>();
-				c.Move(_input * (_input.magnitude * _run * Time.deltaTime));
-			}
+				characterController.Move(_input * (_input.magnitude * _run * Time.deltaTime));
+			}*/
 			else // rien à l'arrêt
             {
-				CharacterController c = GetComponent<CharacterController>();
-				c.Move(Vector3.zero);
-				//_rb.velocity = Vector3.zero;
+				characterController.Move(Vector3.zero);
 			}
 		}
 		else
