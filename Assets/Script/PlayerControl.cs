@@ -16,6 +16,7 @@ using Vector3 = UnityEngine.Vector3;
 public class PlayerControl : MonoBehaviour
 {
 
+	public Transform cameraTransform;
 	public Transform[] rightBone;
 	public Arsenal[] arsenal;
 	public AudioSource audiosource;
@@ -139,9 +140,10 @@ public class PlayerControl : MonoBehaviour
 		float rayLength;
 		AimingRay = Cam.ScreenPointToRay(Input.mousePosition);
 		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+		Vector3 pointToLook;
 		if (groundPlane.Raycast(AimingRay, out rayLength) && alive)
 		{
-			Vector3 pointToLook = AimingRay.GetPoint(rayLength);
+			pointToLook = AimingRay.GetPoint(rayLength);
 			//Debug.DrawLine(cameraRay.origin, pointToLook, Color.cyan);
 			RaycastHit rayHit;
 			if (Physics.Raycast(AimingRay, out rayHit))
@@ -168,10 +170,35 @@ public class PlayerControl : MonoBehaviour
 				}
 					
 			}
-			
-			
+			else // Si on pointe sur du vide on regarde dans la direction de la souris
+			{
+				transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+			}
+
+			// Set Camera Transform
+			float distanceMin = 8;
+			float distanceMax = 40;
+			float elasticity = 3f;
+			float distance = (pointToLook - this.transform.position).sqrMagnitude;
+			if (distance > distanceMin)
+			{
+				float pos = elasticity * Mathf.Clamp((distance - distanceMin) / (distanceMax - distanceMin), 0, 1);
+				cameraTransform.localPosition = new Vector3(0, 0, pos);
+
+			}
+			else
+			{
+				cameraTransform.localPosition = Vector3.zero;
+			}
+
 		}
+
+
+
 	}
+
+
+
 	// ReSharper disable Unity.PerformanceAnalysis
 	void Move()
 	{

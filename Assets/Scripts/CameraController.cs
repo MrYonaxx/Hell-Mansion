@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
     List<TargetsCamera> targets = new List<TargetsCamera>();
 
     [Header("Object Reference")]
-    //[SerializeField]
+    [SerializeField]
     private Camera cam;
     public Camera Camera
     {
@@ -64,7 +64,8 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        cam = GetComponent<Camera>();
+        if(cam == null)
+            cam = GetComponent<Camera>();
         if (boundsCamera == null)
         {
             boundsCamera = this.gameObject.AddComponent<BoxCollider>();
@@ -105,15 +106,22 @@ public class CameraController : MonoBehaviour
         else if (bluePlane.max.y > d.max.y)
             y = d.max.y - bluePlane.max.y;
 
+        float z = 0;
+        if (bluePlane.min.z < d.min.z)
+            z = d.min.z - bluePlane.min.z;
+        else if (bluePlane.max.z > d.max.z)
+            z = d.max.z - bluePlane.max.z;
+
         //Calculate new Position for the camera by calculating centerpoint with an offset
         newPos = centerPoint + offset;
         newPos.x += x;
         newPos.y += y;
+        newPos.z += z;
        // newPos.z = cam.transform.position.z;
        // newPos.z += z;
 
         cameraView = bluePlane;
-        cameraView.center += new Vector3(x, y);
+        cameraView.center += new Vector3(x, y, z);
 
         //Change transform position smoothly without jitter from new Pos vector we got.
         transform.position = Vector3.SmoothDamp(transform.position, newPos, ref velocity, Mathf.Max(0, smoothTime + bonusSmoothTime));

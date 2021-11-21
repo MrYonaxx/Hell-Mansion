@@ -55,6 +55,7 @@ public class RoomManager : MonoBehaviour
 
         // On instancie la room
         Room room = Instantiate(GetRoom(), new Vector3(posX, 0, 0), Quaternion.identity);
+        room.transform.Rotate(new Vector3(0, -45, 0));
         room.eventEndRoom.AddListener(CreateRoom);
         posX += 100;
         levelLayout.Add(room);
