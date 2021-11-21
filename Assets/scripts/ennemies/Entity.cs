@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Entity : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class Entity : MonoBehaviour
     private float currentHealth;
     private float currentStunResistance;
     private float lastDamageTime;
+
+    public delegate void ActionEntity(Entity e);
+    public event ActionEntity OnDead;
+
     public virtual void Start()
     {
         facingDirection = 1;
@@ -171,6 +176,7 @@ public class Entity : MonoBehaviour
         if(currentHealth<=0)
         {
             isDead = true;
+            OnDead?.Invoke(this);
         }
     }
 
