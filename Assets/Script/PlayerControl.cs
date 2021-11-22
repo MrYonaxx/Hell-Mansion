@@ -33,7 +33,7 @@ public class PlayerControl : MonoBehaviour
 	private Ray AimingRay;
 	private Animator animator;
 	
-	
+	public PauseHUD Pause;
 	public Image[] ListGun;
 //	public Image [] Amo;
 //	public Sprite amo;
@@ -85,6 +85,11 @@ public class PlayerControl : MonoBehaviour
 				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
 			}
 		}
+		
+		 if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause.OnPause();
+        }
 	}
 	
 	void FixedUpdate()

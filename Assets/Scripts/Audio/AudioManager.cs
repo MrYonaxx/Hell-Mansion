@@ -150,7 +150,7 @@ namespace Audio
                 audioIndex = 0;
             }
             audioArray[audioIndex].clip = sound;
-            audioArray[audioIndex].volume = soundVolumeMax * volumeMultiplier;
+            audioArray[audioIndex].volume = volumeMultiplier;
             audioArray[audioIndex].pitch = Random.Range(pitchMin, pitchMax);
             audioArray[audioIndex].Play();
         }

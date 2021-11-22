@@ -10,6 +10,8 @@ public class HUDController : MonoBehaviour
 	public GameObject MessagePanelReload;
     public GameObject reloadGameObject;
     public Slider reloadSlider;
+	
+
     public void OpenMessagePanel()
     {
 	    MessagePanel.SetActive(true);
@@ -44,5 +46,6 @@ public class HUDController : MonoBehaviour
 	    }
 	    reloadGameObject.SetActive(false);
     }
+
 
 }

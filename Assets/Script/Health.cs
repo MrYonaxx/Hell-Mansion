@@ -20,6 +20,7 @@ public class Health : MonoBehaviour
     private bool isVulnerable;
     public float invulnerailityTime;
     
+    public GameOverHUD GameOver;
 
     public int getCurrentHealth()
     {
@@ -109,6 +110,7 @@ public class Health : MonoBehaviour
                 // we're dead
                 animator.SetBool("Die", true);
                 GetComponent<PlayerControl>().setAlive(false);
+                GameOver.OnDeath();
                 //GetComponent<PlayerControl>().gameObject.SetActive(false);
             }
             else
