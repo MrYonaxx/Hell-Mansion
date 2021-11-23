@@ -749,19 +749,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1069051803134504203, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1325028901035891542, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2843385901779191217, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3895872762887514742, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3953276255488158716, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: m_Layer
@@ -780,6 +780,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5149071062006418044, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
+      propertyPath: mouseIcon
+      value: 
+      objectReference: {fileID: 1900842890262040257}
+    - target: {fileID: 5149071062006418044, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 363048856800620216}
@@ -797,11 +801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6834178524040559953, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8729917165055493608, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
@@ -821,6 +825,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1965509da9996a1489366851614d4400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1900842890262040257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6834178524040559953, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
+  m_PrefabInstance: {fileID: 4951364334760440720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4951364335070615016
 PrefabInstance:
   m_ObjectHideFlags: 0
