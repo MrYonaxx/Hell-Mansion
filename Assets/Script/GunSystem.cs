@@ -127,7 +127,7 @@ public class GunSystem : MonoBehaviour
         if (Physics.Raycast(_rb.transform.position, _rb.transform.forward + direction, out rayHit,range,LayerMaskRaycast))
         {
             Entity ennemyHit = rayHit.collider.GetComponentInParent<Entity>();
-            Debug.Log(rayHit.collider.name);
+            //Debug.Log(rayHit.collider.name);
             if (ennemyHit)
             {
                 AttackDetails currentdamage;
@@ -135,13 +135,13 @@ public class GunSystem : MonoBehaviour
                 currentdamage.damageAmount = damage;
                 currentdamage.stunDamageAmount = 1;
                 ennemyHit.Damage(currentdamage);
-                Debug.Log("hit");
+                //Debug.Log("hit");
             }
             
         }
         else
         {
-            Debug.Log(" No hit");
+            //Debug.Log(" No hit");
         }
         
         if (!infiniteAmmo)

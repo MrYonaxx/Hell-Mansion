@@ -940,6 +940,14 @@ PrefabInstance:
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: CanInputPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 5927512412616517189, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685888613153353747, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7831443677934526864, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1135,7 +1143,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.3
-  m_SlopeLimit: 45
+  m_SlopeLimit: 0
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -1183,7 +1191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1784082014}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1640247079
 Light:
