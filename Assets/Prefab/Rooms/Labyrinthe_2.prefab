@@ -517,7 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2711981368982868135}
   - component: {fileID: 4923391727322112460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Entit\xE9Sortie"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1045,7 +1045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9011526604448648402}
   - component: {fileID: 1905971722115590116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1318,7 +1318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8323900849400650892}
   - component: {fileID: 8117747068242487741}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Entit\xE9Entr\xE9e"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1584,7 +1584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8594156940366154711}
   - component: {fileID: 8594156940366154708}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1627,7 +1627,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8594156940377678742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Labyrinthe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1736,7 +1736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8594156940412015406}
   - component: {fileID: 8594156940412015407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8594156941876752435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7113,6 +7113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_corner_inner
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b58b9f9dbb49c4dd695cd827efe313b1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b58b9f9dbb49c4dd695cd827efe313b1, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -7445,6 +7449,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -7925,6 +7933,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -8486,6 +8498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -9045,6 +9061,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -10006,6 +10026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_straight_v2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -10085,6 +10109,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -10486,6 +10514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -10565,6 +10597,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -11446,6 +11482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 47
@@ -11605,6 +11645,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_Name
       value: wall_straight_v2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
@@ -11766,6 +11810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_straight_v2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -11845,6 +11893,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -12406,6 +12458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 72
@@ -12726,6 +12782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 58
@@ -12805,6 +12865,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -13445,6 +13509,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -14246,6 +14314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -14565,6 +14637,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -14965,6 +15041,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_Name
       value: wall_straight_v2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
@@ -15686,6 +15766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 48
@@ -15845,6 +15929,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -16006,6 +16094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -16165,6 +16257,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -17286,6 +17382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -17446,6 +17546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -17526,6 +17630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -17605,6 +17713,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_Name
       value: wall_straight_v2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
@@ -17765,6 +17877,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -18406,6 +18522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 67
@@ -18646,6 +18766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 76
@@ -18806,6 +18930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 60
@@ -18965,6 +19093,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -20246,6 +20378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -20326,6 +20462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -20405,6 +20545,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -21606,6 +21750,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -21845,6 +21993,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_Name
       value: wall_straight_v2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
@@ -22486,6 +22638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -22645,6 +22801,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -23046,6 +23206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -23285,6 +23449,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_Name
       value: wall_straight_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
@@ -23765,6 +23933,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -24566,6 +24738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -24645,6 +24821,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 797eeb69019ed460e918f4e2be334307, type: 3}
       propertyPath: m_Name
       value: wall_arch_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 797eeb69019ed460e918f4e2be334307, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 797eeb69019ed460e918f4e2be334307, type: 3}
       propertyPath: m_RootOrder
@@ -24819,6 +24999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_straight_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -24978,6 +25162,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -25459,6 +25647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 69
@@ -25538,6 +25730,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -26099,6 +26295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -26258,6 +26458,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -27379,6 +27583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -28179,6 +28387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -28818,6 +29030,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -29859,6 +30075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -30419,6 +30639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -30738,6 +30962,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0f2049f6a4a81469d8fca7eac010e633, type: 3}
       propertyPath: m_Name
       value: wall_straight_half
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f2049f6a4a81469d8fca7eac010e633, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f2049f6a4a81469d8fca7eac010e633, type: 3}
       propertyPath: m_RootOrder
@@ -31459,6 +31687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -31619,6 +31851,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_straight_v2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -31698,6 +31934,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -32498,6 +32738,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -33459,6 +33703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -34019,6 +34267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -34179,6 +34431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_straight_v2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -34338,6 +34594,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -34739,6 +34999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 68
@@ -34818,6 +35082,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -35059,6 +35327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 64
@@ -35219,6 +35491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_straight_v2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -35298,6 +35574,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -36739,6 +37019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -37218,6 +37502,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -37699,6 +37987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_straight_v2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -38018,6 +38310,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -38339,6 +38635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -38578,6 +38878,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -39139,6 +39443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -39698,6 +40006,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -40659,6 +40971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_straight_v2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -41059,6 +41375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -41379,6 +41699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -41458,6 +41782,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_Name
       value: wall_straight_v2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
@@ -41859,6 +42187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 53
@@ -41938,6 +42270,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -42979,6 +43315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -43458,6 +43798,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_Name
       value: wall_straight_v2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d3ae17d7bfaa449b84eeeb47f7ba1e9, type: 3}
       propertyPath: m_RootOrder
@@ -44099,6 +44443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_1a (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -44659,6 +45007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 70
@@ -44818,6 +45170,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -46259,6 +46615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stair_1_side_tile_2 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -46418,6 +46778,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
@@ -46658,6 +47022,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_2 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 98dcb97d6ef3c4844b2088a0322cf004, type: 3}
       propertyPath: m_RootOrder
@@ -47058,6 +47426,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_Name
       value: stair_1_side_tile_1a (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 238b7fec883424b9a97aa5ef3a503c88, type: 3}
       propertyPath: m_RootOrder
