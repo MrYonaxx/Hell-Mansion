@@ -992,6 +992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tuto
       objectReference: {fileID: 0}
+    - target: {fileID: 7831443677934526867, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
 --- !u!1001 &8086706221963981660
@@ -1384,7 +1388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8594156942060697795, guid: 182f61133985a3c4a96fd4608b9bbea7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182f61133985a3c4a96fd4608b9bbea7, type: 3}

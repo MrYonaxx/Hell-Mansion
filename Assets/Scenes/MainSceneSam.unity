@@ -1546,11 +1546,11 @@ PrefabInstance:
     - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1542459608}
+      objectReference: {fileID: 1542459612}
     - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: roomDatabase
       value: 
-      objectReference: {fileID: 11400000, guid: c121d8278ab6c36428db64463a366a2a, type: 2}
+      objectReference: {fileID: 11400000, guid: 1612bb3db738dbd4ea278d61e12826f3, type: 2}
     - target: {fileID: 2962719169207884287, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: m_IsActive
       value: 1
