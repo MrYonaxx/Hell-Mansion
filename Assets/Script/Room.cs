@@ -43,4 +43,9 @@ public class Room : MonoBehaviour
     {
         player = newPlayer;
     }
+
+    public void SetPlayerInput(bool b)
+    {
+        player.CanInputPlayer = b;
+    }
 }
