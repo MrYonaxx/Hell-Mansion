@@ -155,7 +155,7 @@ public class PlayerControl : MonoBehaviour
              						new Vector3(rayHit.collider.transform.position.x, transform.position.y,
              							rayHit.collider.transform.position.z), transform.position);
 
-				if (GetComponentInChildren<GunSystem>() == null)
+				if (GetComponentInChildren<GunSystem>() != null)
 				{
 					if (rayHit.collider.CompareTag("Enemy") && distanceFromEnnemy <= GetComponentInChildren<GunSystem>().range)
 					{

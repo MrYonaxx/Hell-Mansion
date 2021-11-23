@@ -14,6 +14,8 @@ public class ArenaManager : MonoBehaviour
 
     [SerializeField]
     ParticleSystem particleEndArena;
+    [SerializeField]
+    GameObject objToFocus = null;
 
     int killCount = 0;
     int maxKillCount = 0;
@@ -86,9 +88,10 @@ public class ArenaManager : MonoBehaviour
 
         // à ne jamais refaire
         CameraController c = FindObjectOfType<CameraController>();
-        Door d = FindObjectOfType<Door>();
-        c.AddTarget(d.transform, 10);
+        if(objToFocus == null)
+            objToFocus = FindObjectOfType<Door>().gameObject;
+        c.AddTarget(objToFocus.transform, 10);
         yield return new WaitForSecondsRealtime(2f);
-        c.RemoveTarget(d.transform);
+        c.RemoveTarget(objToFocus.transform);
     }
 }
