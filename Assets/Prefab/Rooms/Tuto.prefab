@@ -9021,7 +9021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[0]
-      value: Je ne les vois pas mais j'entend mon fils m'appeler, je les poursuit
+      value: Comment je peux vous faire confiance?
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: dialogues.Array.data[4].sentences.Array.data[0]
