@@ -27,6 +27,7 @@ public class Weapon : MonoBehaviour
     {
         if (pickingItem && Input.GetButton("Pick"))
         {
+            playerTrigger.startNoWeapon = false;
             switch (Typeweapon)
             {
                 case WeaponType.Gun:

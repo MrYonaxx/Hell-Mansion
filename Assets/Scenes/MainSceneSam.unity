@@ -1171,6 +1171,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1740366294477548949, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740366294477548949, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5554361472596032557, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -1242,6 +1250,10 @@ PrefabInstance:
     - target: {fileID: 7831443677934526867, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831443678595143202, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7831443678904602278, guid: ea0a3a0822939ca4e9df322c5a72edd7, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1383,7 +1395,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.3
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
@@ -1535,6 +1547,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1542459608}
+    - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
+      propertyPath: roomDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: c121d8278ab6c36428db64463a366a2a, type: 2}
     - target: {fileID: 2962719169207884287, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: m_IsActive
       value: 1

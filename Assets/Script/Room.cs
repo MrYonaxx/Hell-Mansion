@@ -18,6 +18,12 @@ public class Room : MonoBehaviour
         get { return startPosition; }
     }
 
+    private PlayerControl player;
+    public PlayerControl Player
+    {
+        get { return player; }
+    }
+
 
     // Fonction initialisant la salle
     public virtual void StartRoom()
@@ -28,5 +34,18 @@ public class Room : MonoBehaviour
     public virtual void EndRoom()
     {
         eventEndRoom.Invoke();
+    }
+
+
+
+    // Donne à la salle une référence au player pour que les objets de la room puissent retrouver le player
+    public void SetPlayer(PlayerControl newPlayer)
+    {
+        player = newPlayer;
+    }
+
+    public void SetPlayerInput(bool b)
+    {
+        player.CanInputPlayer(b);
     }
 }

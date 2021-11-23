@@ -33,13 +33,14 @@ public class PlayerControl : MonoBehaviour
 	private Ray AimingRay;
 	private Animator animator;
 	
-	
+	public PauseHUD Pause;
 	public Image[] ListGun;
 //	public Image [] Amo;
 //	public Sprite amo;
 	public TextController TextBox;
 
 	public AudioClip audioFootstep;
+	public bool startNoWeapon = false;
 
 	CharacterController characterController;
 	private bool canInput = true;
@@ -57,7 +58,8 @@ public class PlayerControl : MonoBehaviour
 	public void CanInputPlayer(bool b)
 	{
 		canInput = b;
-		GetComponentInChildren<GunSystem>().CanInput = b;
+		if(GetComponentInChildren<GunSystem>() != null)
+			GetComponentInChildren<GunSystem>().CanInput = b;
 	}
 
 	void Awake()
@@ -67,6 +69,8 @@ public class PlayerControl : MonoBehaviour
 		animator = GetComponent<Animator> ();
 		if (arsenal.Length > 0)
 			resetArsenal();
+		if(startNoWeapon)
+			SetArsenal(arsenal[5]);
 		ChangeCursor(cursor);
 	}
 	
@@ -76,15 +80,12 @@ public class PlayerControl : MonoBehaviour
 		{
 			GatherInput();
 			Look();
-			if (GetComponentInChildren<GunSystem>().infiniteAmmo)
-			{
-				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, -1);
-			}
-			else
-			{
-				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
-			}
 		}
+		
+		if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause.OnPause(this);
+        }
 	}
 	
 	void FixedUpdate()
@@ -153,13 +154,17 @@ public class PlayerControl : MonoBehaviour
 				var distanceFromEnnemy = Vector3.Distance(
              						new Vector3(rayHit.collider.transform.position.x, transform.position.y,
              							rayHit.collider.transform.position.z), transform.position);
-				
-				if (rayHit.collider.CompareTag("Enemy") && distanceFromEnnemy <= GetComponentInChildren<GunSystem>().range)
+
+				if (GetComponentInChildren<GunSystem>() == null)
 				{
-					ChangeCursor(cursorReady);
-                    transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+					if (rayHit.collider.CompareTag("Enemy") && distanceFromEnnemy <= GetComponentInChildren<GunSystem>().range)
+					{
+						ChangeCursor(cursorReady);
+						transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+					}
 				}
-				else if (rayHit.collider.CompareTag("Enemy"))
+
+				if (rayHit.collider.CompareTag("Enemy"))
 				{
 					ChangeCursor(cursorAim);
 					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
@@ -168,7 +173,7 @@ public class PlayerControl : MonoBehaviour
 				{
 					ChangeCursor(cursor);
 					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-					
+
 				}
 					
 			}
@@ -260,7 +265,10 @@ public class PlayerControl : MonoBehaviour
 	}
 	// Function for equip new weapon
 	public void SetArsenal(Arsenal arsenalEquip) {
-		for (int i = 0; i < arsenal.Length; i++)
+
+		if (startNoWeapon)
+			return;
+		for (int i = 0; i < arsenal.Length-1; i++)
 		{
 			if (arsenal[i].name != arsenalEquip.name)
 			{

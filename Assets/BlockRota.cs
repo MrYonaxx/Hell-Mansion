@@ -9,7 +9,7 @@ public class BlockRota : MonoBehaviour
 
     private void Start()
     {
-        if(main_cam == null)
+        if (main_cam == null)
             main_cam = Camera.main;
     }
 
