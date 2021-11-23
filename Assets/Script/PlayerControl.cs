@@ -82,9 +82,9 @@ public class PlayerControl : MonoBehaviour
 			Look();
 		}
 		
-		 if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Pause.OnPause();
+            Pause.OnPause(this);
         }
 	}
 	
@@ -154,13 +154,17 @@ public class PlayerControl : MonoBehaviour
 				var distanceFromEnnemy = Vector3.Distance(
              						new Vector3(rayHit.collider.transform.position.x, transform.position.y,
              							rayHit.collider.transform.position.z), transform.position);
-				
-				if (rayHit.collider.CompareTag("Enemy") && distanceFromEnnemy <= GetComponentInChildren<GunSystem>().range)
+
+				if (GetComponentInChildren<GunSystem>() == null)
 				{
-					ChangeCursor(cursorReady);
-                    transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+					if (rayHit.collider.CompareTag("Enemy") && distanceFromEnnemy <= GetComponentInChildren<GunSystem>().range)
+					{
+						ChangeCursor(cursorReady);
+						transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+					}
 				}
-				else if (rayHit.collider.CompareTag("Enemy"))
+
+				if (rayHit.collider.CompareTag("Enemy"))
 				{
 					ChangeCursor(cursorAim);
 					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
@@ -169,7 +173,7 @@ public class PlayerControl : MonoBehaviour
 				{
 					ChangeCursor(cursor);
 					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-					
+
 				}
 					
 			}

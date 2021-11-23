@@ -15,9 +15,9 @@ public class GameOverHUD : MonoBehaviour
 	}
 
     public void Restart()
-    { //Plus tard car pas le nom de la scene
+    { 
         GameOver.SetActive(false);
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()

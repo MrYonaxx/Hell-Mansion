@@ -7,9 +7,12 @@ public class PauseHUD : MonoBehaviour
 {
 
     public GameObject Pause;
+    PlayerControl player;
 
-    public void OnPause()
+    public void OnPause(PlayerControl p)
 	{
+        player = p;
+        player.CanInputPlayer(false);
 		Pause.SetActive(true);
         Time.timeScale = 0;
 
@@ -17,6 +20,7 @@ public class PauseHUD : MonoBehaviour
 
     public void ResumeButton()
     {
+        player.CanInputPlayer(true);
         Pause.SetActive(false);
         Time.timeScale = 1;
     }
