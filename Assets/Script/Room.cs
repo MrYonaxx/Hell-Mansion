@@ -38,7 +38,7 @@ public class Room : MonoBehaviour
 
 
 
-    // Donne à la salle une référence au player pour que les objets de la room puissent retrouver le player
+    // Donne ï¿½ la salle une rï¿½fï¿½rence au player pour que les objets de la room puissent retrouver le player
     public void SetPlayer(PlayerControl newPlayer)
     {
         player = newPlayer;
