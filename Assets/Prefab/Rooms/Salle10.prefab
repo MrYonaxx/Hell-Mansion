@@ -51551,7 +51551,7 @@ PrefabInstance:
       objectReference: {fileID: 8086706223227799814}
     - target: {fileID: 7093406782614874027, guid: 45e1e7079a675fd41b186708895fb03c, type: 3}
       propertyPath: eventEndArena.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7093406782614874027, guid: 45e1e7079a675fd41b186708895fb03c, type: 3}
       propertyPath: eventEndArena.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
