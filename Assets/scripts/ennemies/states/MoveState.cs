@@ -19,6 +19,7 @@ public class MoveState : State
         base.DoChecks();
         isDetectingLedge = entity.checkLedge();
         isDetectingWall = entity.checkWall();
+        Debug.Log(isDetectingWall);
         isPlayerInMinAgroRange = entity.checkPlayerInMinRangeAgro();
     }
 

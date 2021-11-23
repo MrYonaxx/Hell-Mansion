@@ -147,7 +147,8 @@ public class Entity : MonoBehaviour
 
     public virtual void DamageHop(float velocity)
     {
-        velocityWorkSpace = -rb.transform.forward * velocity; //we do not need lastDamageDirection for now 
+        velocityWorkSpace.Set(0, velocity, 0);
+        //velocityWorkSpace = -rb.transform.forward * velocity; 
         rb.velocity = velocityWorkSpace;
         //alors la faudrait juste qu'il saute un peu et c'est tout.
     }
@@ -164,7 +165,7 @@ public class Entity : MonoBehaviour
 
         currentHealth -= attackDetails.damageAmount;
         currentStunResistance -= attackDetails.stunDamageAmount;
-        DamageHop(entityData.damageHopSpeed);
+       // DamageHop(entityData.damageHopSpeed);
         healthBar.setHealth(currentHealth);
         //TODO : voir pour partiules quand il est endommagé
         //Instantiate(entityData.hitParticule, aliveGameObject.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360)));
