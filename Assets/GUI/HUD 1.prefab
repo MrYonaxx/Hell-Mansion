@@ -2471,20 +2471,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 2359136276937822495}
     m_Modifications:
     - target: {fileID: 1950960020837098, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 2800000, guid: a447872c921469d4e945e39c68b7e392, type: 3}
-    - target: {fileID: 1950960020837098, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
       propertyPath: m_Name
       value: Gun Frame
-      objectReference: {fileID: 0}
-    - target: {fileID: 114889517190749642, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 201650343139990865, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224005461199175078, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
       propertyPath: m_Pivot.x
@@ -2569,22 +2557,6 @@ PrefabInstance:
     - target: {fileID: 224005461199175078, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224324607374595238, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726484719294127520, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6111333917349386598, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337876190123019810, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbee8c2f2581de44c93d4da125ac9861, type: 3}

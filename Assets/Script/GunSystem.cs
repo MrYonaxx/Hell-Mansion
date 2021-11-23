@@ -71,6 +71,14 @@ public class GunSystem : MonoBehaviour
                     AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
 
                 }
+                if (infiniteAmmo)
+                {
+                    _rb.GetComponent<PlayerControl>().TextBox.UpdateText(bulletLeft, -1);
+                }
+                else
+                {
+                    _rb.GetComponent<PlayerControl>().TextBox.UpdateText(bulletLeft, AmmoReserve);
+                }
                 Shoot();
             }
         }

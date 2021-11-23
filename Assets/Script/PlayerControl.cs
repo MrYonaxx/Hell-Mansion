@@ -40,6 +40,7 @@ public class PlayerControl : MonoBehaviour
 	public TextController TextBox;
 
 	public AudioClip audioFootstep;
+	public bool startNoWeapon = false;
 
 	CharacterController characterController;
 	private bool canInput = true;
@@ -57,7 +58,8 @@ public class PlayerControl : MonoBehaviour
 	public void CanInputPlayer(bool b)
 	{
 		canInput = b;
-		GetComponentInChildren<GunSystem>().CanInput = b;
+		if(GetComponentInChildren<GunSystem>() != null)
+			GetComponentInChildren<GunSystem>().CanInput = b;
 	}
 
 	void Awake()
@@ -67,6 +69,8 @@ public class PlayerControl : MonoBehaviour
 		animator = GetComponent<Animator> ();
 		if (arsenal.Length > 0)
 			resetArsenal();
+		if(startNoWeapon)
+			SetArsenal(arsenal[5]);
 		ChangeCursor(cursor);
 	}
 	
@@ -76,14 +80,6 @@ public class PlayerControl : MonoBehaviour
 		{
 			GatherInput();
 			Look();
-			if (GetComponentInChildren<GunSystem>().infiniteAmmo)
-			{
-				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, -1);
-			}
-			else
-			{
-				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
-			}
 		}
 		
 		 if (Input.GetKeyDown(KeyCode.Escape))
@@ -265,7 +261,10 @@ public class PlayerControl : MonoBehaviour
 	}
 	// Function for equip new weapon
 	public void SetArsenal(Arsenal arsenalEquip) {
-		for (int i = 0; i < arsenal.Length; i++)
+
+		if (startNoWeapon)
+			return;
+		for (int i = 0; i < arsenal.Length-1; i++)
 		{
 			if (arsenal[i].name != arsenalEquip.name)
 			{

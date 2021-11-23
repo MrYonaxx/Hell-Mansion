@@ -356,19 +356,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: d809c3d57411d493493f1c98e13ace0b, type: 3}
   m_PrefabInstance: {fileID: 9005583537471287621}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &9005583539121729021
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005583537471322081}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8, y: 5, z: 1}
-  m_Center: {x: -6, y: 2.5, z: -2}
 --- !u!65 &9005583539121729020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -382,6 +369,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 5, z: 1}
   m_Center: {x: 6, y: 2.5, z: -2}
+--- !u!65 &9005583539121729021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005583537471322081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 5, z: 1}
+  m_Center: {x: -6, y: 2.5, z: -2}
 --- !u!65 &9005583539121729023
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1787,6 +1787,18 @@ PrefabInstance:
     - target: {fileID: 4884945667563323323, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149071062006418044, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9005583539336971441}
+    - target: {fileID: 5149071062006418044, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149071062006418044, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Room, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 598522ebc6116ad449e568fd472d9400, type: 3}
