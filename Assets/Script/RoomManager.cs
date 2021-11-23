@@ -66,6 +66,7 @@ public class RoomManager : MonoBehaviour
     private IEnumerator CreateRoomCoroutine(Room room)
     {
         // Fade in
+        player.CanInputPlayer(false);
         animator.SetBool("Fade", true);
         yield return new WaitForSeconds(1);
 
@@ -76,5 +77,6 @@ public class RoomManager : MonoBehaviour
         // Fade out
         yield return new WaitForSeconds(1);
         animator.SetBool("Fade", false);
+        player.CanInputPlayer(true);
     }
 }

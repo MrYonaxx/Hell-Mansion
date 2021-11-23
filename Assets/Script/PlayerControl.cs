@@ -144,6 +144,7 @@ public class PlayerControl : MonoBehaviour
 		AimingRay = Cam.ScreenPointToRay(Input.mousePosition);
 		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
 		Vector3 pointToLook;
+		AimingRay.origin += new Vector3(0, 0.4f, 0);
 		if (groundPlane.Raycast(AimingRay, out rayLength) && alive)
 		{
 			pointToLook = AimingRay.GetPoint(rayLength);
@@ -230,6 +231,7 @@ public class PlayerControl : MonoBehaviour
 				//                     _input * (_input.magnitude * _run  * Time.deltaTime);
 				//_rb.velocity = _input * (_input.magnitude * _run * Time.deltaTime); //(transform.position + transform.forward * (_input.magnitude * _run/1.5f * Time.deltaTime));
 				//CharacterController c = GetComponent<CharacterController>();
+				_input.y = -1;
 				characterController.Move(_input * _run * Time.deltaTime);
 				//_rb.AddForce(_input * (_input.magnitude * _run * Time.deltaTime), ForceMode.Force);
 			}
@@ -249,12 +251,16 @@ public class PlayerControl : MonoBehaviour
 			}*/
 			else // rien à l'arrêt
             {
-				characterController.Move(Vector3.zero);
+				Vector3 gravity = new Vector3(0, -1f, 0);
+				characterController.Move(gravity * Time.deltaTime);
 			}
 		}
 		else
 		{
 			animator.SetBool("Running", false);
+
+			Vector3 gravity = new Vector3(0, -1f, 0);
+			characterController.Move(gravity * Time.deltaTime);
 		}
 	}
 
