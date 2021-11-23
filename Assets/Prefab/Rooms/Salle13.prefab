@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 828176955130646867}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meubles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1396,7 @@ GameObject:
   - component: {fileID: 828176955267474167}
   - component: {fileID: 828176955267474165}
   - component: {fileID: 828176955267474164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_straps_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1734,7 +1734,7 @@ GameObject:
   - component: {fileID: 828176955310970330}
   - component: {fileID: 828176955310970328}
   - component: {fileID: 828176955310970331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_straps_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1911,7 +1911,7 @@ GameObject:
   - component: {fileID: 828176955354683240}
   - component: {fileID: 828176955354683243}
   - component: {fileID: 828176955354683246}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2005,7 +2005,7 @@ GameObject:
   - component: {fileID: 828176955377202125}
   - component: {fileID: 828176955377202115}
   - component: {fileID: 828176955377202114}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: curtain_v2c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2276,7 +2276,7 @@ GameObject:
   - component: {fileID: 828176955434255210}
   - component: {fileID: 828176955434255208}
   - component: {fileID: 828176955434255211}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_saw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2548,7 +2548,7 @@ GameObject:
   - component: {fileID: 828176955459330067}
   - component: {fileID: 828176955459330066}
   - component: {fileID: 828176955459330077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3404,7 +3404,7 @@ GameObject:
   - component: {fileID: 828176955535852000}
   - component: {fileID: 828176955535852006}
   - component: {fileID: 828176955535852001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3660,7 +3660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828176955572155172}
   - component: {fileID: 828176955572155173}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3830,7 +3830,7 @@ GameObject:
   - component: {fileID: 828176955602110014}
   - component: {fileID: 828176955602110012}
   - component: {fileID: 828176955602110015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_straps_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3911,7 +3911,7 @@ GameObject:
   - component: {fileID: 828176955614372953}
   - component: {fileID: 828176955614372959}
   - component: {fileID: 828176955614372958}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4090,7 +4090,7 @@ GameObject:
   - component: {fileID: 828176955655892985}
   - component: {fileID: 828176955655892984}
   - component: {fileID: 828176955655892987}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_corner_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4468,7 +4468,7 @@ GameObject:
   - component: {fileID: 828176955682992592}
   - component: {fileID: 828176955682992598}
   - component: {fileID: 828176955682992593}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet_drawer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4644,7 +4644,7 @@ GameObject:
   - component: {fileID: 828176955693736422}
   - component: {fileID: 828176955693736420}
   - component: {fileID: 828176955693736423}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_straps_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5158,7 +5158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828176955733009756}
   - component: {fileID: 828176955733009757}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5204,7 +5204,7 @@ GameObject:
   - component: {fileID: 828176955744086944}
   - component: {fileID: 828176955744086947}
   - component: {fileID: 828176955744086946}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5298,7 +5298,7 @@ GameObject:
   - component: {fileID: 828176955757578153}
   - component: {fileID: 828176955757578159}
   - component: {fileID: 828176955757578158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet_drawer_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5379,7 +5379,7 @@ GameObject:
   - component: {fileID: 828176955776714686}
   - component: {fileID: 828176955776714684}
   - component: {fileID: 828176955776714687}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5623,7 +5623,7 @@ GameObject:
   - component: {fileID: 828176955819782844}
   - component: {fileID: 828176955819782847}
   - component: {fileID: 828176955819782846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5815,7 +5815,7 @@ GameObject:
   - component: {fileID: 828176955846909413}
   - component: {fileID: 828176955846909412}
   - component: {fileID: 828176955846909415}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6470,7 +6470,7 @@ GameObject:
   - component: {fileID: 828176955916581867}
   - component: {fileID: 828176955916581866}
   - component: {fileID: 828176955916581845}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7818,7 +7818,7 @@ GameObject:
   - component: {fileID: 828176956143884343}
   - component: {fileID: 828176956143884341}
   - component: {fileID: 828176956143884340}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8374,7 +8374,7 @@ GameObject:
   - component: {fileID: 828176956211318271}
   - component: {fileID: 828176956211318269}
   - component: {fileID: 828176956211318268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: curtain_v2c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8726,7 +8726,7 @@ GameObject:
   - component: {fileID: 828176956223708057}
   - component: {fileID: 828176956223708063}
   - component: {fileID: 828176956223708062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9095,7 +9095,7 @@ GameObject:
   - component: {fileID: 828176956293449657}
   - component: {fileID: 828176956293449656}
   - component: {fileID: 828176956293449659}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9286,7 +9286,7 @@ GameObject:
   - component: {fileID: 828176956327415751}
   - component: {fileID: 828176956327415749}
   - component: {fileID: 828176956327415748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: clamp_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9781,7 +9781,7 @@ GameObject:
   - component: {fileID: 828176956416025661}
   - component: {fileID: 828176956416025651}
   - component: {fileID: 828176956416025650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_straps_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9957,7 +9957,7 @@ GameObject:
   - component: {fileID: 828176955808193216}
   - component: {fileID: 828176956419759252}
   - component: {fileID: 828176956419759255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10649,7 +10649,7 @@ GameObject:
   - component: {fileID: 828176956536256917}
   - component: {fileID: 828176956536256939}
   - component: {fileID: 828176956536256938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bowl_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11271,7 +11271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828176956934637464}
   - component: {fileID: 828176956637579952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11318,7 +11318,7 @@ GameObject:
   - component: {fileID: 828176956644203077}
   - component: {fileID: 828176956644203099}
   - component: {fileID: 828176956644203098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table_straps_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11628,7 +11628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828176956583705991}
   - component: {fileID: 828176956684404243}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11674,7 +11674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 828176956659711366}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LitExperience
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11710,7 +11710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 828176956688934283}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11829,7 +11829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828176956044424031}
   - component: {fileID: 828176956702359047}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallWindow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12439,7 +12439,7 @@ GameObject:
   - component: {fileID: 828176956791551385}
   - component: {fileID: 828176956791551391}
   - component: {fileID: 828176956791551390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet_drawer_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13512,7 +13512,7 @@ GameObject:
   - component: {fileID: 828176956906782826}
   - component: {fileID: 828176956906782824}
   - component: {fileID: 828176956906782827}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet_drawer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13995,7 +13995,7 @@ GameObject:
   - component: {fileID: 828176957122339280}
   - component: {fileID: 828176957011018702}
   - component: {fileID: 828176957011018697}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: operating_table
   m_TagString: Untagged
   m_Icon: {fileID: 0}

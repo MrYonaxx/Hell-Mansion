@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 7246148140230070993}
   - component: {fileID: 7246148140230070999}
   - component: {fileID: 7246148140230070992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 7246148140252453219}
   - component: {fileID: 7246148140252453217}
   - component: {fileID: 7246148140252453218}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spider_web_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1408,7 @@ GameObject:
   - component: {fileID: 7246148140272807519}
   - component: {fileID: 7246148140272807517}
   - component: {fileID: 7246148140272807518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1584,7 +1584,7 @@ GameObject:
   - component: {fileID: 7246148140293412770}
   - component: {fileID: 7246148140293412768}
   - component: {fileID: 7246148140293412769}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1856,7 +1856,7 @@ GameObject:
   - component: {fileID: 7246148140322552691}
   - component: {fileID: 7246148140322552684}
   - component: {fileID: 7246148140322552685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x2_v5_broken_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2329,7 +2329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148142253212614}
   - component: {fileID: 7246148140333398780}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2472,7 +2472,7 @@ GameObject:
   - component: {fileID: 7246148140348858269}
   - component: {fileID: 7246148140348858275}
   - component: {fileID: 7246148140348858268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: painting_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2744,7 +2744,7 @@ GameObject:
   - component: {fileID: 7246148140365901614}
   - component: {fileID: 7246148140365901615}
   - component: {fileID: 7246148140365901608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x1_v4_broken_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2838,7 +2838,7 @@ GameObject:
   - component: {fileID: 7246148140366164904}
   - component: {fileID: 7246148140366164910}
   - component: {fileID: 7246148140366164911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: painting_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3014,7 +3014,7 @@ GameObject:
   - component: {fileID: 7246148140369415027}
   - component: {fileID: 7246148140369415025}
   - component: {fileID: 7246148140369415026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3099,7 +3099,7 @@ GameObject:
   - component: {fileID: 7246148140374502473}
   - component: {fileID: 7246148140374502474}
   - component: {fileID: 7246148140374502475}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_corner_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3489,7 +3489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7246148140382087632}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meubles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4103,7 +4103,7 @@ GameObject:
   - component: {fileID: 7246148140436907106}
   - component: {fileID: 7246148140436907104}
   - component: {fileID: 7246148140436907105}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: scale_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4186,7 +4186,7 @@ GameObject:
   - component: {fileID: 7246148140437244251}
   - component: {fileID: 7246148140437244249}
   - component: {fileID: 7246148140437244250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: painting_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4267,7 +4267,7 @@ GameObject:
   - component: {fileID: 7246148140449370184}
   - component: {fileID: 7246148140449370190}
   - component: {fileID: 7246148140449370191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk_drawer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4443,7 +4443,7 @@ GameObject:
   - component: {fileID: 7246148140458162772}
   - component: {fileID: 7246148140458162778}
   - component: {fileID: 7246148140458162779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4524,7 +4524,7 @@ GameObject:
   - component: {fileID: 7246148140459101622}
   - component: {fileID: 7246148140459101620}
   - component: {fileID: 7246148140459101621}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4700,7 +4700,7 @@ GameObject:
   - component: {fileID: 7246148140465784086}
   - component: {fileID: 7246148140465784084}
   - component: {fileID: 7246148140465784085}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: painting_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4781,7 +4781,7 @@ GameObject:
   - component: {fileID: 7246148140467422355}
   - component: {fileID: 7246148140467422353}
   - component: {fileID: 7246148140467422354}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_fireplace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4862,7 +4862,7 @@ GameObject:
   - component: {fileID: 7246148140469205813}
   - component: {fileID: 7246148140469205819}
   - component: {fileID: 7246148140469205812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: clamp_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5133,7 +5133,7 @@ GameObject:
   - component: {fileID: 7246148140473859574}
   - component: {fileID: 7246148140473859572}
   - component: {fileID: 7246148140473859573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: scale_r_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5404,7 +5404,7 @@ GameObject:
   - component: {fileID: 7246148140480146532}
   - component: {fileID: 7246148140480146538}
   - component: {fileID: 7246148140480146539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5677,7 +5677,7 @@ GameObject:
   - component: {fileID: 7246148140496765753}
   - component: {fileID: 7246148140496765759}
   - component: {fileID: 7246148140496765752}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sand_clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5757,7 +5757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148140502365431}
   - component: {fileID: 7246148140501449639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BureauRenverse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6677,7 +6677,7 @@ GameObject:
   - component: {fileID: 7246148140540170901}
   - component: {fileID: 7246148140540170907}
   - component: {fileID: 7246148140540170900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7423,7 +7423,7 @@ GameObject:
   - component: {fileID: 7246148140597114224}
   - component: {fileID: 7246148140597114230}
   - component: {fileID: 7246148140597114231}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7504,7 +7504,7 @@ GameObject:
   - component: {fileID: 7246148140598899901}
   - component: {fileID: 7246148140598899907}
   - component: {fileID: 7246148140598899900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7870,7 +7870,7 @@ GameObject:
   - component: {fileID: 7246148140622964280}
   - component: {fileID: 7246148140622964286}
   - component: {fileID: 7246148140622964287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8236,7 +8236,7 @@ GameObject:
   - component: {fileID: 7246148140632378175}
   - component: {fileID: 7246148140632378173}
   - component: {fileID: 7246148140632378174}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_small_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8412,7 +8412,7 @@ GameObject:
   - component: {fileID: 7246148140644267729}
   - component: {fileID: 7246148140644267735}
   - component: {fileID: 7246148140644267728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet_drawer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8588,7 +8588,7 @@ GameObject:
   - component: {fileID: 7246148140659115458}
   - component: {fileID: 7246148140659115456}
   - component: {fileID: 7246148140659115457}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8861,7 +8861,7 @@ GameObject:
   - component: {fileID: 7246148140666505997}
   - component: {fileID: 7246148140666506003}
   - component: {fileID: 7246148140666505996}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9260,7 +9260,7 @@ GameObject:
   - component: {fileID: 7246148140710845126}
   - component: {fileID: 7246148140710845124}
   - component: {fileID: 7246148140710845125}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9436,7 +9436,7 @@ GameObject:
   - component: {fileID: 7246148140714215562}
   - component: {fileID: 7246148140714215560}
   - component: {fileID: 7246148140714215561}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: scale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9898,7 +9898,7 @@ GameObject:
   - component: {fileID: 7246148140726064182}
   - component: {fileID: 7246148140726064180}
   - component: {fileID: 7246148140726064181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9979,7 +9979,7 @@ GameObject:
   - component: {fileID: 7246148140726366084}
   - component: {fileID: 7246148140726366090}
   - component: {fileID: 7246148140726366091}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_fireplace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10250,7 +10250,7 @@ GameObject:
   - component: {fileID: 7246148140745012167}
   - component: {fileID: 7246148140745012165}
   - component: {fileID: 7246148140745012166}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk_drawer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10330,7 +10330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148140880790191}
   - component: {fileID: 7246148140748160706}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallStraight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11048,7 +11048,7 @@ GameObject:
   - component: {fileID: 7246148140793945594}
   - component: {fileID: 7246148140793945592}
   - component: {fileID: 7246148140793945593}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11224,7 +11224,7 @@ GameObject:
   - component: {fileID: 7246148140800947450}
   - component: {fileID: 7246148140800947448}
   - component: {fileID: 7246148140800947449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: curtain_v1d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11495,7 +11495,7 @@ GameObject:
   - component: {fileID: 7246148140808862080}
   - component: {fileID: 7246148140808862086}
   - component: {fileID: 7246148140808862087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spider_web_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12051,7 +12051,7 @@ GameObject:
   - component: {fileID: 7246148140833884549}
   - component: {fileID: 7246148140833884555}
   - component: {fileID: 7246148140833884548}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12227,7 +12227,7 @@ GameObject:
   - component: {fileID: 7246148140845302908}
   - component: {fileID: 7246148140845304706}
   - component: {fileID: 7246148140845304707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: painting_02_frame_broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12441,7 +12441,7 @@ GameObject:
   - component: {fileID: 7246148140862574487}
   - component: {fileID: 7246148140862574485}
   - component: {fileID: 7246148140862574486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12711,7 +12711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148141232202245}
   - component: {fileID: 7246148140872681292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallArtSpiderWeb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12759,7 +12759,7 @@ GameObject:
   - component: {fileID: 7246148140874055831}
   - component: {fileID: 7246148140874055829}
   - component: {fileID: 7246148140874055830}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_saw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13824,7 +13824,7 @@ GameObject:
   - component: {fileID: 7246148140925201891}
   - component: {fileID: 7246148140925201889}
   - component: {fileID: 7246148140925201890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_saw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14095,7 +14095,7 @@ GameObject:
   - component: {fileID: 7246148140934545708}
   - component: {fileID: 7246148140934545714}
   - component: {fileID: 7246148140934545715}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14840,7 +14840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148141957367073}
   - component: {fileID: 7246148140978154718}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16220,7 +16220,7 @@ GameObject:
   - component: {fileID: 7246148141031975433}
   - component: {fileID: 7246148141031975439}
   - component: {fileID: 7246148141031975432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16301,7 +16301,7 @@ GameObject:
   - component: {fileID: 7246148141040119292}
   - component: {fileID: 7246148141040119042}
   - component: {fileID: 7246148141040119043}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bone_saw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16572,7 +16572,7 @@ GameObject:
   - component: {fileID: 7246148141066559791}
   - component: {fileID: 7246148141066559789}
   - component: {fileID: 7246148141066559790}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17032,7 +17032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148142040864170}
   - component: {fileID: 7246148141090985852}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallWindowsCurtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17174,7 +17174,7 @@ GameObject:
   - component: {fileID: 7246148141094478100}
   - component: {fileID: 7246148141094478106}
   - component: {fileID: 7246148141094478107}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17255,7 +17255,7 @@ GameObject:
   - component: {fileID: 7246148141098275438}
   - component: {fileID: 7246148141098275436}
   - component: {fileID: 7246148141098275437}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: paper_tower_small_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17526,7 +17526,7 @@ GameObject:
   - component: {fileID: 7246148141106014794}
   - component: {fileID: 7246148141106014792}
   - component: {fileID: 7246148141106014793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17892,7 +17892,7 @@ GameObject:
   - component: {fileID: 7246148141124775615}
   - component: {fileID: 7246148141124775613}
   - component: {fileID: 7246148141124775614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: clamp_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18068,7 +18068,7 @@ GameObject:
   - component: {fileID: 7246148141162403533}
   - component: {fileID: 7246148141162403539}
   - component: {fileID: 7246148141162403532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk_drawer_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18435,7 +18435,7 @@ GameObject:
   - component: {fileID: 7246148141167969716}
   - component: {fileID: 7246148141167969717}
   - component: {fileID: 7246148141167969718}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x1_v4_broken_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18815,7 +18815,7 @@ GameObject:
   - component: {fileID: 7246148141195499118}
   - component: {fileID: 7246148141195499119}
   - component: {fileID: 7246148141195499112}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x2_v5_broken_03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19004,7 +19004,7 @@ GameObject:
   - component: {fileID: 7246148141204578266}
   - component: {fileID: 7246148141204578264}
   - component: {fileID: 7246148141204578265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet_drawer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20036,7 +20036,7 @@ GameObject:
   - component: {fileID: 7246148141271233613}
   - component: {fileID: 7246148141271233614}
   - component: {fileID: 7246148141271233615}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x1_v4_broken_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20509,7 +20509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148142271711792}
   - component: {fileID: 7246148141282355188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BureauRenverseWithChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20653,7 +20653,7 @@ GameObject:
   - component: {fileID: 7246148141291165651}
   - component: {fileID: 7246148141291165649}
   - component: {fileID: 7246148141291165650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20925,7 +20925,7 @@ GameObject:
   - component: {fileID: 7246148141303935405}
   - component: {fileID: 7246148141303935406}
   - component: {fileID: 7246148141303935407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21019,7 +21019,7 @@ GameObject:
   - component: {fileID: 7246148141308091021}
   - component: {fileID: 7246148141308091027}
   - component: {fileID: 7246148141308091020}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21574,7 +21574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148141783406351}
   - component: {fileID: 7246148141322159264}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CabinetRenverse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21823,7 +21823,7 @@ GameObject:
   - component: {fileID: 7246148141348957117}
   - component: {fileID: 7246148141348957123}
   - component: {fileID: 7246148141348957116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: armchair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21904,7 +21904,7 @@ GameObject:
   - component: {fileID: 7246148141353330570}
   - component: {fileID: 7246148141353330568}
   - component: {fileID: 7246148141353330569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21985,7 +21985,7 @@ GameObject:
   - component: {fileID: 7246148141353574324}
   - component: {fileID: 7246148141353574330}
   - component: {fileID: 7246148141353574331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet_drawer_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22161,7 +22161,7 @@ GameObject:
   - component: {fileID: 7246148141356481408}
   - component: {fileID: 7246148141356481414}
   - component: {fileID: 7246148141356481415}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: painting_03_frame_broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22962,7 +22962,7 @@ GameObject:
   - component: {fileID: 7246148141420044737}
   - component: {fileID: 7246148141420044743}
   - component: {fileID: 7246148141420044736}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23137,7 +23137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148141437845885}
   - component: {fileID: 7246148141437845884}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23833,7 +23833,7 @@ GameObject:
   - component: {fileID: 7246148141482116914}
   - component: {fileID: 7246148141482116912}
   - component: {fileID: 7246148141482116913}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sand_clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24482,7 +24482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7246148141502651469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24717,7 +24717,7 @@ GameObject:
   - component: {fileID: 7246148141532212717}
   - component: {fileID: 7246148141532212723}
   - component: {fileID: 7246148141532212716}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spider_web_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24988,7 +24988,7 @@ GameObject:
   - component: {fileID: 7246148141542743765}
   - component: {fileID: 7246148141542743771}
   - component: {fileID: 7246148141542743764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25544,7 +25544,7 @@ GameObject:
   - component: {fileID: 7246148141570437225}
   - component: {fileID: 7246148141570437231}
   - component: {fileID: 7246148141570437224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: paper_tower_small_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25625,7 +25625,7 @@ GameObject:
   - component: {fileID: 7246148141575661613}
   - component: {fileID: 7246148141575661619}
   - component: {fileID: 7246148141575661612}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25801,7 +25801,7 @@ GameObject:
   - component: {fileID: 7246148141584362323}
   - component: {fileID: 7246148141584362321}
   - component: {fileID: 7246148141584362322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26343,7 +26343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148141600894774}
   - component: {fileID: 7246148141600894773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26674,7 +26674,7 @@ GameObject:
   - component: {fileID: 7246148141619642518}
   - component: {fileID: 7246148141619642519}
   - component: {fileID: 7246148141619642512}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x2_v5_broken_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26957,7 +26957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148142290759951}
   - component: {fileID: 7246148141628242109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallArtSpiderWeb (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27603,7 +27603,7 @@ GameObject:
   - component: {fileID: 7246148141655365470}
   - component: {fileID: 7246148141655365468}
   - component: {fileID: 7246148141655365469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: clamp_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28539,7 +28539,7 @@ GameObject:
   - component: {fileID: 7246148141711969596}
   - component: {fileID: 7246148141711969602}
   - component: {fileID: 7246148141711969603}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28905,7 +28905,7 @@ GameObject:
   - component: {fileID: 7246148141729999478}
   - component: {fileID: 7246148141729999476}
   - component: {fileID: 7246148141729999477}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet_drawer_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29860,7 +29860,7 @@ GameObject:
   - component: {fileID: 7246148141816526156}
   - component: {fileID: 7246148141816526162}
   - component: {fileID: 7246148141816526163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29942,7 +29942,7 @@ GameObject:
   - component: {fileID: 7246148141829122357}
   - component: {fileID: 7246148141829122358}
   - component: {fileID: 7246148141829122359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31702,7 +31702,7 @@ GameObject:
   - component: {fileID: 7246148141914065777}
   - component: {fileID: 7246148141914065783}
   - component: {fileID: 7246148141914065776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand01_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33333,7 +33333,7 @@ GameObject:
   - component: {fileID: 7246148141984426163}
   - component: {fileID: 7246148141984426161}
   - component: {fileID: 7246148141984426162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33509,7 +33509,7 @@ GameObject:
   - component: {fileID: 7246148141988587901}
   - component: {fileID: 7246148141988587651}
   - component: {fileID: 7246148141988587900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bowl_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34065,7 +34065,7 @@ GameObject:
   - component: {fileID: 7246148142017698654}
   - component: {fileID: 7246148142017698652}
   - component: {fileID: 7246148142017698653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34242,7 +34242,7 @@ GameObject:
   - component: {fileID: 7246148142029770194}
   - component: {fileID: 7246148142029770195}
   - component: {fileID: 7246148142029770188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34431,7 +34431,7 @@ GameObject:
   - component: {fileID: 7246148142035669057}
   - component: {fileID: 7246148142035669063}
   - component: {fileID: 7246148142035669056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35841,7 +35841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148141452563495}
   - component: {fileID: 7246148142093818891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CabinetRenverse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35995,7 +35995,7 @@ GameObject:
   - component: {fileID: 7246148142101990032}
   - component: {fileID: 7246148142101990038}
   - component: {fileID: 7246148142101990039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: clamp_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36266,7 +36266,7 @@ GameObject:
   - component: {fileID: 7246148142120868275}
   - component: {fileID: 7246148142120868273}
   - component: {fileID: 7246148142120868274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: eye (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36443,7 +36443,7 @@ GameObject:
   - component: {fileID: 7246148142133143052}
   - component: {fileID: 7246148142133143053}
   - component: {fileID: 7246148142133143054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x2_v5_broken_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36632,7 +36632,7 @@ GameObject:
   - component: {fileID: 7246148142144636838}
   - component: {fileID: 7246148142144636836}
   - component: {fileID: 7246148142144636837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: scale_l_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37568,7 +37568,7 @@ GameObject:
   - component: {fileID: 7246148142185978385}
   - component: {fileID: 7246148142185978391}
   - component: {fileID: 7246148142185978384}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38031,7 +38031,7 @@ GameObject:
   - component: {fileID: 7246148142199752847}
   - component: {fileID: 7246148142199752845}
   - component: {fileID: 7246148142199752846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: curtain_v2c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38763,7 +38763,7 @@ GameObject:
   - component: {fileID: 7246148142235884258}
   - component: {fileID: 7246148142235884256}
   - component: {fileID: 7246148142235884257}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk_drawer_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38844,7 +38844,7 @@ GameObject:
   - component: {fileID: 7246148142251208527}
   - component: {fileID: 7246148142251208525}
   - component: {fileID: 7246148142251208526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_small_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39021,7 +39021,7 @@ GameObject:
   - component: {fileID: 7246148142254502275}
   - component: {fileID: 7246148142254502524}
   - component: {fileID: 7246148142254502525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x1_v4_broken_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40095,7 +40095,7 @@ GameObject:
   - component: {fileID: 7246148142310598597}
   - component: {fileID: 7246148142310598603}
   - component: {fileID: 7246148142310598596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40365,7 +40365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148142029018875}
   - component: {fileID: 7246148142324090181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fireplace2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40797,7 +40797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246148141499037003}
   - component: {fileID: 7246148142346482322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireplaceDecoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}

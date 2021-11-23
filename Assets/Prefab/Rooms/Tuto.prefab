@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 7831443677640071070}
   - component: {fileID: 7831443677640071071}
   - component: {fileID: 7831443677640071064}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 7831443677736437696}
   - component: {fileID: 7831443677736437697}
   - component: {fileID: 7831443677736437698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,7 +1057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7831443677747080058}
   - component: {fileID: 7831443677747080057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1821,7 +1821,7 @@ GameObject:
   - component: {fileID: 7831443678269628009}
   - component: {fileID: 7831443678269628010}
   - component: {fileID: 7831443678269628011}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2424,7 +2424,7 @@ GameObject:
   - component: {fileID: 7831443678543432475}
   - component: {fileID: 7831443678543432468}
   - component: {fileID: 7831443678543432469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2519,7 +2519,7 @@ GameObject:
   - component: {fileID: 7831443678554539535}
   - component: {fileID: 7831443678554539528}
   - component: {fileID: 7831443678554539529}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2744,7 +2744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7831443678598893313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3180,7 +3180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7831443678775179413}
   - component: {fileID: 7831443678775179412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3224,7 +3224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7831443678784711043}
   - component: {fileID: 7831443678784711042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3270,7 +3270,7 @@ GameObject:
   - component: {fileID: 7831443678797704407}
   - component: {fileID: 7831443678797704400}
   - component: {fileID: 7831443678797704401}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_corner_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8132,6 +8132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shelf_2x2_v5_broken_03
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6400fe6ec651e462a93ee9b3d99615ef, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6400fe6ec651e462a93ee9b3d99615ef, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10020,6 +10024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shelf_2x2_v5_broken_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9889606302594482796cfa03c22f5c02, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9889606302594482796cfa03c22f5c02, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -10345,6 +10353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shelf_2x1_v4_broken_03
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 227dc36e6ed6a4e738a28a1719916134, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 227dc36e6ed6a4e738a28a1719916134, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10504,6 +10516,18 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c00b792e242d5472bacd019281f0046c, type: 3}
       propertyPath: m_Name
       value: desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c00b792e242d5472bacd019281f0046c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c00b792e242d5472bacd019281f0046c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c00b792e242d5472bacd019281f0046c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c00b792e242d5472bacd019281f0046c, type: 3}
       propertyPath: m_RootOrder

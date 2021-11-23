@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 3349955889735582722}
   - component: {fileID: 3349955889735582723}
   - component: {fileID: 3349955889735582724}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 3349955889741203296}
   - component: {fileID: 3349955889741203297}
   - component: {fileID: 3349955889741203298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2551,7 +2551,7 @@ GameObject:
   - component: {fileID: 3349955890261862087}
   - component: {fileID: 3349955890261862136}
   - component: {fileID: 3349955890261862137}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_corner_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2646,7 +2646,7 @@ GameObject:
   - component: {fileID: 3349955890280551768}
   - component: {fileID: 3349955890280551769}
   - component: {fileID: 3349955890280551770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2739,7 +2739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3349955890289487249}
   - component: {fileID: 3349955890289487248}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3151,7 +3151,7 @@ GameObject:
   - component: {fileID: 3349955890361320387}
   - component: {fileID: 3349955890361320388}
   - component: {fileID: 3349955890361320389}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x2_v5_broken_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4113,7 +4113,7 @@ GameObject:
   - component: {fileID: 3349955890468492971}
   - component: {fileID: 3349955890468492972}
   - component: {fileID: 3349955890468492973}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_half (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4208,7 +4208,7 @@ GameObject:
   - component: {fileID: 3349955890491018166}
   - component: {fileID: 3349955890491018167}
   - component: {fileID: 3349955890491018152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x1_v4_broken_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5548,7 +5548,7 @@ GameObject:
   - component: {fileID: 3349955890771058248}
   - component: {fileID: 3349955890771058249}
   - component: {fileID: 3349955890771058250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6372,7 +6372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3349955890905327529}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7937,7 +7937,7 @@ GameObject:
   - component: {fileID: 3349955891180844175}
   - component: {fileID: 3349955891180844173}
   - component: {fileID: 3349955891180844174}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk_drawer_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8479,7 +8479,7 @@ GameObject:
   - component: {fileID: 3349955891290970100}
   - component: {fileID: 3349955891290970098}
   - component: {fileID: 3349955891290970099}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk_drawer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8899,7 +8899,7 @@ GameObject:
   - component: {fileID: 3349955891340524450}
   - component: {fileID: 3349955891340524451}
   - component: {fileID: 3349955891340524452}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wall_straight_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9592,7 +9592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3349955890962543871}
   - component: {fileID: 3349955891495937252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10406,7 +10406,7 @@ GameObject:
   - component: {fileID: 3349955891559644815}
   - component: {fileID: 3349955891559644800}
   - component: {fileID: 3349955891559644801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shelf_2x2_v5_broken_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10676,7 +10676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3349955891583297367}
   - component: {fileID: 3349955891583297366}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: colider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
