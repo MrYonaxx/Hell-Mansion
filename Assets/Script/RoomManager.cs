@@ -71,7 +71,7 @@ public class RoomManager : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         // On initialise tout ni vu ni connu
-        player.transform.position = room.StartPosition.position;
+        player.transform.position = room.StartPosition.position + new Vector3(0, 0.2f, 0);
         room.StartRoom();
 
         // Fade out

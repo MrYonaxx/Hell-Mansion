@@ -36,6 +36,8 @@ public class Entity : MonoBehaviour
     public delegate void ActionEntity(Entity e);
     public event ActionEntity OnDead;
 
+    CharacterController characterController;
+
     public virtual void Start()
     {
         facingDirection = 1;
@@ -43,6 +45,7 @@ public class Entity : MonoBehaviour
         healthBar.setMaxHealthPoints(entityData.maxHealth);
         isStunned = false;
         aliveGameObject = transform.Find("Alive").gameObject;
+        characterController = aliveGameObject.GetComponent<CharacterController>();
         rb = aliveGameObject.GetComponent<Rigidbody>();
         anim = aliveGameObject.GetComponent<Animator>();
         atsm = aliveGameObject.GetComponent<animationToStateMachine>();
@@ -82,6 +85,8 @@ public class Entity : MonoBehaviour
         //TODO: à revoir pour adapter à notre jeu
         velocityWorkSpace = rb.transform.forward*velocity;
         rb.velocity = velocityWorkSpace;
+
+        //characterController.Move(velocityWorkSpace * Time.deltaTime);
     }
 
     public virtual bool checkWall()

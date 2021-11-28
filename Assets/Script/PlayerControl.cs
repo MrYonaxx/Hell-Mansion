@@ -144,13 +144,14 @@ public class PlayerControl : MonoBehaviour
 		AimingRay = Cam.ScreenPointToRay(Input.mousePosition);
 		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
 		Vector3 pointToLook;
-		AimingRay.origin += new Vector3(0, 0.4f, 0);
+		//AimingRay.origin += new Vector3(0, 0.8f, 0);
 		if (groundPlane.Raycast(AimingRay, out rayLength) && alive)
 		{
 			pointToLook = AimingRay.GetPoint(rayLength);
 			//Debug.DrawLine(cameraRay.origin, pointToLook, Color.cyan);
 			RaycastHit rayHit;
-			if (Physics.Raycast(AimingRay, out rayHit))
+
+			if (Physics.BoxCast(AimingRay.origin, new Vector3(0.1f, 1f, 0.1f), AimingRay.direction, out rayHit)) //Physics.Raycast(AimingRay, out rayHit))
 			{
 				var distanceFromEnnemy = Vector3.Distance(
              						new Vector3(rayHit.collider.transform.position.x, transform.position.y,
