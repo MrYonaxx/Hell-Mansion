@@ -8,7 +8,7 @@ public class RoomManager : MonoBehaviour
     [SerializeField]
     RoomDatabase roomDatabase = null;
     [SerializeField]
-    GameObject player = null;
+    PlayerControl player = null;
 
     [Space]
     [SerializeField]
@@ -55,6 +55,7 @@ public class RoomManager : MonoBehaviour
 
         // On instancie la room
         Room room = Instantiate(GetRoom(), new Vector3(posX, 0, 0), Quaternion.identity);
+        room.SetPlayer(player);
         room.eventEndRoom.AddListener(CreateRoom);
         posX += 100;
         levelLayout.Add(room);
@@ -65,6 +66,7 @@ public class RoomManager : MonoBehaviour
     private IEnumerator CreateRoomCoroutine(Room room)
     {
         // Fade in
+        player.CanInputPlayer(false);
         animator.SetBool("Fade", true);
         yield return new WaitForSeconds(1);
 
@@ -75,5 +77,6 @@ public class RoomManager : MonoBehaviour
         // Fade out
         yield return new WaitForSeconds(1);
         animator.SetBool("Fade", false);
+        player.CanInputPlayer(true);
     }
 }

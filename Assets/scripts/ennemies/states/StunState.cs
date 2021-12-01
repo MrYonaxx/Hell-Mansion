@@ -28,7 +28,10 @@ public class StunState : State
         base.enter();
         isStunTimeOver = false;
         isMovementStopped = false;
-        entity.SetVelocity(stateData.stunKnockBackSpeed, stateData.stunKnockBackAngle, entity.lastDamageDirection); 
+        //TODO : petit knockback
+        //entity.SetVelocity(stateData.stunKnockBackSpeed, stateData.stunKnockBackAngle, entity.lastDamageDirection); 
+        entity.setVelocity(0f);
+
     }
 
     public override void exit()

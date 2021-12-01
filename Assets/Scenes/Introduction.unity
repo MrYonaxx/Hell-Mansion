@@ -710,7 +710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: scenes sam
+      value: MainScene
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

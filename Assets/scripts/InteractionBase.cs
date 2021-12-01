@@ -22,6 +22,8 @@ public class InteractionBase : MonoBehaviour, IInteractable
     [SerializeField]
     private bool onlyOnce;
 
+    private PlayerControl previousPlayer = null;
+
     public Vector3 GetPos()
     {
         return this.transform.position;
@@ -39,8 +41,13 @@ public class InteractionBase : MonoBehaviour, IInteractable
 
     public void Interact(PlayerControl player)
     {
+        previousPlayer = player;
         eventPlayer.Invoke(player);
     }
+
+
+
+    // Fonctions à utilisés pour les Events
 
     public void StopInputPlayer(PlayerControl player)
     {
@@ -51,6 +58,19 @@ public class InteractionBase : MonoBehaviour, IInteractable
     {
         player.CanInputPlayer(true);
     }
+
+
+    // Utilise le player enregistré dans Interact()
+    public void StopInputPlayer()
+    {
+        previousPlayer.CanInputPlayer(false);
+    }
+    public void StartInputPlayer()
+    {
+        previousPlayer.CanInputPlayer(true);
+    }
+
+
 
     public void PlaySound(AudioClip clip)
     {

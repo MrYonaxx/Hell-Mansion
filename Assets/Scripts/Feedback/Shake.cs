@@ -24,6 +24,7 @@ namespace Feedbacks
 
 
         RectTransform rectTransform;
+        private IEnumerator shakeCoroutine;
 
         #endregion
 
@@ -52,6 +53,7 @@ namespace Feedbacks
         [ContextMenu("Shake")]
         public void ShakeEffect()
         {
+            StopAllCoroutines();
             if (isRectTransform)
                 ShakeRectEffect();
             else
@@ -60,21 +62,22 @@ namespace Feedbacks
 
         public void ShakeEffect(float power, int time)
         {
+            StopAllCoroutines();
             StartCoroutine(ShakeCoroutine(power, time));
         }
         
         private IEnumerator ShakeCoroutine(float power, int time)
         {
-            Vector3 start = this.transform.position;
+            Vector3 start = this.transform.localPosition;
             float speed = power / time;
             while (time != 0)
             {
                 power -= speed;
-                this.transform.position = new Vector3(start.x + Random.Range(-power, power), start.y + Random.Range(-power, power), start.z + Random.Range(-power, power));
+                this.transform.localPosition = new Vector3(start.x + Random.Range(-power, power), start.y + Random.Range(-power, power), start.z + Random.Range(-power, power));
                 time -= 1;
                 yield return null;
             }
-            this.transform.position = start;
+            this.transform.localPosition = start;
         }
 
 

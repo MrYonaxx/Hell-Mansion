@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3926384158696394010}
   - component: {fileID: 4583699562340399025}
   - component: {fileID: 4409825408538066538}
+  - component: {fileID: 8873471135495280647}
   m_Layer: 11
   m_Name: Door
   m_TagString: Untagged
@@ -46,8 +47,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.1}
-  m_Center: {x: 0.5, y: 1, z: 0.11}
+  m_Size: {x: 1.5, y: 1, z: 1.5}
+  m_Center: {x: 0.5, y: 0.5, z: 0}
 --- !u!114 &4583699562340399025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +77,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8873471135495280647}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onlyOnce: 0
 --- !u!114 &4409825408538066538
 MonoBehaviour:
@@ -91,6 +104,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   doorOpen: {fileID: 6889384585145907324}
+--- !u!95 &8873471135495280647
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130423821956855845}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2b57215926abc54a9d8cb359d3d4e20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2755745052826337436
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,8 +147,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2755745052826337436}
-  m_LocalRotation: {x: -0.14644662, y: -0.8535535, z: 0.35355332, w: -0.3535534}
-  m_LocalPosition: {x: 0.5000004, y: 3, z: 0.5000001}
+  m_LocalRotation: {x: -0.14644662, y: -0.8535534, z: 0.35355332, w: -0.3535534}
+  m_LocalPosition: {x: 0.5000004, y: 3, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6809636602782955592}
@@ -249,7 +281,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 3
+  m_Range: 7
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

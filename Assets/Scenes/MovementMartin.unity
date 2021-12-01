@@ -156,6 +156,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Typeweapon: 1
+  ElementToRotate: {fileID: 0}
+  events:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &133114442
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -265,6 +269,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Typeweapon: 2
+  ElementToRotate: {fileID: 0}
+  events:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &603402188
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -394,6 +402,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397495201451989732, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397495201451989732, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -716,10 +732,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0df8bf01653e446986495627bdeb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxShieldPoints: 3
   maxHealthPoints: 10
   hitSound: {fileID: 0}
   currentHealth: 0
-  hideOnDeath: 0
+  currentShield: 0
+  Heart: []
+  Shield: []
+  invulnerailityTime: 0
+  GameOver: {fileID: 0}
 --- !u!114 &1974369227
 MonoBehaviour:
   m_ObjectHideFlags: 0

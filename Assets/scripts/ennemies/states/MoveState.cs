@@ -19,13 +19,14 @@ public class MoveState : State
         base.DoChecks();
         isDetectingLedge = entity.checkLedge();
         isDetectingWall = entity.checkWall();
+        //Debug.Log(isDetectingWall);
         isPlayerInMinAgroRange = entity.checkPlayerInMinRangeAgro();
     }
 
     public override void enter()
     {
         base.enter();
-        Debug.Log("enter move");
+        //Debug.Log("enter move");
 
         //get a random position and walk to it
         entity.setVelocity(stateData.movementSpeed);

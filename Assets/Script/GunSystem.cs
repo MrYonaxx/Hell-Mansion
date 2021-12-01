@@ -71,6 +71,14 @@ public class GunSystem : MonoBehaviour
                     AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
 
                 }
+                if (infiniteAmmo)
+                {
+                    _rb.GetComponent<PlayerControl>().TextBox.UpdateText(bulletLeft, -1);
+                }
+                else
+                {
+                    _rb.GetComponent<PlayerControl>().TextBox.UpdateText(bulletLeft, AmmoReserve);
+                }
                 Shoot();
             }
         }
@@ -78,7 +86,7 @@ public class GunSystem : MonoBehaviour
 
     private void Reload()
     {
-        Debug.Log("reload en cours");
+        _hud.CloseMessagePanelReload();
         StartCoroutine(_hud.StartReload(reloadTime));
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
@@ -119,7 +127,7 @@ public class GunSystem : MonoBehaviour
         if (Physics.Raycast(_rb.transform.position, _rb.transform.forward + direction, out rayHit,range,LayerMaskRaycast))
         {
             Entity ennemyHit = rayHit.collider.GetComponentInParent<Entity>();
-            Debug.Log(rayHit.collider.name);
+            //Debug.Log(rayHit.collider.name);
             if (ennemyHit)
             {
                 AttackDetails currentdamage;
@@ -127,13 +135,13 @@ public class GunSystem : MonoBehaviour
                 currentdamage.damageAmount = damage;
                 currentdamage.stunDamageAmount = 1;
                 ennemyHit.Damage(currentdamage);
-                Debug.Log("hit");
+                //Debug.Log("hit");
             }
             
         }
         else
         {
-            Debug.Log(" No hit");
+            //Debug.Log(" No hit");
         }
         
         if (!infiniteAmmo)
@@ -147,13 +155,13 @@ public class GunSystem : MonoBehaviour
         {
             Invoke("Shoot", timeBetweenShots);
         }
-        else if (bulletLeft > 0 && bulletLeft == 0)
-        {
-            Invoke("ResetShoot", timeBetweenShooting);
-        }
         else
         {
             Invoke("ResetShoot", timeBetweenShooting);
+        }
+        if(bulletLeft == 0 && AmmoReserve > 0)
+        {
+            _hud.OpenMessagePanelReload();
         }
         
     }

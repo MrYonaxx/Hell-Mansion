@@ -29,8 +29,8 @@ public class DeathState : State
         int randomIndex = Random.RandomRange(0, stateData.drops.Length);
 
         float randomTaux = Random.Range(0, 100);
-        Debug.Log("randomTaux");
-        Debug.Log(randomTaux);
+        //Debug.Log("randomTaux");
+        //Debug.Log(randomTaux);
         foreach (DropStruct dropStruct in stateData.drops)
         {
             if(randomTaux<dropStruct.dropChance)

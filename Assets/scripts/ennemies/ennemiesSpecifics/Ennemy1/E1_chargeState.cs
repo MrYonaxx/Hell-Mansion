@@ -34,7 +34,9 @@ public class E1_chargeState : ChargeState
         }
         else if (isDetectingWall)
         {
-            stateMachine.changeState(ennemy.lookForPlayerState);
+            //stateMachine.changeState(ennemy.lookForPlayerState);
+            ennemy.idleState.setFLipAfterIdle(true);
+            stateMachine.changeState(ennemy.idleState);
         }
         else if(isChargeTimeOver)
         {

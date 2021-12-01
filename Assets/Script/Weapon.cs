@@ -27,6 +27,7 @@ public class Weapon : MonoBehaviour
     {
         if (pickingItem && Input.GetButton("Pick"))
         {
+            playerTrigger.startNoWeapon = false;
             switch (Typeweapon)
             {
                 case WeaponType.Gun:
@@ -68,7 +69,7 @@ public class Weapon : MonoBehaviour
             
         if (playerTrigger != null)
         {
-            playerTrigger.hud.OpenMessagePanel("");
+            playerTrigger.hud.OpenMessagePanel();
             pickingItem = true;
         };
     }

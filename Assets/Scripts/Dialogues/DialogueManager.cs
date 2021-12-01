@@ -51,7 +51,7 @@ public class DialogueManager : MonoBehaviour
         while(tmpPhrase.maxVisibleCharacters < sentence.Length)
         {
             tmpPhrase.maxVisibleCharacters++;
-            yield return new WaitForSeconds(0.1f);
+            yield return null;
             if (Input.GetMouseButton(0))
             {
                 tmpPhrase.maxVisibleCharacters = sentence.Length;

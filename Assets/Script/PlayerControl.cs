@@ -16,6 +16,7 @@ using Vector3 = UnityEngine.Vector3;
 public class PlayerControl : MonoBehaviour
 {
 
+	public Transform cameraTransform;
 	public Transform[] rightBone;
 	public Arsenal[] arsenal;
 	public AudioSource audiosource;
@@ -32,11 +33,14 @@ public class PlayerControl : MonoBehaviour
 	private Ray AimingRay;
 	private Animator animator;
 	
-	
+	public PauseHUD Pause;
 	public Image[] ListGun;
 //	public Image [] Amo;
 //	public Sprite amo;
 	public TextController TextBox;
+
+	public AudioClip audioFootstep;
+	public bool startNoWeapon = false;
 
 	CharacterController characterController;
 	private bool canInput = true;
@@ -54,7 +58,8 @@ public class PlayerControl : MonoBehaviour
 	public void CanInputPlayer(bool b)
 	{
 		canInput = b;
-		GetComponentInChildren<GunSystem>().CanInput = b;
+		if(GetComponentInChildren<GunSystem>() != null)
+			GetComponentInChildren<GunSystem>().CanInput = b;
 	}
 
 	void Awake()
@@ -64,6 +69,8 @@ public class PlayerControl : MonoBehaviour
 		animator = GetComponent<Animator> ();
 		if (arsenal.Length > 0)
 			resetArsenal();
+		if(startNoWeapon)
+			SetArsenal(arsenal[5]);
 		ChangeCursor(cursor);
 	}
 	
@@ -73,15 +80,12 @@ public class PlayerControl : MonoBehaviour
 		{
 			GatherInput();
 			Look();
-			if (GetComponentInChildren<GunSystem>().infiniteAmmo)
-			{
-				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, -1);
-			}
-			else
-			{
-				TextBox.UpdateText(GetComponentInChildren<GunSystem>().bulletLeft, GetComponentInChildren<GunSystem>().AmmoReserve);
-			}
 		}
+		
+		if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause.OnPause(this);
+        }
 	}
 	
 	void FixedUpdate()
@@ -139,9 +143,11 @@ public class PlayerControl : MonoBehaviour
 		float rayLength;
 		AimingRay = Cam.ScreenPointToRay(Input.mousePosition);
 		Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+		Vector3 pointToLook;
+		AimingRay.origin += new Vector3(0, 0.4f, 0);
 		if (groundPlane.Raycast(AimingRay, out rayLength) && alive)
 		{
-			Vector3 pointToLook = AimingRay.GetPoint(rayLength);
+			pointToLook = AimingRay.GetPoint(rayLength);
 			//Debug.DrawLine(cameraRay.origin, pointToLook, Color.cyan);
 			RaycastHit rayHit;
 			if (Physics.Raycast(AimingRay, out rayHit))
@@ -149,13 +155,17 @@ public class PlayerControl : MonoBehaviour
 				var distanceFromEnnemy = Vector3.Distance(
              						new Vector3(rayHit.collider.transform.position.x, transform.position.y,
              							rayHit.collider.transform.position.z), transform.position);
-				
-				if (rayHit.collider.CompareTag("Enemy") && distanceFromEnnemy <= GetComponentInChildren<GunSystem>().range)
+
+				if (GetComponentInChildren<GunSystem>() != null)
 				{
-					ChangeCursor(cursorReady);
-                    transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+					if (rayHit.collider.CompareTag("Enemy") && distanceFromEnnemy <= GetComponentInChildren<GunSystem>().range)
+					{
+						ChangeCursor(cursorReady);
+						transform.LookAt(new Vector3(rayHit.collider.transform.position.x, transform.position.y, rayHit.collider.transform.position.z));
+					}
 				}
-				else if (rayHit.collider.CompareTag("Enemy"))
+
+				if (rayHit.collider.CompareTag("Enemy"))
 				{
 					ChangeCursor(cursorAim);
 					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
@@ -164,14 +174,39 @@ public class PlayerControl : MonoBehaviour
 				{
 					ChangeCursor(cursor);
 					transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-					
+
 				}
 					
 			}
-			
-			
+			else // Si on pointe sur du vide on regarde dans la direction de la souris
+			{
+				transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+			}
+
+			// Set Camera Transform
+			float distanceMin = 8;
+			float distanceMax = 40;
+			float elasticity = 3f;
+			float distance = (pointToLook - this.transform.position).sqrMagnitude;
+			if (distance > distanceMin)
+			{
+				float pos = elasticity * Mathf.Clamp((distance - distanceMin) / (distanceMax - distanceMin), 0, 1);
+				cameraTransform.localPosition = new Vector3(0, 0, pos);
+
+			}
+			else
+			{
+				cameraTransform.localPosition = Vector3.zero;
+			}
+
 		}
+
+
+
 	}
+
+
+
 	// ReSharper disable Unity.PerformanceAnalysis
 	void Move()
 	{
@@ -186,8 +221,8 @@ public class PlayerControl : MonoBehaviour
 			Vector3 direction = right * _input.x + forward * _input.z;
 			direction.Normalize();
 			
-			animator.SetFloat("X", direction.x);
-			animator.SetFloat("Y", direction.z);
+			animator.SetFloat("X", direction.z);
+			animator.SetFloat("Y", direction.x);
 
 
 			if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) // 2 Direction
@@ -196,6 +231,7 @@ public class PlayerControl : MonoBehaviour
 				//                     _input * (_input.magnitude * _run  * Time.deltaTime);
 				//_rb.velocity = _input * (_input.magnitude * _run * Time.deltaTime); //(transform.position + transform.forward * (_input.magnitude * _run/1.5f * Time.deltaTime));
 				//CharacterController c = GetComponent<CharacterController>();
+				_input.y = -1;
 				characterController.Move(_input * _run * Time.deltaTime);
 				//_rb.AddForce(_input * (_input.magnitude * _run * Time.deltaTime), ForceMode.Force);
 			}
@@ -215,12 +251,16 @@ public class PlayerControl : MonoBehaviour
 			}*/
 			else // rien à l'arrêt
             {
-				characterController.Move(Vector3.zero);
+				Vector3 gravity = new Vector3(0, -1f, 0);
+				characterController.Move(gravity * Time.deltaTime);
 			}
 		}
 		else
 		{
 			animator.SetBool("Running", false);
+
+			Vector3 gravity = new Vector3(0, -1f, 0);
+			characterController.Move(gravity * Time.deltaTime);
 		}
 	}
 
@@ -231,7 +271,10 @@ public class PlayerControl : MonoBehaviour
 	}
 	// Function for equip new weapon
 	public void SetArsenal(Arsenal arsenalEquip) {
-		for (int i = 0; i < arsenal.Length; i++)
+
+		if (startNoWeapon)
+			return;
+		for (int i = 0; i < arsenal.Length-1; i++)
 		{
 			if (arsenal[i].name != arsenalEquip.name)
 			{
@@ -277,6 +320,11 @@ public class PlayerControl : MonoBehaviour
 			
 	}
 
+
+	public void PlayFootstep()
+    {
+		AudioManager.Instance?.PlaySound(audioFootstep, 0.1f, 0.9f, 1.1f);
+	}
 
 	
 	

@@ -16,7 +16,7 @@ MonoBehaviour:
   damageHopSpeed: 3
   MonsterName: Bouboule
   power: 1
-  wallCheckDistance: 0.2
+  wallCheckDistance: 0.8
   ledgeCheckDistance: 0.4
   groundCheckRadius: 0.2
   closeRangeActionDistance: 0.5
