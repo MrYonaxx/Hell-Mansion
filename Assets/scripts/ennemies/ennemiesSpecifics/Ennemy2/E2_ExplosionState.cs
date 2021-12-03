@@ -37,11 +37,7 @@ public class E2_ExplosionState : ExplosionState
         base.logicUpdate();
         if(isAnimationFinished)
         {
-            AttackDetails currentdamage;
-            currentdamage.position = ennemy.transform.position;
-            currentdamage.damageAmount = 100;
-            currentdamage.stunDamageAmount = 100;
-            ennemy.Damage(currentdamage);
+            stateMachine.changeState(ennemy.deathState);
         }
     }
 

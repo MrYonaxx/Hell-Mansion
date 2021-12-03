@@ -14,8 +14,7 @@ public class Ennemy2 : Entity
     public E2_stunState stunState { get; private set; }
     public E2_deathState deathState { get; private set; }
     public E2_ExplosionState explosionState { get; private set; }
-
-    public E2_MeleeAttackState meleeAttackState { get; private set; }
+    
     [SerializeField]
     private D_idleState idleStateData;
     [SerializeField]
@@ -26,8 +25,6 @@ public class Ennemy2 : Entity
     private D_chargeState chargeStateData;
     [SerializeField]
     private D_LookForPlayerState lookForPlayerStateData;
-    [SerializeField]
-    private D_meleeAttackState meleeAttackStateDate;
     [SerializeField]
     private D_StunState stunStateData;
     [SerializeField]
@@ -48,7 +45,6 @@ public class Ennemy2 : Entity
         playerDetectedState = new E2_playerDetectedState(this, stateMachine, "playerDetected", playerDetectedStateData, this);
         chargeState = new E2_chargeState(this, stateMachine, "charge",chargeStateData,this);
         lookForPlayerState = new E2_lookForPlayerState(this, stateMachine, "look", lookForPlayerStateData, this);
-        meleeAttackState = new E2_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateDate, this);
         stunState = new E2_stunState(this, stateMachine, "stun", stunStateData, this);
         deathState = new E2_deathState(this, stateMachine, "dead", deathStateData, this);
         explosionState = new E2_ExplosionState(this, stateMachine, "meleeAttack",meleeAttackPosition, explosionStateData, this);

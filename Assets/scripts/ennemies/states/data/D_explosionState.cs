@@ -7,5 +7,5 @@ public class D_explosionState : ScriptableObject
 {
     public float attackRadius = 2f;
     public LayerMask whatIsPlayer;
-    public float attackDamage = 10f;
+    public float attackDamage = 2f;
 }

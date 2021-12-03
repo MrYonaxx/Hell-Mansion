@@ -30,7 +30,7 @@ public class E2_chargeState : ChargeState
         base.logicUpdate();
         if (performCloseRangeAction)
         {
-            stateMachine.changeState(ennemy.meleeAttackState);
+            stateMachine.changeState(ennemy.explosionState);
         }
         else if (isDetectingWall)
         {
