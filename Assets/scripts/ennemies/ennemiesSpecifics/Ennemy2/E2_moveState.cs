@@ -13,6 +13,7 @@ public class E2_moveState : MoveState
     public override void enter()
     {
         base.enter();
+        Debug.Log("je vais bouger");
     }
 
     public override void exit()

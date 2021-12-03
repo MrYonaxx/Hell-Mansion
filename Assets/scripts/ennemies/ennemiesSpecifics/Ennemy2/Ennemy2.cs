@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ennemy2 : Entity
 {
 
- public E2_idleState idleState { get; private set; }
+    public E2_idleState idleState { get; private set; }
     public E2_moveState moveState { get; private set; }
     public E2_playerDetectedState playerDetectedState { get; private set; }
     public E2_chargeState chargeState { get; private set; }
@@ -47,8 +47,13 @@ public class Ennemy2 : Entity
         lookForPlayerState = new E2_lookForPlayerState(this, stateMachine, "look", lookForPlayerStateData, this);
         stunState = new E2_stunState(this, stateMachine, "stun", stunStateData, this);
         deathState = new E2_deathState(this, stateMachine, "dead", deathStateData, this);
-        explosionState = new E2_ExplosionState(this, stateMachine, "meleeAttack",meleeAttackPosition, explosionStateData, this);
+        explosionState = new E2_ExplosionState(this, stateMachine, "explosion",meleeAttackPosition, explosionStateData, this);
         stateMachine.initialize(moveState);
+    }
+    public override void Update()
+    {
+        base.Update();
+        Debug.Log(stateMachine.currentState);
     }
 
     public override void Damage(AttackDetails attackDetails)
