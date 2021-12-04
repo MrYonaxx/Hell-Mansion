@@ -37,7 +37,7 @@ public class E2_MeleeAttackState : MeleeAttackState
         {
             //TODO : si ennemie explosif, faut qu'il meurt ici ou on change en explosion state le meleeAttackState (mais explosionState reprend la majorité du code de meleeAttackState)
             stateMachine.changeState(ennemy.deathState);
-            /*
+            
             if(isPlayerInMinAgroRange)
             {
                 stateMachine.changeState(ennemy.playerDetectedState);
@@ -45,7 +45,7 @@ public class E2_MeleeAttackState : MeleeAttackState
             {
                 stateMachine.changeState(ennemy.lookForPlayerState);
             }
-            */
+            
         }
     }
 

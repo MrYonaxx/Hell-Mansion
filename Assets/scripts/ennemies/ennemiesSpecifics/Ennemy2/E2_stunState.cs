@@ -32,7 +32,7 @@ public class E2_stunState : StunState
         {
             if(performCloseRangeAction)
             {
-                stateMachine.changeState(ennemy.meleeAttackState);
+                stateMachine.changeState(ennemy.explosionState);
             } else if( isPlayerInMinAgroRange)
             {
                 stateMachine.changeState(ennemy.chargeState);
