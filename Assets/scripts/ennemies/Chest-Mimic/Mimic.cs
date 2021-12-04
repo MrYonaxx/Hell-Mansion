@@ -7,16 +7,34 @@ public class Mimic : MonoBehaviour
     private PlayerControl playerTrigger;
     private bool pickingItem;
     [SerializeField]
-    private GameObject arm;
+    private GameObject mimic;
+
+        [SerializeField]
+    private GameObject chest;
     protected bool isAnimationFinished;
+    private bool isDone = false;
     public void Update()
     {
+        
+        if (pickingItem && Input.GetButton("Pick"))
+        {
+            //TODO Activer un ennemi mimic qui explose
+            // Destroy le coffre pour une parfaite transition
+            // Ou le faire peter sur place
+        }
+        if(!isDone)
         {
             if (pickingItem && Input.GetButton("Pick"))
             {
-                //TODO Activer un ennemi mimic qui explose
-                // Destroy le coffre pour une parfaite transition
-                // Ou le faire peter sur place
+                
+                gameObject.GetComponent<Animator>().SetBool("Open", true);
+            }
+            if(isAnimationFinished)
+            {
+                isDone = true;
+                Destroy(chest);
+                mimic.SetActive(true);
+
             }
         }
     }
