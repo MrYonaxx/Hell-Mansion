@@ -32,24 +32,7 @@ public class Health : MonoBehaviour
         return currentShield;
     }
 
-    public void setCurrentShield(int newShield)
-    {
-        if(newShield < 0){
-            currentShield = 0;
-        }
-        else
-            currentShield = newShield;
-        
-    }
- 
-    public void setCurrentHealth(int newHealth)
-    {
-        if(newHealth < 0)
-            currentHealth = 0;
-        else
-            currentHealth = newHealth;
-        
-    }
+
     void Start()
     {
         currentHealth = maxHealthPoints;
@@ -129,9 +112,19 @@ public class Health : MonoBehaviour
 
     public void Revive()
     {
-        setCurrentHealth(maxHealthPoints);
+        currentHealth = maxHealthPoints;
         UpdateSprite();
         animator.SetBool("Die", false);
         GetComponent<PlayerControl>().setAlive(true);
+    }
+
+
+    public void addShield() // Add 1 shieldPoint
+    {
+        if(currentShield  < currentHealth && currentShield < maxShieldPoints)
+        {
+            currentShield += 1;
+            UpdateSprite();
+        }
     }
 }
