@@ -71,22 +71,19 @@ public class GunSystem : MonoBehaviour
                     AudioManager.Instance?.PlaySound(GunShotClip, 0.3f, audioPitch.x, audioPitch.y);
 
                 }
-                if (infiniteAmmo)
-                {
-                    _rb.GetComponent<PlayerControl>().TextBox.UpdateText(bulletLeft, -1);
-                }
-                else
-                {
-                    _rb.GetComponent<PlayerControl>().TextBox.UpdateText(bulletLeft, AmmoReserve);
-                }
                 Shoot();
+                
+                
             }
         }
     }
 
     private void Reload()
     {
-        _hud.CloseMessagePanelReload();
+        if (_hud.MessagePanelReload)
+        {
+            _hud.CloseMessagePanelReload();
+        }
         StartCoroutine(_hud.StartReload(reloadTime));
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
@@ -124,7 +121,7 @@ public class GunSystem : MonoBehaviour
         
         
         //Raycast
-        if (Physics.Raycast(_rb.transform.position, _rb.transform.forward + direction, out rayHit,range,LayerMaskRaycast))
+        if (Physics.Raycast(new Vector3(_rb.transform.position.x,0.5f,_rb.transform.position.z), _rb.transform.forward + direction, out rayHit,range,LayerMaskRaycast))
         {
             Entity ennemyHit = rayHit.collider.GetComponentInParent<Entity>();
             //Debug.Log(rayHit.collider.name);
@@ -151,6 +148,7 @@ public class GunSystem : MonoBehaviour
         }
 
         bulletShoot--;
+        _hud.UpdatePanelBullet(this);
         if (bulletShoot > 0 && bulletLeft > 0)
         {
             Invoke("Shoot", timeBetweenShots);
@@ -169,22 +167,23 @@ public class GunSystem : MonoBehaviour
     private void OnDrawGizmos()
     {
      
-        bool isHit = Physics.Raycast(_rb.transform.position, _rb.transform.forward, out rayHit, range);
+        bool isHit = Physics.Raycast(new Vector3(_rb.transform.position.x,0.5f,_rb.transform.position.z), _rb.transform.forward, out rayHit, range);
        
         if (isHit)
         {
             Gizmos.color= Color.red;
-            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward  * rayHit.distance);
+            Gizmos.DrawRay(new Vector3(_rb.transform.position.x,0.5f,_rb.transform.position.z), _rb.transform.forward  * rayHit.distance);
         }  
         else
         {
             Gizmos.color= Color.blue;
-            Gizmos.DrawRay(_rb.transform.position, _rb.transform.forward * range);
+            Gizmos.DrawRay(new Vector3(_rb.transform.position.x,0.5f,_rb.transform.position.z), _rb.transform.forward * range);
         }
     }
 
     private void ResetShoot()
     {
+        
         if (bulletLeft <= 0 && AmmoReserve <= 0)
         {
             GetComponentInParent<PlayerControl>().resetArsenal();
@@ -193,5 +192,6 @@ public class GunSystem : MonoBehaviour
         {
             readyToShoot = true;
         }
+        
     }
 }

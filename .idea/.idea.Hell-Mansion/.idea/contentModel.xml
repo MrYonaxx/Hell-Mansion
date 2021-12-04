@@ -17,6 +17,7 @@
           </e>
         </e>
         <e p="BlockRota.cs" t="Include" />
+        <e p="GameOverHUD.cs" t="Include" />
         <e p="GUI" t="Include">
           <e p="Emerald Treasure" t="Include">
             <e p="Fonts" t="Include">
@@ -24,9 +25,39 @@
             </e>
           </e>
         </e>
+        <e p="Import" t="Include">
+          <e p="Black_and_white_Belweder__OT_1782_TV_set" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="FM_radio" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="Retro_TV_(90's_Themed__Style_Televison)" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+          <e p="Vintage_Pocket_Radio" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+        </e>
+        <e p="PauseHUD.cs" t="Include" />
+        <e p="Prefab" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="DawnShader" t="Include">
+              <e p="ClothingShader.shader" t="Include" />
+              <e p="ClothingShader2Sides.shader" t="Include" />
+              <e p="EyesGradianShader.shader" t="Include" />
+              <e p="EyeslashShader.shader" t="Include" />
+              <e p="EyesShader.shader" t="Include" />
+              <e p="EyesTearShader.shader" t="Include" />
+              <e p="HairShader.shader" t="Include" />
+              <e p="HairShaderV2.shader" t="Include" />
+              <e p="HornShader.shader" t="Include" />
+              <e p="SkinShaderHDRP.shader" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Script" t="Include">
           <e p="BoardManager.cs" t="Include" />
-          <e p="DoorNextRoom.cs" t="Include" />
           <e p="EnnemySpawner.cs" t="Include" />
           <e p="FlashObject.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
@@ -52,6 +83,14 @@
           <e p="Dialogues" t="Include">
             <e p="Dialogue.cs" t="Include" />
             <e p="DialogueManager.cs" t="Include" />
+          </e>
+          <e p="Enigme" t="Include">
+            <e p="ArenaManager.cs" t="Include" />
+            <e p="Brasero.cs" t="Include" />
+            <e p="BraseroManager.cs" t="Include" />
+            <e p="Door.cs" t="Include" />
+            <e p="RandomEvents.cs" t="Include" />
+            <e p="WaitZone.cs" t="Include" />
           </e>
           <e p="ennemies" t="Include">
             <e p="ennemiesSpecifics" t="Include">
@@ -121,12 +160,38 @@
             <e p="HideAtStartup.cs" t="Include" />
             <e p="TriggerEvent.cs" t="Include" />
           </e>
+          <e p="Options.cs" t="Include" />
           <e p="PlayerInteraction.cs" t="Include" />
           <e p="Stats" t="Include">
             <e p="ElementalResistance.cs" t="Include" />
             <e p="Stat.cs" t="Include" />
             <e p="StatEnum.cs" t="Include" />
             <e p="StatModifier.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Sketchfab For Unity" t="Include">
+          <e p="Dependencies" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="GLTFBumpToNormal.shader" t="Include" />
+              <e p="GLTFColorSpace.cginc" t="Include" />
+              <e p="GLTFFlipTexture.shader" t="Include" />
+              <e p="GLTFPackOccMetalRough.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="AssetBrowser" t="Include">
+              <e p="SketchfabBrowserManager.cs" t="Include" />
+              <e p="SketchfabBrowserWindow.cs" t="Include" />
+              <e p="SketchfabModelWindow.cs" t="Include" />
+            </e>
+            <e p="Resizer.cs" t="Include" />
+            <e p="SketchfabApi.cs" t="Include" />
+            <e p="SketchfabExporter.cs" t="Include" />
+            <e p="SketchfabImporter.cs" t="Include" />
+            <e p="SketchfabImporterWindow.cs" t="Include" />
+            <e p="SketchfabLogger.cs" t="Include" />
+            <e p="SketchfabPlugin.cs" t="Include" />
+            <e p="SketchfabUI.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

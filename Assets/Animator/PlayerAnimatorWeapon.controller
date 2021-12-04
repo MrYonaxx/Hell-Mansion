@@ -75,7 +75,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4aa84a58f0d9b2f49a13334720f38120, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5eecd64a9cf69d245b4b7a2cc0b784f1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -101,7 +101,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: da771241419e3cd469bb95a4be45929c, type: 2}
+  m_Motion: {fileID: 7400000, guid: fb4e6b4b66cb80a49b78fea539410370, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -256,7 +256,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerAnimatorController
+  m_Name: PlayerAnimatorWeapon
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Vertical
@@ -463,7 +463,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 6de5beebf54218c47a9acc803ef2ab50, type: 2}
+    m_Motion: {fileID: 7400000, guid: ae68cc2cd179b8c48a3b59257124e05e, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0.5}
     m_TimeScale: 1.5
@@ -471,15 +471,15 @@ BlendTree:
     m_DirectBlendParameter: X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 6de5beebf54218c47a9acc803ef2ab50, type: 2}
+    m_Motion: {fileID: 7400000, guid: d8cd0d582e0431f4d94d0bac4ef07ff9, type: 2}
     m_Threshold: 0.33333334
     m_Position: {x: 0, y: -0.5}
-    m_TimeScale: -1.5
+    m_TimeScale: 1.5
     m_CycleOffset: 0
     m_DirectBlendParameter: X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 78c8d41fdc3ac7849b3d6d75514a4d85, type: 2}
+    m_Motion: {fileID: 7400000, guid: fe7d8f5c700733846882b2df783bc5ee, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1.5
@@ -487,7 +487,7 @@ BlendTree:
     m_DirectBlendParameter: X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 4b48f035b6e1f7b46bb01b01d8339ac4, type: 2}
+    m_Motion: {fileID: 7400000, guid: 1d35ef2b4728a2b40b72b4ea38cc909e, type: 2}
     m_Threshold: 1
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1.5

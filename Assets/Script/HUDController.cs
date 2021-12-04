@@ -10,7 +10,12 @@ public class HUDController : MonoBehaviour
 	public GameObject MessagePanelReload;
     public GameObject reloadGameObject;
     public Slider reloadSlider;
-	
+    public Text TextControl;
+
+    private void Awake()
+    {
+	    // Debug.Log(GetComponentInChildren<TextController>());
+    }
 
     public void OpenMessagePanel()
     {
@@ -31,7 +36,19 @@ public class HUDController : MonoBehaviour
     {
 		MessagePanelReload.SetActive(false);
     }
-	
+
+    public void UpdatePanelBullet(GunSystem EquipGun)
+    {
+	    if (EquipGun.infiniteAmmo ){
+		    TextControl.text = "\u221E";
+		    TextControl.fontSize = 40;
+	    }
+	    else{
+		    TextControl.text = EquipGun.bulletLeft + " / " + EquipGun.AmmoReserve ;  
+		    TextControl.fontSize = 26;
+	    }
+    }
+    
     public IEnumerator StartReload(float reloadtime)
     {
 	    Debug.Log("anim reload");
