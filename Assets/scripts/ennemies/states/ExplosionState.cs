@@ -48,7 +48,6 @@ public class ExplosionState : AttackState
     public override void triggerAttack()
     {
         base.triggerAttack();
-        Debug.Log("L'attaque");
 
         Collider[] detectedObjects = Physics.OverlapSphere(attackPosition.position, stateDate.attackRadius,stateDate.whatIsPlayer);
 
