@@ -108,5 +108,6 @@ public class ArenaManager : MonoBehaviour
         c.AddTarget(objToFocus.transform, 10);
         yield return new WaitForSecondsRealtime(2f);
         c.RemoveTarget(objToFocus.transform);
+
     }
 }

@@ -39,6 +39,8 @@ public class IKShoot : MonoBehaviour
         t = time;
         targetPosRight = animator.GetBoneTransform(HumanBodyBones.RightHand).position + new Vector3(0, height, 0);
         targetPosLeft = animator.GetBoneTransform(HumanBodyBones.LeftHand).position + new Vector3(0, height, 0);
+        targetPosRight -= this.transform.position;
+        targetPosLeft -= this.transform.position;
     }
 
     //a callback for calculating IK
@@ -50,10 +52,10 @@ public class IKShoot : MonoBehaviour
 
             float factor = t / time;
             animator.SetIKPositionWeight(AvatarIKGoal.RightHand, factor);
-            animator.SetIKPosition(AvatarIKGoal.RightHand, targetPosRight);
+            animator.SetIKPosition(AvatarIKGoal.RightHand, targetPosRight + transform.position);
 
             animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, factor);
-            animator.SetIKPosition(AvatarIKGoal.LeftHand, targetPosLeft);
+            animator.SetIKPosition(AvatarIKGoal.LeftHand, targetPosLeft + transform.position);
         }
     }
 }
