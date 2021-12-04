@@ -14,7 +14,7 @@ public class Ennemy2 : Entity
     public E2_stunState stunState { get; private set; }
     public E2_deathState deathState { get; private set; }
     public E2_ExplosionState explosionState { get; private set; }
-    
+
     [SerializeField]
     private D_idleState idleStateData;
     [SerializeField]
