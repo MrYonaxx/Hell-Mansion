@@ -34,6 +34,7 @@ public class Entity : MonoBehaviour
     private float lastDamageTime;
 
     public delegate void ActionEntity(Entity e);
+    public event ActionEntity OnHit;
     public event ActionEntity OnDead;
 
     CharacterController characterController;
@@ -179,11 +180,13 @@ public class Entity : MonoBehaviour
         {
             isStunned = true;
         }
-        if(currentHealth<=0)
+        if (currentHealth <= 0)
         {
             isDead = true;
             OnDead?.Invoke(this);
         }
+        else
+            OnHit?.Invoke(this);
     }
 
     public virtual void SetVelocity(float velocity,Vector2 angle,int direction)

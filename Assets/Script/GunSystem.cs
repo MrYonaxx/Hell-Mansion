@@ -31,8 +31,11 @@ public class GunSystem : MonoBehaviour
     public int bulletLeft, bulletsShot;
     private bool shooting, readyToShoot, reloading;
     public bool CanInput = true;
-   
-    
+
+
+    public delegate void ActionShoot(Vector3 impact);
+    public event ActionShoot OnShoot;
+
     private void Awake()
     {
         bulletLeft = magazineSizeInitial;
@@ -133,12 +136,14 @@ public class GunSystem : MonoBehaviour
                 currentdamage.stunDamageAmount = 1;
                 ennemyHit.Damage(currentdamage);
                 //Debug.Log("hit");
+                OnShoot?.Invoke(rayHit.point);
             }
             
         }
         else
         {
             //Debug.Log(" No hit");
+            OnShoot?.Invoke(Vector3.zero);
         }
         
         if (!infiniteAmmo)

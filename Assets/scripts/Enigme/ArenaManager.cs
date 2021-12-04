@@ -15,10 +15,13 @@ public class ArenaManager : MonoBehaviour
     [SerializeField]
     ParticleSystem particleEndArena;
     [SerializeField]
+    ParticleSystem bloodParticle;
+    [SerializeField]
     GameObject objToFocus = null;
 
     int killCount = 0;
     int maxKillCount = 0;
+    Camera camera = null;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,10 @@ public class ArenaManager : MonoBehaviour
         for (int i = 0; i < ennemies.Count; i++)
         {
             ennemies[i].OnDead += DeathRegister;
+            ennemies[i].OnHit += ParticleBlood;
         }
+
+        camera = Camera.main;
     }
 
     private void OnDestroy()
@@ -37,7 +43,16 @@ public class ArenaManager : MonoBehaviour
         for (int i = 0; i < ennemies.Count; i++)
         {
             ennemies[i].OnDead -= DeathRegister;
+            ennemies[i].OnHit -= ParticleBlood;
         }
+    }
+
+
+    void ParticleBlood(Entity e)
+    {
+        camera.GetComponent<Feedbacks.Shake>().ShakeEffect(0.2f, 2);
+        bloodParticle.transform.position = e.aliveGameObject.transform.position;
+        bloodParticle.Play();
     }
 
 
@@ -72,7 +87,7 @@ public class ArenaManager : MonoBehaviour
 
     private IEnumerator EndArenaCoroutine()
     {
-        Camera.main.GetComponent<Feedbacks.Shake>().ShakeEffect(1f, 1);
+        camera.GetComponent<Feedbacks.Shake>().ShakeEffect(1f, 1);
         Time.timeScale = 0.2f;
         yield return new WaitForSecondsRealtime(1f);
         float t = 0.2f;

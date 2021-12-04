@@ -34,9 +34,17 @@ public class PlayerControl : MonoBehaviour
 	
 	public PauseHUD Pause;
 	public Image[] ListGun;
-//	public Image [] Amo;
-//	public Sprite amo;
-	
+	//	public Image [] Amo;
+	//	public Sprite amo;
+
+	public delegate void ActionPlayerControl(PlayerControl e);
+	public event ActionPlayerControl OnHit;
+	public event ActionPlayerControl OnDead;
+	public delegate void ActionShoot(Vector3 impact);
+	public event ActionShoot OnShoot;
+
+	IKShoot feedbackShoot;
+	GunSystem currentGun;
 
 	public AudioClip audioFootstep;
 	public bool startNoWeapon = false;
@@ -63,6 +71,7 @@ public class PlayerControl : MonoBehaviour
 
 	void Awake()
 	{
+		feedbackShoot = GetComponent<IKShoot>();
 		characterController = GetComponent<CharacterController>();
 		//audiosource = GetComponent<AudioSource>();
 		animator = GetComponent<Animator> ();
@@ -278,9 +287,21 @@ public class PlayerControl : MonoBehaviour
             newRightWeapon.transform.localRotation = Quaternion.Euler(0, 0, 0);
             animator.runtimeAnimatorController = arsenalEquip.Animator;
             hud.UpdatePanelBullet(ActualGun);
+
+			// pour les events
+			if (currentGun != null)
+				currentGun.OnShoot -= Shoot;
+			currentGun = ActualGun;
+			currentGun.OnShoot += Shoot;
 		}
 			
 	}
+
+
+	public void Shoot(Vector3 pos)
+    {
+		OnShoot.Invoke(pos);
+    }
 
 
 	public void PlayFootstep()
