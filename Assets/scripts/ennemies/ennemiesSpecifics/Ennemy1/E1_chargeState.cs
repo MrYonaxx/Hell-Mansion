@@ -31,6 +31,7 @@ public class E1_chargeState : ChargeState
         if (performCloseRangeAction)
         {
             stateMachine.changeState(ennemy.meleeAttackState);
+            //TODO : à choisi parmi plusieurs attaque en fonction de l'attaque précédente ou choix aléatoire.
         }
         else if (isDetectingWall)
         {
