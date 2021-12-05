@@ -82,7 +82,6 @@ public class Entity : MonoBehaviour
 
     public virtual void setVelocity(float velocity)
     {
-        //TODO: à revoir pour adapter à notre jeu
         velocityWorkSpace = rb.transform.forward*velocity;
         rb.velocity = velocityWorkSpace;
 
@@ -91,25 +90,21 @@ public class Entity : MonoBehaviour
 
     public virtual bool checkWall()
     {
-        //TODO: à revoir pour adapter à notre jeu
         return Physics.Raycast(wallCheck.position, aliveGameObject.transform.forward, entityData.wallCheckDistance, entityData.whatisground);
     }
 
     public virtual bool checkLedge()
     {
-        //TODO: à revoir pour adapter à notre jeu
         return Physics2D.Raycast(ledgeCheck.position,Vector2.down, entityData.ledgeCheckDistance, entityData.whatisground);
 
     }
 
     public virtual bool checkPlayerInMinRangeAgro()
     {
-        //TODO: à revoir pour adapter la détéction à notre jeu peut être pas un raycast d'ailleurs
         this.minFieldOfView.FindVisibleTargets();
         //Debug.Log("minFieldOfView");
         //Debug.Log(minFieldOfView.visibleTargets.Count);
         return minFieldOfView.visibleTargets.Count > 0;
-        //return Physics2D.Raycast(playerCheck.position, aliveGameObject.transform.right, entityData.minAgroDistance, entityData.whatIsPlayer);
     }
 
     public virtual bool checkPlayerInMaxRangeAgro()
@@ -118,7 +113,6 @@ public class Entity : MonoBehaviour
        //Debug.Log("maxFieldOfView");
         //Debug.Log(maxFieldOfView.visibleTargets.Count);
         return maxFieldOfView.visibleTargets.Count > 0;
-        //return Physics2D.Raycast(playerCheck.position, aliveGameObject.transform.forward, entityData.maxAgroDistance, entityData.whatIsPlayer);
     }
 
     public virtual bool checkPlayerInCloseRangeAction() //check juste devant lui
@@ -132,13 +126,10 @@ public class Entity : MonoBehaviour
     }
     public virtual void flip()
     {
-        //TODO: à revoir pour adapter à notre jeu et le facing
-        //facingDirection *= -1;
         aliveGameObject.transform.Rotate(0f, 180f, 0f);
     }
     public virtual void Rotate(int angle)
     {
-        //facingDirection = (facingDirection + angle) % 360; // Applique la rotation
         aliveGameObject.transform.Rotate(0f, 0f, angle); // Je suppose qu'on va tourner par rapport à l'axe z   
     }
 
@@ -188,7 +179,6 @@ public class Entity : MonoBehaviour
 
     public virtual void SetVelocity(float velocity,Vector2 angle,int direction)
     {
-        //TODO : faire entrer en jeu l'angle pour qu'il saute un peu en l'air
         angle.Normalize();
         velocityWorkSpace = direction*rb.transform.forward * velocity;
         rb.velocity = velocityWorkSpace;
