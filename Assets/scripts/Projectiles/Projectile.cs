@@ -13,12 +13,15 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsPlayer;
     [SerializeField]
+    private LayerMask whatIsGround;
+    [SerializeField]
     private Transform damagePosition;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.forward * speed;
         startPosition = transform.position;
+        rb.useGravity = false;
     }
 
     private void Update()
@@ -30,7 +33,8 @@ public class Projectile : MonoBehaviour
     {
 
         Collider[] detectedObjects = Physics.OverlapSphere(damagePosition.position, damageRadius, whatIsPlayer);
-        if(detectedObjects.Length>0)
+        Collider[] detectedGround = Physics.OverlapSphere(transform.position, damageRadius, whatIsGround);
+        if (detectedObjects.Length>0)
         {
             foreach (Collider collider in detectedObjects)
             {
@@ -38,6 +42,9 @@ public class Projectile : MonoBehaviour
 
                 collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount);
             }
+            Destroy(gameObject);
+        } else if(detectedGround.Length>0)
+        {
             Destroy(gameObject);
         }
         else if ((transform.position - startPosition).magnitude >= travelDistance)

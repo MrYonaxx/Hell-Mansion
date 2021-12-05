@@ -1464,6 +1464,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 359259228899284854, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}
+      propertyPath: m_Mass
+      value: 0.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 359259228899284854, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
@@ -1482,6 +1486,10 @@ PrefabInstance:
     - target: {fileID: 359259228899284854, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}
       propertyPath: m_CollisionDetection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 359259228899284855, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 136
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}
