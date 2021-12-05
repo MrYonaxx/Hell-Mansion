@@ -18,8 +18,8 @@ public class Weapon : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] public WeaponType Typeweapon;
-    private bool pickingItem;
-    private PlayerControl playerTrigger;
+    public bool pickingItem;
+    public PlayerControl playerTrigger;
     [SerializeField] private Rigidbody ElementToRotate;
 
     [SerializeField]
@@ -66,24 +66,31 @@ public class Weapon : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        playerTrigger = other.GetComponent<PlayerControl>();
-            
-        if (playerTrigger != null)
+        if (other.GetComponent<PlayerControl>())
         {
-            playerTrigger.hud.OpenMessagePanel();
-            pickingItem = true;
-        };
+            playerTrigger = other.GetComponent<PlayerControl>();
+                        
+            if (playerTrigger != null)
+            {
+                playerTrigger.hud.OpenMessagePanel();
+                pickingItem = true;
+            };
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        playerTrigger= other.GetComponent<PlayerControl>();
-
-        if (playerTrigger != null)
+        if (other.GetComponent<PlayerControl>())
         {
-            pickingItem = false;
-            playerTrigger.hud.CloseMessagePanel();
-        } 
+            playerTrigger = other.GetComponent<PlayerControl>();
+
+            if (playerTrigger != null)
+            {
+                pickingItem = false;
+                playerTrigger.hud.CloseMessagePanel();
+            }
+        }
     }
 
     private void RotateElement()
