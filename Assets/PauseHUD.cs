@@ -7,12 +7,14 @@ public class PauseHUD : MonoBehaviour
 {
 
     public GameObject Pause;
+    public GameObject OptionsMenu;
     PlayerControl player;
 
     public void OnPause(PlayerControl p)
 	{
         player = p;
         player.CanInputPlayer(false);
+        OptionsMenu.SetActive(false);
 		Pause.SetActive(true);
         Time.timeScale = 0;
 

@@ -11,7 +11,8 @@ public enum WeaponType
         Rifle,
         Rifle3,
         Shotgun,
-        smg
+        smg,
+        none
     }
 public class Weapon : MonoBehaviour
 {
