@@ -31,7 +31,6 @@ public class E1_moveState : MoveState
         }
         else if ((isDetectingWall)) //(isDetectingWall || !isDetectingLedge)
         {
-            Debug.Log("changeToIdle");
             ennemy.idleState.setFLipAfterIdle(true);
             stateMachine.changeState(ennemy.idleState);
         }
