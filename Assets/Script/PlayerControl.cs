@@ -300,7 +300,7 @@ public class PlayerControl : MonoBehaviour
 
 	public void Shoot(Vector3 pos)
     {
-		OnShoot.Invoke(pos);
+		OnShoot?.Invoke(pos);
     }
 
 
