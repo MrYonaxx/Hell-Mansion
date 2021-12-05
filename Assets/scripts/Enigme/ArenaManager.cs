@@ -50,7 +50,7 @@ public class ArenaManager : MonoBehaviour
 
     void ParticleBlood(Entity e)
     {
-        camera.GetComponent<Feedbacks.Shake>().ShakeEffect(0.2f, 2);
+        camera.GetComponent<Feedbacks.Shake>().ShakeEffect(0.1f, 1);
         bloodParticle.transform.position = e.aliveGameObject.transform.position;
         bloodParticle.Play();
     }

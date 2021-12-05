@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 1074407038}
   - component: {fileID: 1074407039}
   - component: {fileID: 333185594}
+  - component: {fileID: 3039767011279758523}
   m_Layer: 6
   m_Name: Alive
   m_TagString: Enemy
@@ -356,6 +357,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b64645ed36cca2446abbb16d8a61badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3039767011279758523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102228498571682737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4926f6d377eae9a4dba32187cc245cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 5102228497727078914}
+  bone: {fileID: 5381618749315261905}
+  ikActive: 0
+  shakeVal: 0.1
+  time: 0.2
 --- !u!1001 &714803146856221921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -540,5 +558,10 @@ PrefabInstance:
 --- !u!4 &5381618749315261919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6418190438911407609, guid: d12cb3e8640cd784095e713796df045e, type: 3}
+  m_PrefabInstance: {fileID: 1422758767897595942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5381618749315261905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6418190438911407607, guid: d12cb3e8640cd784095e713796df045e, type: 3}
   m_PrefabInstance: {fileID: 1422758767897595942}
   m_PrefabAsset: {fileID: 0}

@@ -6,7 +6,11 @@ public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField]
     PlayerControl player;
-    
+    [SerializeField]
+    Transform neckBone;
+    [SerializeField]
+    Transform test;
+
     List<IInteractable> interactables = new List<IInteractable>();
     IInteractable objInteractable = null;
 
@@ -57,6 +61,58 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
         objInteractable.CanInteract(true);
+    }
+
+    float tRotation = 1;
+    Quaternion previousRotation;
+
+    private void LateUpdate()
+    {
+
+        if (neckBone && objInteractable != null)
+        {
+            Quaternion originRot = neckBone.transform.rotation;
+            float z = neckBone.eulerAngles.z;
+            neckBone.transform.LookAt(objInteractable.GetPos());
+            neckBone.transform.rotation *= Quaternion.FromToRotation(Vector3.left, Vector3.forward);
+            neckBone.eulerAngles = new Vector3(neckBone.eulerAngles.x, neckBone.eulerAngles.y, z);
+
+
+
+            previousRotation = neckBone.transform.rotation;
+            if(tRotation > 0)
+                tRotation -= Time.deltaTime * 6;
+
+            neckBone.transform.rotation = Quaternion.Slerp(neckBone.transform.rotation, originRot, tRotation);
+            /*Quaternion rot = Quaternion.LookRotation(objInteractable.GetPos() - neckBone.position);
+            Quaternion change = Quaternion.Inverse(rot) * previousRotation;
+            neckBone.transform.rotation *= change;
+            previousRotation = neckBone.rotation;
+            return;*/
+        }
+        else if (tRotation < 1)
+        {
+            tRotation += Time.deltaTime * 6;
+            neckBone.transform.rotation = Quaternion.Slerp(previousRotation, neckBone.transform.rotation, tRotation);
+        }
+        /*float y = neckBone.eulerAngles.y;
+        float z = neckBone.eulerAngles.z;
+        neckBone.transform.LookAt(test.position, Vector3.forward);
+        neckBone.eulerAngles = new Vector3(neckBone.eulerAngles.x, y, z);
+        return;
+
+        if (neckBone && objInteractable != null)
+        {
+            float angle = Vector3.SignedAngle(this.transform.forward, neckBone.position - objInteractable.GetPos(), Vector3.up);
+            Debug.Log("Allo");
+            //Quaternion quaterion = Quaternion.RotateTowards
+            neckBone.transform.LookAt(objInteractable.GetPos());
+            if (Mathf.Abs(angle) < 45)
+            {
+                Debug.Log("Allo45");
+                neckBone.transform.LookAt(objInteractable.GetPos());
+            }
+        }*/
     }
 
     private void OnTriggerEnter(Collider other)
