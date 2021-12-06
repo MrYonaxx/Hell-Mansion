@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3fb7ac75f469a409c4cc2e56359101, type: 3}
   m_Name: E4_baseData
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 8
   damageHopSpeed: 3
   MonsterName: Bibi
   power: 1

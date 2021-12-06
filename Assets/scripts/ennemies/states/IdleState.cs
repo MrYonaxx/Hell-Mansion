@@ -24,7 +24,7 @@ public class IdleState : State
     public override void enter()
     {
         base.enter();
-        Debug.Log("enter idle");
+        //Debug.Log("enter idle");
         entity.setVelocity(0f);
         isIdleTimeOver = false;
         setRandomIdleTime();

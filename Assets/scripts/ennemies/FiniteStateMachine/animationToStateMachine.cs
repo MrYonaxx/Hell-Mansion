@@ -12,15 +12,18 @@ public class animationToStateMachine : MonoBehaviour
 
     private void triggerAttack()
     {
-        particleSystemTrigger.Play();
-
+        if(particleSystemTrigger)
+            particleSystemTrigger.Play();
+        attackState.triggerAttack();
     }
 
     private void finishAttack()
     {
-        particleSystemExplosion.transform.SetParent(null);
-        particleSystemExplosion.Play();
-        attackState.triggerAttack();
+        if (particleSystemExplosion)
+        {
+            particleSystemExplosion.transform.SetParent(null);
+            particleSystemExplosion.Play();
+        }
         attackState.finishAttack();
     }
 }

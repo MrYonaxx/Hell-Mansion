@@ -67,6 +67,13 @@ public class PlayerControl : MonoBehaviour
 		canInput = b;
 		if(GetComponentInChildren<GunSystem>() != null)
 			GetComponentInChildren<GunSystem>().CanInput = b;
+
+		if(b == false)
+        {
+			animator.SetFloat("X", 0);
+			animator.SetFloat("Y", 0);
+			animator.SetBool("Running", false);
+		}
 	}
 
 	void Awake()
@@ -269,10 +276,10 @@ public class PlayerControl : MonoBehaviour
 			}
 			else
 			{
-				Debug.Log(arsenal[i].name);
+				//Debug.Log(arsenal[i].name);
 				arsenal[i].IsEquip = true;
 				ListGun[i].enabled = true;
-				Debug.Log(ListGun[i].enabled);
+				//Debug.Log(ListGun[i].enabled);
 			}
 		}
 		if (arsenalEquip.rightGun != null && arsenalEquip.PlayerBones != null && !arsenalEquip.IsEquip )

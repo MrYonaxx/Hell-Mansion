@@ -136,9 +136,17 @@ public class GunSystem : MonoBehaviour
                 currentdamage.stunDamageAmount = 1;
                 ennemyHit.Damage(currentdamage);
                 //Debug.Log("hit");
+                OnShoot?.Invoke(new Vector3(ennemyHit.aliveGameObject.transform.position.x,
+                                            ennemyHit.aliveGameObject.transform.position.y + (rayHit.point.y + ennemyHit.aliveGameObject.transform.position.y) * 0.5f, 
+                                            ennemyHit.aliveGameObject.transform.position.z)
+                                );
+
+            }
+            else
+            {
                 OnShoot?.Invoke(rayHit.point);
             }
-            
+
         }
         else
         {

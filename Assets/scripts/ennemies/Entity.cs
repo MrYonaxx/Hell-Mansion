@@ -180,6 +180,10 @@ public class Entity : MonoBehaviour
             OnHit?.Invoke(this);
     }
 
+    public void Revive()
+    {
+        isDead = false;
+    }
     public virtual void SetVelocity(float velocity,Vector2 angle,int direction)
     {
         angle.Normalize();

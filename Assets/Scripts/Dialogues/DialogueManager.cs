@@ -52,11 +52,18 @@ public class DialogueManager : MonoBehaviour
         {
             tmpPhrase.maxVisibleCharacters++;
             yield return null;
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 tmpPhrase.maxVisibleCharacters = sentence.Length;
             }
         }
+        yield return null;
+        while (!Input.GetMouseButtonDown(0))
+        {
+            yield return null;
+        }
+        yield return null;
+        nextDialogue();
     }
 
     public void nextDialogue()
