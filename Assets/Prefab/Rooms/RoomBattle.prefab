@@ -3650,7 +3650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3683,7 +3683,7 @@ PrefabInstance:
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 809025956123962246}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -3722,7 +3722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
+      value: SetPlayerInput
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -3742,7 +3742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: Room, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
@@ -3754,7 +3754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
