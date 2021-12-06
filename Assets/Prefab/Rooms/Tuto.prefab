@@ -2719,7 +2719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7831443678595143201
 Transform:
   m_ObjectHideFlags: 0
@@ -9238,7 +9238,7 @@ PrefabInstance:
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7831443677934526866}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -9277,7 +9277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: CanInputPlayer
+      value: SetPlayerInput
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -9297,7 +9297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PlayerControl, Assembly-CSharp
+      value: Room, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
@@ -10181,7 +10181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.98
+      value: 11.025057
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10189,11 +10189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.96
+      value: 0.99656105
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7765453
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10201,7 +10201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.63006157
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -10213,7 +10213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -78.109
       objectReference: {fileID: 0}
     - target: {fileID: 5102228497727078917, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10221,11 +10221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397495201451989732, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397495201451989732, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe70ed632b2771f4899677c5eaba860a, type: 3}
@@ -11166,7 +11166,7 @@ PrefabInstance:
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7831443677934526866}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -11205,7 +11205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: CanInputPlayer
+      value: SetPlayerInput
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -11225,7 +11225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PlayerControl, Assembly-CSharp
+      value: Room, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2430799054954642028, guid: 1fdd75d7a7789214f9ecf47f3684d91d, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
