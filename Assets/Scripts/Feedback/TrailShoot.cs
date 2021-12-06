@@ -31,7 +31,10 @@ public class TrailShoot : MonoBehaviour
         trailRenderer.Clear();
 
         if (finalPos == Vector3.zero)
+        {
             finalPos = trailRenderer.transform.position + (playerControl.transform.forward * 4);
+            Debug.Log("Allo");
+        }
 
         StopAllCoroutines();
         StartCoroutine(TrailDrawcoroutine(trailRenderer.transform.position, finalPos, 5f));

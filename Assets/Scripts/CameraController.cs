@@ -200,7 +200,7 @@ public class CameraController : MonoBehaviour
     private IEnumerator CoroutineTarget(Transform t)
     {
         targets.Add(new TargetsCamera(t, 0));
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         RemoveTarget(t);
     }
 

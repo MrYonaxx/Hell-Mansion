@@ -74,6 +74,8 @@ public class ArenaManager : MonoBehaviour
         else
         {
             eventEnemyKilled?.Invoke();
+            particleEndArena.transform.position = e.aliveGameObject.transform.position;
+            particleEndArena.Play();
             Camera.main.GetComponent<Feedbacks.Shake>().ShakeEffect();
         }
     }
