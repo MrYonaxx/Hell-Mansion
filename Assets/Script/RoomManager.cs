@@ -170,6 +170,7 @@ public class RoomManager : MonoBehaviour
         animator.SetBool("Fade", false);
         player.CanInputPlayer(true);
 
+        yield return new WaitForSeconds(2);
         if (roomCount >= 2)
             levelLayout[roomCount - 2].gameObject.SetActive(false);
     }

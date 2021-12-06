@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class ArenaManager : MonoBehaviour
 {
     [SerializeField]
+    bool orderMatter = false;
+    [SerializeField]
     List<Entity> ennemies;
     [SerializeField]
     UnityEvent eventEnemyKilled;
@@ -58,7 +60,11 @@ public class ArenaManager : MonoBehaviour
 
     void DeathRegister(Entity e)
     {
-
+        if(orderMatter)
+        {
+            DeathRegisterOrder(e);
+            return;
+        }
         ennemies.Remove(e);
         e.OnDead -= DeathRegister;
         killCount += 1;
@@ -80,6 +86,52 @@ public class ArenaManager : MonoBehaviour
         }
     }
 
+    int goodOrder = 0;
+    private void DeathRegisterOrder(Entity e)
+    {
+        killCount += 1;
+        if (e == ennemies[killCount-1])
+        {
+            goodOrder += 1;
+        }
+
+        eventEnemyKilled?.Invoke();
+        particleEndArena.transform.position = e.aliveGameObject.transform.position;
+        particleEndArena.Play();
+        Camera.main.GetComponent<Feedbacks.Shake>().ShakeEffect();
+
+        if (killCount == ennemies.Count)
+        {
+            if (goodOrder == ennemies.Count)
+            {
+                // GG
+                eventEndArena?.Invoke();
+                particleEndArena.transform.position = e.aliveGameObject.transform.position;
+                particleEndArena.Play();
+            }
+            else
+            {
+                // On reset
+                goodOrder = 0;
+                killCount = 0;
+                StartCoroutine(WaitRevive());
+            }
+        }
+    }
+
+    private IEnumerator WaitRevive()
+    {
+        yield return new WaitForSeconds(1f);
+        AttackDetails attack = new AttackDetails();
+        attack.damageAmount = -5;
+        for (int i = 0; i < ennemies.Count; i++)
+        {
+            ennemies[i].Revive();
+            ennemies[i].Damage(attack);
+            ennemies[i].stateMachine.changeState(((Ennemy1)ennemies[i]).idleState);
+            ennemies[i].gameObject.SetActive(true);
+        }
+    }
 
 
     public void EndArena()
