@@ -104,7 +104,7 @@ public class RoomManager : MonoBehaviour
 
         if (roomCount > maxRoom)
         {
-            ChangeScene(ProchainNiveau);
+            NextLevel();
             return;
         }
 
@@ -130,11 +130,11 @@ public class RoomManager : MonoBehaviour
         StartCoroutine(CreateRoomCoroutine(room));
     }
 
-    public void ChangeScene(string scene)
+    public void NextLevel()
     {
-        ChangeSceneCoroutine(scene);
+        StartCoroutine(NextLevelCoroutine());
     }
-    private IEnumerator ChangeSceneCoroutine(string scene)
+    private IEnumerator NextLevelCoroutine()
     {
         // Fade in
         player.CanInputPlayer(false);
@@ -142,7 +142,8 @@ public class RoomManager : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         // On initialise tout ni vu ni connu
-        SceneManager.LoadScene(scene);
+        Debug.Log("test");
+        SceneManager.LoadScene(ProchainNiveau);
     }
 
     private IEnumerator CreateRoomCoroutine(Room room)

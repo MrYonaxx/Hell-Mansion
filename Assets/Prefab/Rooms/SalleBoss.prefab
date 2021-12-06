@@ -44406,16 +44406,44 @@ PrefabInstance:
       value: Room, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 449256868906921996}
+    - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 449256868639349674}
+    - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetPlayerInput
       objectReference: {fileID: 0}
     - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
       propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Room, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Door, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812427421182933851, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
+      propertyPath: eventPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8147589164422114606, guid: bcf7913a13dd6d340b06938b91416242, type: 3}
       propertyPath: m_IsActive
