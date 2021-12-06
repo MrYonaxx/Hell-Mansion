@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour
 {
@@ -33,6 +34,9 @@ public class RoomManager : MonoBehaviour
 
     [SerializeField]
     AudioClip music = null;
+
+    [SerializeField]
+    string ProchainNiveau;
 
     float posX = 0;
     int roomCount = 0;
@@ -92,9 +96,15 @@ public class RoomManager : MonoBehaviour
             levelLayout[levelLayout.Count - 1].eventEndRoom.RemoveListener(CreateRoom);
 
         roomCount += 1;
-        if(roomCount >= maxRoom)
+        if(roomCount == maxRoom)
         {
             CreateBossRoom();
+            return;
+        }
+
+        if (roomCount > maxRoom)
+        {
+            ChangeScene(ProchainNiveau);
             return;
         }
 
@@ -118,6 +128,21 @@ public class RoomManager : MonoBehaviour
         levelLayout.Add(room);
 
         StartCoroutine(CreateRoomCoroutine(room));
+    }
+
+    public void ChangeScene(string scene)
+    {
+        ChangeSceneCoroutine(scene);
+    }
+    private IEnumerator ChangeSceneCoroutine(string scene)
+    {
+        // Fade in
+        player.CanInputPlayer(false);
+        animator.SetBool("Fade", true);
+        yield return new WaitForSeconds(1);
+
+        // On initialise tout ni vu ni connu
+        SceneManager.LoadScene(scene);
     }
 
     private IEnumerator CreateRoomCoroutine(Room room)
