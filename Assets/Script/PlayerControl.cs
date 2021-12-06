@@ -67,6 +67,13 @@ public class PlayerControl : MonoBehaviour
 		canInput = b;
 		if(GetComponentInChildren<GunSystem>() != null)
 			GetComponentInChildren<GunSystem>().CanInput = b;
+
+		if(b == false)
+        {
+			animator.SetFloat("X", 0);
+			animator.SetFloat("Y", 0);
+			animator.SetBool("Running", false);
+		}
 	}
 
 	void Awake()

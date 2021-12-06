@@ -53,7 +53,7 @@ public class Ennemy2 : Entity
     public override void Update()
     {
         base.Update();
-        Debug.Log(stateMachine.currentState);
+        //Debug.Log(stateMachine.currentState);
     }
 
     public override void Damage(AttackDetails attackDetails)

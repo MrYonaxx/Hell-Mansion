@@ -1158,6 +1158,7 @@ MonoBehaviour:
   MessagePanelReload: {fileID: 1001243754466136201}
   reloadGameObject: {fileID: 0}
   reloadSlider: {fileID: 0}
+  TextControl: {fileID: 2359136275983155019}
 --- !u!1 &2359136277027298944
 GameObject:
   m_ObjectHideFlags: 0

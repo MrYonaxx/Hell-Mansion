@@ -181,10 +181,27 @@ public class CameraController : MonoBehaviour
 
 
 
-
+    public void AddTarget(Transform t)
+    {
+        targets.Add(new TargetsCamera(t, 10));
+    }
     public void AddTarget(Transform t, int priority)
     {
         targets.Add(new TargetsCamera(t, priority));
+    }
+
+
+    // Y'a plus le temps
+    public void AddTargetCoroutine(Transform t)
+    {
+        StopAllCoroutines();
+        StartCoroutine(CoroutineTarget(t));
+    }
+    private IEnumerator CoroutineTarget(Transform t)
+    {
+        targets.Add(new TargetsCamera(t, 0));
+        yield return new WaitForSeconds(5f);
+        RemoveTarget(t);
     }
 
 
