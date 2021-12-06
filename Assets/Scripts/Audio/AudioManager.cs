@@ -140,7 +140,7 @@ namespace Audio
 
         public void PlaySound(AudioClip sound, float volumeMultiplier = 1)
         {
-            audioSound.PlayOneShot(sound, soundVolumeMax * volumeMultiplier);
+            audioSound.PlayOneShot(sound, volumeMultiplier);
         }
 
         public void PlaySound(AudioClip sound, float volumeMultiplier = 1, float pitchMin = 1, float pitchMax = 1)
@@ -151,7 +151,7 @@ namespace Audio
                 audioIndex = 0;
             }
             audioArray[audioIndex].clip = sound;
-            audioArray[audioIndex].volume = volumeMultiplier;
+            audioArray[audioIndex].volume = volumeMultiplier * soundVolumeMax;
             audioArray[audioIndex].pitch = Random.Range(pitchMin, pitchMax);
             audioArray[audioIndex].Play();
         }

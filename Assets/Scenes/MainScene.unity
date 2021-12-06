@@ -15227,21 +15227,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2031627606}
     - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
+      propertyPath: maxRoom
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: bossRoom
       value: 
       objectReference: {fileID: 449256868906921996, guid: e1c1ac0c499e9ce4cb1ebd60f31d1e5e, type: 3}
     - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
-      propertyPath: roomDatabase
-      value: 
-      objectReference: {fileID: 11400000, guid: 1612bb3db738dbd4ea278d61e12826f3, type: 2}
-    - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: ProchainNiveau
       value: MainScene2
       objectReference: {fileID: 0}
-    - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
-      propertyPath: enigmeDatabase
-      value: 
-      objectReference: {fileID: 11400000, guid: 1612bb3db738dbd4ea278d61e12826f3, type: 2}
     - target: {fileID: 2962719169207884287, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: m_IsActive
       value: 1

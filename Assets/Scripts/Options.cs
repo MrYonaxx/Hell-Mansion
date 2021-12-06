@@ -13,9 +13,9 @@ public class Options : MonoBehaviour
 
     public void Volume(float value)
     {
-        int volume = (int)(value * 100);
+        int volume = (int)(value * 10);
         AudioManager.Instance.SetMusicVolume(volume);
-        AudioManager.Instance.SetMusicVolume(volume);
+        AudioManager.Instance.SetSoundVolume(volume);
     }
 
     public void play()

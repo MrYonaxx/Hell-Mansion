@@ -276,10 +276,10 @@ public class PlayerControl : MonoBehaviour
 			}
 			else
 			{
-				Debug.Log(arsenal[i].name);
+				//Debug.Log(arsenal[i].name);
 				arsenal[i].IsEquip = true;
 				ListGun[i].enabled = true;
-				Debug.Log(ListGun[i].enabled);
+				//Debug.Log(ListGun[i].enabled);
 			}
 		}
 		if (arsenalEquip.rightGun != null && arsenalEquip.PlayerBones != null && !arsenalEquip.IsEquip )
