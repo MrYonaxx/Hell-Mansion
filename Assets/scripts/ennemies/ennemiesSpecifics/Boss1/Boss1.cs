@@ -57,6 +57,7 @@ public B1_MeleeAttackState meleeAttackStateFirst { get; private set; }
 
     public override void Damage(AttackDetails attackDetails)
     {
+        Debug.Log("damage");
         base.Damage(attackDetails);
         if (isDead)
         {
