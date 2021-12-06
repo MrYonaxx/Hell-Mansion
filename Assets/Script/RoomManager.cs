@@ -31,11 +31,16 @@ public class RoomManager : MonoBehaviour
     List<Room> roomPool = new List<Room>();
     List<Room> roomEnigmePool = new List<Room>();
 
+    [SerializeField]
+    AudioClip music = null;
+
     float posX = 0;
     int roomCount = 0;
 
     private void Start()
     {
+        if(music != null)
+            Audio.AudioManager.Instance?.PlayMusic(music, 10);
         Initialize();
         posX += 100;
     }
