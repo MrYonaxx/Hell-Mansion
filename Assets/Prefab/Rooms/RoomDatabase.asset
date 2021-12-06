@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: RoomDatabase
   m_EditorClassIdentifier: 
   roomDatabase:
-  - {fileID: 9005583539336971441, guid: bed081ba9b89bc247b644686259ffa2f, type: 3}
   - {fileID: 2411231976314123196, guid: 233db4759139ae648a0458fc17ee961f, type: 3}
   - {fileID: 2482395786329393248, guid: 51330d3e0fa3b6343af2fb1c6a976ac6, type: 3}
   - {fileID: 7120427812991498804, guid: 7f37a45f88af4c3449b09cf0be225ba1, type: 3}
