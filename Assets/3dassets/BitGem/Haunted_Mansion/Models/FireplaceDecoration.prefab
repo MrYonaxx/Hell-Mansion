@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1831267415440416985}
   - component: {fileID: 7533916459498908893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireplaceDecoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
