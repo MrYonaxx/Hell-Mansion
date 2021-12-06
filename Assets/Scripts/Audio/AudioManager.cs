@@ -163,17 +163,17 @@ namespace Audio
 
 
 
-        public void SetMusicVolume(int value)
+        public void SetMusicVolume(float value)
         {
-            musicVolumeMax = (value / 10f);
+            musicVolumeMax = value;
             if(audioMusic.volume != 0)
                 audioMusic.volume = musicVolumeMax;
         }
 
-        public void SetSoundVolume(int value)
+        public void SetSoundVolume(float value)
         {
             
-            soundVolumeMax = (value / 10f);
+            soundVolumeMax = value;
             audioSound.volume = soundVolumeMax;
         }
     } // AudioManager class

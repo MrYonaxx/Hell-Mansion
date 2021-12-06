@@ -43,10 +43,18 @@ public class RoomManager : MonoBehaviour
 
     private void Start()
     {
-        if(music != null)
-            Audio.AudioManager.Instance?.PlayMusic(music, 10);
+        Audio.AudioManager.Instance?.StopMusic(3f);
+
         Initialize();
         posX += 100;
+        StartCoroutine(CoroutineViteuf());
+    }
+
+    private IEnumerator CoroutineViteuf()
+    {
+        yield return new WaitForSeconds(5f);
+        if (music != null)
+            Audio.AudioManager.Instance?.PlayMusic(music, 10);
     }
 
 
@@ -71,7 +79,7 @@ public class RoomManager : MonoBehaviour
     public Room GetRoom()
     {
         Room room;
-        if(roomCount % enigmeRoomInterval == 0)
+        if(roomCount % enigmeRoomInterval != 0)
         {
             int r = Random.Range(0, roomPool.Count);
             room = roomPool[r];
@@ -161,5 +169,8 @@ public class RoomManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         animator.SetBool("Fade", false);
         player.CanInputPlayer(true);
+
+        if (roomCount >= 2)
+            levelLayout[roomCount - 2].gameObject.SetActive(false);
     }
 }
