@@ -28,7 +28,7 @@ public class WaitZone : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.GetComponent<PlayerControl>())
         {
             inWaitZone = true;
         }
@@ -36,10 +36,25 @@ public class WaitZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.GetComponent<PlayerControl>())
         {
             inWaitZone = false;
             t = 0f;
         }
+    }
+
+    public void FocusObj(Transform obj)
+    {
+        StartCoroutine(EndArenaCoroutine(obj));
+    }
+
+    private IEnumerator EndArenaCoroutine(Transform obj)
+    {
+        // à ne jamais refaire
+        CameraController c = FindObjectOfType<CameraController>();
+        c.AddTarget(obj, 10);
+        yield return new WaitForSeconds(2f);
+        c.RemoveTarget(obj);
+
     }
 }

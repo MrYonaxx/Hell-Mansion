@@ -58,6 +58,9 @@ public class Ennemy2 : Entity
 
     public override void Damage(AttackDetails attackDetails)
     {
+        if (!enabled)
+            return;
+
         base.Damage(attackDetails);
         if (isDead)
         {

@@ -221,6 +221,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0844446f7795c7a46ad38aa0398932e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomDatabase: {fileID: 11400000, guid: c121d8278ab6c36428db64463a366a2a, type: 2}
+  roomDatabase: {fileID: 11400000, guid: 1612bb3db738dbd4ea278d61e12826f3, type: 2}
+  enigmeDatabase: {fileID: 11400000, guid: 0a401b588090a1447b02c9fd3ff61534, type: 2}
+  bossRoom: {fileID: 0}
+  enigmeRoomInterval: 3
+  maxRoom: 12
   player: {fileID: 0}
   animator: {fileID: 500531466148670953}
+  music: {fileID: 0}
