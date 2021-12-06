@@ -5972,6 +5972,10 @@ PrefabInstance:
       propertyPath: OptionsMenu
       value: 
       objectReference: {fileID: 1294748845}
+    - target: {fileID: 4834396115796437986, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6343528803941328808, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
       propertyPath: test
       value: 
@@ -11497,6 +11501,10 @@ PrefabInstance:
       objectReference: {fileID: 2031627606}
     - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
       propertyPath: roomDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: 1612bb3db738dbd4ea278d61e12826f3, type: 2}
+    - target: {fileID: 190702732824567034, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}
+      propertyPath: enigmeDatabase
       value: 
       objectReference: {fileID: 11400000, guid: 1612bb3db738dbd4ea278d61e12826f3, type: 2}
     - target: {fileID: 2962719169207884287, guid: 5e2dc3c731a5754459038e1c9a2413a2, type: 3}

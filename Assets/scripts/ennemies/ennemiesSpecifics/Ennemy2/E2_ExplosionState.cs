@@ -37,6 +37,9 @@ public class E2_ExplosionState : ExplosionState
         base.logicUpdate();
         if(isAnimationFinished)
         {
+            AttackDetails attack = new AttackDetails();
+            attack.damageAmount = 999;
+            ennemy.Damage(attack);
             stateMachine.changeState(ennemy.deathState);
         }
     }
