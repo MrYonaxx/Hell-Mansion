@@ -172,7 +172,7 @@ public class Entity : MonoBehaviour
             isStunned = true;
         }
         if (currentHealth <= 0)
-        {
+        {   
             isDead = true;
             OnDead?.Invoke(this);
         }
