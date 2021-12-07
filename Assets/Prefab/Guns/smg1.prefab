@@ -267,8 +267,9 @@ MonoBehaviour:
   audioPitch: {x: 0.9, y: 1.1}
   LayerMaskRaycast:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 1088
   muzzlePrefab: {fileID: 1336949550903370, guid: d5ab9f1a3e704cd4cae78423614dc551, type: 3}
   muzzlePosition: {fileID: 7020316646201385563}
   bulletLeft: 0
   bulletsShot: 0
+  CanInput: 1

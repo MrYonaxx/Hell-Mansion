@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 3349955889735582722}
   - component: {fileID: 3349955889735582723}
   - component: {fileID: 3349955889735582724}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 3349955889741203296}
   - component: {fileID: 3349955889741203297}
   - component: {fileID: 3349955889741203298}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 3349955889683976626}
   - component: {fileID: 3349955889803949292}
   - component: {fileID: 3349955889803949293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand01_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2198,7 +2198,7 @@ GameObject:
   - component: {fileID: 3349955890738648035}
   - component: {fileID: 3349955890093991993}
   - component: {fileID: 3349955890093991994}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2279,7 +2279,7 @@ GameObject:
   - component: {fileID: 3349955890879500010}
   - component: {fileID: 3349955890172652706}
   - component: {fileID: 3349955890172652707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: painting_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2551,7 +2551,7 @@ GameObject:
   - component: {fileID: 3349955890261862087}
   - component: {fileID: 3349955890261862136}
   - component: {fileID: 3349955890261862137}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_corner_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2646,7 +2646,7 @@ GameObject:
   - component: {fileID: 3349955890280551768}
   - component: {fileID: 3349955890280551769}
   - component: {fileID: 3349955890280551770}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2739,7 +2739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3349955890289487249}
   - component: {fileID: 3349955890289487248}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: colider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2784,7 +2784,7 @@ GameObject:
   - component: {fileID: 3349955889685798281}
   - component: {fileID: 3349955890303334270}
   - component: {fileID: 3349955890303334271}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand01_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3565,7 +3565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3349955890393797711}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "d\xE9co"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3610,7 +3610,7 @@ GameObject:
   - component: {fileID: 3349955890824563536}
   - component: {fileID: 3349955890403077779}
   - component: {fileID: 3349955890403077780}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand03 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4113,7 +4113,7 @@ GameObject:
   - component: {fileID: 3349955890468492971}
   - component: {fileID: 3349955890468492972}
   - component: {fileID: 3349955890468492973}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4680,7 +4680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3349955890595399496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Furnitures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5845,7 +5845,7 @@ GameObject:
   - component: {fileID: 3349955891244834733}
   - component: {fileID: 3349955890811403254}
   - component: {fileID: 3349955890811403255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6021,7 +6021,7 @@ GameObject:
   - component: {fileID: 3349955891558004981}
   - component: {fileID: 3349955890841624906}
   - component: {fileID: 3349955890841624907}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6290,7 +6290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3349955890905327529}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6330,7 +6330,7 @@ GameObject:
   - component: {fileID: 3349955890275805968}
   - component: {fileID: 3349955890911040724}
   - component: {fileID: 3349955890911040725}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6791,7 +6791,7 @@ GameObject:
   - component: {fileID: 3349955890006853881}
   - component: {fileID: 3349955891040743321}
   - component: {fileID: 3349955891040743322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6967,7 +6967,7 @@ GameObject:
   - component: {fileID: 3349955889882338351}
   - component: {fileID: 3349955891072468470}
   - component: {fileID: 3349955891072468471}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand01_v1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8140,7 +8140,7 @@ GameObject:
   - component: {fileID: 3349955891478714381}
   - component: {fileID: 3349955891239435447}
   - component: {fileID: 3349955891239435432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand01_v2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8397,7 +8397,7 @@ GameObject:
   - component: {fileID: 3349955889981774923}
   - component: {fileID: 3349955891317443540}
   - component: {fileID: 3349955891317443541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: curtain_v2d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8478,7 +8478,7 @@ GameObject:
   - component: {fileID: 3349955890987914031}
   - component: {fileID: 3349955891320612846}
   - component: {fileID: 3349955891320612847}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rug_small_v3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8559,7 +8559,7 @@ GameObject:
   - component: {fileID: 3349955891579591060}
   - component: {fileID: 3349955891322355234}
   - component: {fileID: 3349955891322355235}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8736,7 +8736,7 @@ GameObject:
   - component: {fileID: 3349955891340524450}
   - component: {fileID: 3349955891340524451}
   - component: {fileID: 3349955891340524452}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9477,7 +9477,7 @@ GameObject:
   - component: {fileID: 3349955891719676456}
   - component: {fileID: 3349955891500064573}
   - component: {fileID: 3349955891500064574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand01_v1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10417,7 +10417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3349955891583297367}
   - component: {fileID: 3349955891583297366}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: colider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21520,6 +21520,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349955890393797711}
     m_Modifications:
+    - target: {fileID: 888371240727155259, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 888371240727212615, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7092157099845767184, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -21567,6 +21575,14 @@ PrefabInstance:
     - target: {fileID: 7092157099845995568, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
       propertyPath: m_Name
       value: oil_lamp_01_lighted
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092157099845995568, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092157099845995570, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}

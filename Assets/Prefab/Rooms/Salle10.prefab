@@ -5158,7 +5158,7 @@ GameObject:
   - component: {fileID: 8086706221125061347}
   - component: {fileID: 8086706221125061277}
   - component: {fileID: 8086706221125061276}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5333,7 +5333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8086706221143827497}
   - component: {fileID: 8086706221143827498}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: colider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5473,7 +5473,7 @@ GameObject:
   - component: {fileID: 8086706221168667279}
   - component: {fileID: 8086706221168667273}
   - component: {fileID: 8086706221168667272}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: paper_tower_small_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6110,7 +6110,7 @@ GameObject:
   - component: {fileID: 8086706221219897193}
   - component: {fileID: 8086706221219897195}
   - component: {fileID: 8086706221219897194}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7230,7 +7230,7 @@ GameObject:
   - component: {fileID: 8086706221290138608}
   - component: {fileID: 8086706221290138615}
   - component: {fileID: 8086706221290138614}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_corner_inner (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8085,7 +8085,7 @@ GameObject:
   - component: {fileID: 8086706221347057602}
   - component: {fileID: 8086706221347057660}
   - component: {fileID: 8086706221347057603}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8452,7 +8452,7 @@ GameObject:
   - component: {fileID: 8086706221406368715}
   - component: {fileID: 8086706221406368714}
   - component: {fileID: 8086706221406368713}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_window_blank_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8641,7 +8641,7 @@ GameObject:
   - component: {fileID: 8086706221417305947}
   - component: {fileID: 8086706221417305941}
   - component: {fileID: 8086706221417305940}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9074,7 +9074,7 @@ GameObject:
   - component: {fileID: 8086706221467637775}
   - component: {fileID: 8086706221467637769}
   - component: {fileID: 8086706221467637768}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: painting_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9440,7 +9440,7 @@ GameObject:
   - component: {fileID: 8086706221484161392}
   - component: {fileID: 8086706221484161394}
   - component: {fileID: 8086706221484161393}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: painting_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9901,7 +9901,7 @@ GameObject:
   - component: {fileID: 8086706221517931684}
   - component: {fileID: 8086706221517931686}
   - component: {fileID: 8086706221517931685}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: painting_03_frame_broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10078,7 +10078,7 @@ GameObject:
   - component: {fileID: 8086706221541277004}
   - component: {fileID: 8086706221541277011}
   - component: {fileID: 8086706221541277010}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10267,7 +10267,7 @@ GameObject:
   - component: {fileID: 8086706221566758453}
   - component: {fileID: 8086706221566758455}
   - component: {fileID: 8086706221566758454}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: spider_web_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10346,7 +10346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8086706221567341001}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10876,7 +10876,7 @@ GameObject:
   - component: {fileID: 8086706221672338616}
   - component: {fileID: 8086706221672338618}
   - component: {fileID: 8086706221672338617}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: spider_web_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11622,7 +11622,7 @@ GameObject:
   - component: {fileID: 8086706221702597877}
   - component: {fileID: 8086706221702597879}
   - component: {fileID: 8086706221702597878}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12302,7 +12302,7 @@ GameObject:
   - component: {fileID: 8086706221754514133}
   - component: {fileID: 8086706221754514135}
   - component: {fileID: 8086706221754514134}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12763,7 +12763,7 @@ GameObject:
   - component: {fileID: 8086706221786239126}
   - component: {fileID: 8086706221786239120}
   - component: {fileID: 8086706221786239127}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: curtain_v2c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13130,7 +13130,7 @@ GameObject:
   - component: {fileID: 8086706221837651655}
   - component: {fileID: 8086706221837651654}
   - component: {fileID: 8086706221837651653}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13413,7 +13413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8086706222597561837}
   - component: {fileID: 8086706221869186695}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallStraight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14119,7 +14119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8086706222236715099}
   - component: {fileID: 8086706221989728162}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallWindowsCurtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15231,7 +15231,7 @@ GameObject:
   - component: {fileID: 8086706222085667952}
   - component: {fileID: 8086706222085667959}
   - component: {fileID: 8086706222085667958}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15692,7 +15692,7 @@ GameObject:
   - component: {fileID: 8086706222432044463}
   - component: {fileID: 8086706222155087023}
   - component: {fileID: 8086706222155087022}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Arch2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15849,7 +15849,7 @@ GameObject:
   - component: {fileID: 8086706222163835679}
   - component: {fileID: 8086706222163835678}
   - component: {fileID: 8086706222163835677}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16215,7 +16215,7 @@ GameObject:
   - component: {fileID: 8086706222202323165}
   - component: {fileID: 8086706222202323164}
   - component: {fileID: 8086706222202322979}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_v2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16960,7 +16960,7 @@ GameObject:
   - component: {fileID: 8086706222248452263}
   - component: {fileID: 8086706222248452257}
   - component: {fileID: 8086706222248452256}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17041,7 +17041,7 @@ GameObject:
   - component: {fileID: 8086706222943629600}
   - component: {fileID: 8086706222259826643}
   - component: {fileID: 8086706222259826642}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17293,7 +17293,7 @@ GameObject:
   - component: {fileID: 8086706222266690102}
   - component: {fileID: 8086706222266690101}
   - component: {fileID: 8086706222266690100}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_corner_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19666,7 +19666,7 @@ GameObject:
   - component: {fileID: 8086706222439208181}
   - component: {fileID: 8086706222439208183}
   - component: {fileID: 8086706222439208182}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: spider_web_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20304,7 +20304,7 @@ GameObject:
   - component: {fileID: 8086706222525896563}
   - component: {fileID: 8086706222525896562}
   - component: {fileID: 8086706222525896561}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20683,7 +20683,7 @@ GameObject:
   - component: {fileID: 8086706222543021557}
   - component: {fileID: 8086706222543021559}
   - component: {fileID: 8086706222543021558}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: curtain_v1d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20858,7 +20858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8086706222297774502}
   - component: {fileID: 8086706222553712252}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallArtSpiderWeb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20905,7 +20905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8086706222754666019}
   - component: {fileID: 8086706222561929548}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21712,7 +21712,7 @@ GameObject:
   - component: {fileID: 8086706222630239541}
   - component: {fileID: 8086706222630239543}
   - component: {fileID: 8086706222630239542}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_arch_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22078,7 +22078,7 @@ GameObject:
   - component: {fileID: 8086706222661836901}
   - component: {fileID: 8086706222661836903}
   - component: {fileID: 8086706222661836902}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: painting_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22256,7 +22256,7 @@ GameObject:
   - component: {fileID: 8086706222670296736}
   - component: {fileID: 8086706222670296743}
   - component: {fileID: 8086706222670296742}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_corner_inner (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22492,7 +22492,7 @@ GameObject:
   - component: {fileID: 8086706222691039700}
   - component: {fileID: 8086706222691039707}
   - component: {fileID: 8086706222691039706}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22681,7 +22681,7 @@ GameObject:
   - component: {fileID: 8086706222707885081}
   - component: {fileID: 8086706222707885083}
   - component: {fileID: 8086706222707885082}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: painting_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23237,7 +23237,7 @@ GameObject:
   - component: {fileID: 8086706222764263419}
   - component: {fileID: 8086706222764263413}
   - component: {fileID: 8086706222764263412}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: head_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23633,7 +23633,7 @@ GameObject:
   - component: {fileID: 8086706222786139129}
   - component: {fileID: 8086706222786139131}
   - component: {fileID: 8086706222786139130}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_arch_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24569,7 +24569,7 @@ GameObject:
   - component: {fileID: 8086706222827808952}
   - component: {fileID: 8086706222827808954}
   - component: {fileID: 8086706222827808953}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: hand01_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24745,7 +24745,7 @@ GameObject:
   - component: {fileID: 8086706222850957467}
   - component: {fileID: 8086706222850957461}
   - component: {fileID: 8086706222850957460}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: spider_web_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25177,7 +25177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8086706222486381327}
   - component: {fileID: 8086706222905699760}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallArtSpiderWeb (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25685,7 +25685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8086706223003017627}
   - component: {fileID: 8086706223003017620}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: colider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26591,7 +26591,7 @@ GameObject:
   - component: {fileID: 8086706223143993873}
   - component: {fileID: 8086706223143993879}
   - component: {fileID: 8086706223143993878}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48783,9 +48783,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3389886305059285684, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389886305059326664, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959786311139635432, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066714877583343396, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698112047222035649, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698112047222035651, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411631744324554395, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6520787794857106222, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
       propertyPath: m_Name
       value: Bureau
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815714051549322808, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815714051549322810, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815714051549322814, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19a5732df3d2ed34db7ab6a6a60fe4e4, type: 3}
@@ -49565,6 +49605,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8086706221567341001}
     m_Modifications:
+    - target: {fileID: 987254020292996448, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1831267415440416985, guid: c78f079ddeb23194e87060022e01221e, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -49609,9 +49653,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2328911232612036968, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328911232612036970, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328911232612036972, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328911232612036974, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137407337967369039, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302619529740048373, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6762125449026507986, guid: c78f079ddeb23194e87060022e01221e, type: 3}
       propertyPath: m_Name
       value: FireplaceDecoration
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762125449026507986, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426597403897301242, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426597403897337140, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170636949616448804, guid: c78f079ddeb23194e87060022e01221e, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c78f079ddeb23194e87060022e01221e, type: 3}
@@ -49708,9 +49792,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8086706221567341001}
     m_Modifications:
+    - target: {fileID: 228683821134344739, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 281029938219007351, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
       propertyPath: m_Name
       value: Fireplace2
+      objectReference: {fileID: 0}
+    - target: {fileID: 281029938219007351, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056345521333366822, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056345521333399016, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192599199895950009, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825814814569551905, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4177734842466619214, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
       propertyPath: m_RootOrder
@@ -49755,6 +49863,34 @@ PrefabInstance:
     - target: {fileID: 4177734842466619214, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418694303669328198, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701944074484374754, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701944074484374756, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701944074484374758, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839130489226880373, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507227835493308552, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637092866302311721, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}

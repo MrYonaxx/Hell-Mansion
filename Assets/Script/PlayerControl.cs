@@ -293,9 +293,8 @@ public class PlayerControl : MonoBehaviour
             newRightWeapon.transform.localPosition = Vector3.zero;
             newRightWeapon.transform.localRotation = Quaternion.Euler(0, 0, 0);
             animator.runtimeAnimatorController = arsenalEquip.Animator;
-            hud.UpdatePanelBullet(ActualGun);
 
-			// pour les events
+            // pour les events
 			if (currentGun != null)
 				currentGun.OnShoot -= Shoot;
 			currentGun = ActualGun;

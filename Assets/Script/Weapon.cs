@@ -54,7 +54,6 @@ public class Weapon : MonoBehaviour
             }
 
             events.Invoke();
-
             Destroy(gameObject);
         }
     }

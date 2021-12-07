@@ -9831,7 +9831,7 @@ GameObject:
   - component: {fileID: 3976503483264536704}
   - component: {fileID: 3976503483264536830}
   - component: {fileID: 3976503483264536705}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_06_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9912,7 +9912,7 @@ GameObject:
   - component: {fileID: 3976503483296978148}
   - component: {fileID: 3976503483296978146}
   - component: {fileID: 3976503483296978149}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_04_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9993,7 +9993,7 @@ GameObject:
   - component: {fileID: 3976503483298939410}
   - component: {fileID: 3976503483298939408}
   - component: {fileID: 3976503483298939411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10536,7 +10536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3976503483422289829}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10575,7 +10575,7 @@ GameObject:
   - component: {fileID: 3976503483474766762}
   - component: {fileID: 3976503483474766760}
   - component: {fileID: 3976503483474766763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10656,7 +10656,7 @@ GameObject:
   - component: {fileID: 3976503485134648379}
   - component: {fileID: 3976503483476827219}
   - component: {fileID: 3976503483476827218}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10738,7 +10738,7 @@ GameObject:
   - component: {fileID: 3976503484102901952}
   - component: {fileID: 3976503483482470257}
   - component: {fileID: 3976503483482470256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10819,7 +10819,7 @@ GameObject:
   - component: {fileID: 3976503484410796498}
   - component: {fileID: 3976503483494702808}
   - component: {fileID: 3976503483494702811}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bowl_v3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10900,7 +10900,7 @@ GameObject:
   - component: {fileID: 3976503483504104801}
   - component: {fileID: 3976503483504104799}
   - component: {fileID: 3976503483504104798}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11648,7 +11648,7 @@ GameObject:
   - component: {fileID: 3976503483380621310}
   - component: {fileID: 3976503483555379922}
   - component: {fileID: 3976503483555379925}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11733,7 +11733,7 @@ GameObject:
   - component: {fileID: 3976503483570942999}
   - component: {fileID: 3976503483570942998}
   - component: {fileID: 3976503483570943001}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_corner_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11840,7 +11840,7 @@ GameObject:
   - component: {fileID: 3976503484332036327}
   - component: {fileID: 3976503483574282229}
   - component: {fileID: 3976503483574282228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11921,7 +11921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3976503483579712092}
   - component: {fileID: 3976503483579712093}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: colider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12237,7 +12237,7 @@ GameObject:
   - component: {fileID: 3976503483633435198}
   - component: {fileID: 3976503483633435196}
   - component: {fileID: 3976503483633435199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_big_02_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12351,7 +12351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3976503483363768216}
   - component: {fileID: 3976503483654413995}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallWindowsCurtain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12649,7 +12649,7 @@ GameObject:
   - component: {fileID: 3976503483705735675}
   - component: {fileID: 3976503483705735673}
   - component: {fileID: 3976503483705735672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_small_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12825,7 +12825,7 @@ GameObject:
   - component: {fileID: 3976503483736833757}
   - component: {fileID: 3976503483736833755}
   - component: {fileID: 3976503483736833754}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: curtain_v1d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13001,7 +13001,7 @@ GameObject:
   - component: {fileID: 3976503483749078073}
   - component: {fileID: 3976503483749078071}
   - component: {fileID: 3976503483749078070}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_05_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13082,7 +13082,7 @@ GameObject:
   - component: {fileID: 3976503483750605303}
   - component: {fileID: 3976503483750605301}
   - component: {fileID: 3976503483750605300}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13448,7 +13448,7 @@ GameObject:
   - component: {fileID: 3976503483791784211}
   - component: {fileID: 3976503483791784209}
   - component: {fileID: 3976503483791784208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_06_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13814,7 +13814,7 @@ GameObject:
   - component: {fileID: 3976503484115421958}
   - component: {fileID: 3976503483876724581}
   - component: {fileID: 3976503483876724580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: scale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13991,7 +13991,7 @@ GameObject:
   - component: {fileID: 3976503484496238710}
   - component: {fileID: 3976503483900761599}
   - component: {fileID: 3976503483900761598}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14169,7 +14169,7 @@ GameObject:
   - component: {fileID: 3976503485313997065}
   - component: {fileID: 3976503483906289465}
   - component: {fileID: 3976503483906289464}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14252,7 +14252,7 @@ GameObject:
   - component: {fileID: 3976503483913519812}
   - component: {fileID: 3976503483913519810}
   - component: {fileID: 3976503483913519813}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_02_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14713,7 +14713,7 @@ GameObject:
   - component: {fileID: 3976503484039946725}
   - component: {fileID: 3976503483979798993}
   - component: {fileID: 3976503483979798992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_big_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14890,7 +14890,7 @@ GameObject:
   - component: {fileID: 3976503483986711000}
   - component: {fileID: 3976503483986710998}
   - component: {fileID: 3976503483986711001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15066,7 +15066,7 @@ GameObject:
   - component: {fileID: 3976503483990822484}
   - component: {fileID: 3976503483990822482}
   - component: {fileID: 3976503483990822485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_02_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15147,7 +15147,7 @@ GameObject:
   - component: {fileID: 3976503484010225300}
   - component: {fileID: 3976503484010225298}
   - component: {fileID: 3976503484010225301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: scale_l_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15228,7 +15228,7 @@ GameObject:
   - component: {fileID: 3976503483523245404}
   - component: {fileID: 3976503484044599528}
   - component: {fileID: 3976503484044599531}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15311,7 +15311,7 @@ GameObject:
   - component: {fileID: 3976503484722711494}
   - component: {fileID: 3976503484055996178}
   - component: {fileID: 3976503484055996181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15773,7 +15773,7 @@ GameObject:
   - component: {fileID: 3976503484269543580}
   - component: {fileID: 3976503484106231802}
   - component: {fileID: 3976503484106231805}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: boiling_pipes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16599,7 +16599,7 @@ GameObject:
   - component: {fileID: 3976503483723174389}
   - component: {fileID: 3976503484259490577}
   - component: {fileID: 3976503484259490576}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hand01_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16774,7 +16774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3976503484594017514}
   - component: {fileID: 3976503484291394709}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallWindowsCurtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17134,7 +17134,7 @@ GameObject:
   - component: {fileID: 3976503483750435099}
   - component: {fileID: 3976503484313959401}
   - component: {fileID: 3976503484313959400}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_05 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17217,7 +17217,7 @@ GameObject:
   - component: {fileID: 3976503484322916537}
   - component: {fileID: 3976503484322916535}
   - component: {fileID: 3976503484322916534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_05_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17298,7 +17298,7 @@ GameObject:
   - component: {fileID: 3976503484345793995}
   - component: {fileID: 3976503484345793993}
   - component: {fileID: 3976503484345793992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17379,7 +17379,7 @@ GameObject:
   - component: {fileID: 3976503484397169959}
   - component: {fileID: 3976503484397169957}
   - component: {fileID: 3976503484397169956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_06_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17460,7 +17460,7 @@ GameObject:
   - component: {fileID: 3976503484404484822}
   - component: {fileID: 3976503484404484820}
   - component: {fileID: 3976503484404484823}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_06_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17636,7 +17636,7 @@ GameObject:
   - component: {fileID: 3976503484431880739}
   - component: {fileID: 3976503484431880737}
   - component: {fileID: 3976503484431880736}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17717,7 +17717,7 @@ GameObject:
   - component: {fileID: 3976503484347416197}
   - component: {fileID: 3976503484437610232}
   - component: {fileID: 3976503484437610235}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: mortar_pestle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17893,7 +17893,7 @@ GameObject:
   - component: {fileID: 3976503484460807484}
   - component: {fileID: 3976503484460807482}
   - component: {fileID: 3976503484460807485}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_window_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18164,7 +18164,7 @@ GameObject:
   - component: {fileID: 3976503484474990016}
   - component: {fileID: 3976503484474989886}
   - component: {fileID: 3976503484474990017}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18245,7 +18245,7 @@ GameObject:
   - component: {fileID: 3976503484475169432}
   - component: {fileID: 3976503484475169430}
   - component: {fileID: 3976503484475169433}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_05_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18456,7 +18456,7 @@ GameObject:
   - component: {fileID: 3976503483861474269}
   - component: {fileID: 3976503484525093667}
   - component: {fileID: 3976503484525093666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_06 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18539,7 +18539,7 @@ GameObject:
   - component: {fileID: 3976503484539764043}
   - component: {fileID: 3976503484539764041}
   - component: {fileID: 3976503484539764040}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_04_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18715,7 +18715,7 @@ GameObject:
   - component: {fileID: 3976503484554982667}
   - component: {fileID: 3976503484554982665}
   - component: {fileID: 3976503484554982664}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: curtain_v1d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18877,7 +18877,7 @@ GameObject:
   - component: {fileID: 3976503483983436059}
   - component: {fileID: 3976503484576423314}
   - component: {fileID: 3976503484576423317}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19054,7 +19054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3976503484613691472}
   - component: {fileID: 3976503484613691473}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: colider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19194,7 +19194,7 @@ GameObject:
   - component: {fileID: 3976503484622390527}
   - component: {fileID: 3976503484622390525}
   - component: {fileID: 3976503484622390524}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_big_01_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19465,7 +19465,7 @@ GameObject:
   - component: {fileID: 3976503484920401110}
   - component: {fileID: 3976503484653319043}
   - component: {fileID: 3976503484653319042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bowl_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19641,7 +19641,7 @@ GameObject:
   - component: {fileID: 3976503484649498181}
   - component: {fileID: 3976503484653697712}
   - component: {fileID: 3976503484653697715}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_big_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19721,7 +19721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3976503484662441943}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "d\xE9co"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19781,7 +19781,7 @@ GameObject:
   - component: {fileID: 3976503484663489366}
   - component: {fileID: 3976503484663489364}
   - component: {fileID: 3976503484663489367}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: scale_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19864,7 +19864,7 @@ GameObject:
   - component: {fileID: 3976503484668672044}
   - component: {fileID: 3976503484668672042}
   - component: {fileID: 3976503484668672045}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_05_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19945,7 +19945,7 @@ GameObject:
   - component: {fileID: 3976503484687569155}
   - component: {fileID: 3976503484687569153}
   - component: {fileID: 3976503484687569152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20122,7 +20122,7 @@ GameObject:
   - component: {fileID: 3976503484747236815}
   - component: {fileID: 3976503484747236814}
   - component: {fileID: 3976503484747236817}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: wall_straight_half (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20216,7 +20216,7 @@ GameObject:
   - component: {fileID: 3976503484787129652}
   - component: {fileID: 3976503484787129650}
   - component: {fileID: 3976503484787129653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vial_small_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20297,7 +20297,7 @@ GameObject:
   - component: {fileID: 3976503484796971854}
   - component: {fileID: 3976503484796971852}
   - component: {fileID: 3976503484796971855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20473,7 +20473,7 @@ GameObject:
   - component: {fileID: 3976503484809356510}
   - component: {fileID: 3976503484809356508}
   - component: {fileID: 3976503484809356511}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20554,7 +20554,7 @@ GameObject:
   - component: {fileID: 3976503483993535641}
   - component: {fileID: 3976503484811073484}
   - component: {fileID: 3976503484811073487}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21330,7 +21330,7 @@ GameObject:
   - component: {fileID: 3976503484607693937}
   - component: {fileID: 3976503484890159149}
   - component: {fileID: 3976503484890159148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21508,7 +21508,7 @@ GameObject:
   - component: {fileID: 3976503484209975314}
   - component: {fileID: 3976503484917448145}
   - component: {fileID: 3976503484917448144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21685,7 +21685,7 @@ GameObject:
   - component: {fileID: 3976503484949970581}
   - component: {fileID: 3976503484949970579}
   - component: {fileID: 3976503484949970578}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03_liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21928,6 +21928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15447c4be8527e846ac8df71b36112de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orderMatter: 0
   ennemies:
   - {fileID: 0}
   - {fileID: 0}
@@ -21964,6 +21965,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   particleEndArena: {fileID: 3467762979728937844}
+  bloodParticle: {fileID: 0}
   objToFocus: {fileID: 0}
 --- !u!1 &3976503485022033054
 GameObject:
@@ -21976,7 +21978,7 @@ GameObject:
   - component: {fileID: 3976503484345237863}
   - component: {fileID: 3976503485022033052}
   - component: {fileID: 3976503485022033055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: kitchen_spoon_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22423,7 +22425,7 @@ GameObject:
   - component: {fileID: 3976503485403107298}
   - component: {fileID: 3976503485071096143}
   - component: {fileID: 3976503485071096142}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jar_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23009,7 +23011,7 @@ GameObject:
   - component: {fileID: 3976503485217786911}
   - component: {fileID: 3976503485217786909}
   - component: {fileID: 3976503485217786908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: scale_r_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23565,7 +23567,7 @@ GameObject:
   - component: {fileID: 3976503485233280359}
   - component: {fileID: 3976503485290073389}
   - component: {fileID: 3976503485290073388}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25009,9 +25011,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976503483422289829}
     m_Modifications:
+    - target: {fileID: 228683821134344739, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 281029938219007351, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
       propertyPath: m_Name
       value: Fireplace2
+      objectReference: {fileID: 0}
+    - target: {fileID: 281029938219007351, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056345521333366822, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056345521333399016, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192599199895950009, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825814814569551905, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4177734842466619214, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
       propertyPath: m_RootOrder
@@ -25056,6 +25082,34 @@ PrefabInstance:
     - target: {fileID: 4177734842466619214, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418694303669328198, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701944074484374754, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701944074484374756, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701944074484374758, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839130489226880373, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507227835493308552, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637092866302311721, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e6d863fb290c4246877a3d3d476fd0b, type: 3}
@@ -25196,6 +25250,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976503484662441943}
     m_Modifications:
+    - target: {fileID: 888371240727155259, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 888371240727212615, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7092157099845767184, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -25244,6 +25306,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: oil_lamp_01_lighted
       objectReference: {fileID: 0}
+    - target: {fileID: 7092157099845995568, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092157099845995570, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc945c22a7787d42a75ebaaf073a0ec, type: 3}
 --- !u!4 &2780974345722484506 stripped
@@ -25258,6 +25328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976503484662441943}
     m_Modifications:
+    - target: {fileID: 7190070692882509360, guid: b59f25f284f953b499a1c058fd3c1a87, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7190070693546812096, guid: b59f25f284f953b499a1c058fd3c1a87, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -25305,6 +25379,18 @@ PrefabInstance:
     - target: {fileID: 7190070693546812099, guid: b59f25f284f953b499a1c058fd3c1a87, type: 3}
       propertyPath: m_Name
       value: cauldron_big_lighted
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190070693546812099, guid: b59f25f284f953b499a1c058fd3c1a87, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7801855606524507882, guid: b59f25f284f953b499a1c058fd3c1a87, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7801855606524537636, guid: b59f25f284f953b499a1c058fd3c1a87, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b59f25f284f953b499a1c058fd3c1a87, type: 3}
@@ -25363,6 +25449,22 @@ PrefabInstance:
     - target: {fileID: 3110815837072967862, guid: 263e1f25692dcfa41834558e9c2d8e0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3184801731346779640, guid: 263e1f25692dcfa41834558e9c2d8e0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3184801731346812982, guid: 263e1f25692dcfa41834558e9c2d8e0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257677475355764529, guid: 263e1f25692dcfa41834558e9c2d8e0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257677475355802367, guid: 263e1f25692dcfa41834558e9c2d8e0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8399915299700195173, guid: 263e1f25692dcfa41834558e9c2d8e0b, type: 3}
       propertyPath: m_Name
@@ -25636,6 +25738,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976503484662441943}
     m_Modifications:
+    - target: {fileID: 2211969286563299831, guid: f189895eb2ca51043b4ea373e77b7fa9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211969286563357067, guid: f189895eb2ca51043b4ea373e77b7fa9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5320293510050175655, guid: f189895eb2ca51043b4ea373e77b7fa9, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -25680,9 +25790,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5320293510050268805, guid: f189895eb2ca51043b4ea373e77b7fa9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5320293510050268807, guid: f189895eb2ca51043b4ea373e77b7fa9, type: 3}
       propertyPath: m_Name
       value: oil_lamp_02_lighted
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320293510050268807, guid: f189895eb2ca51043b4ea373e77b7fa9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f189895eb2ca51043b4ea373e77b7fa9, type: 3}

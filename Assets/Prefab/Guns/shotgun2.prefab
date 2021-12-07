@@ -248,15 +248,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181e4ad5224696c4db38bc4149d5ee5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 4
   timeBetweenShooting: 1.5
   spread: 0
   range: 5
   reloadTime: 1
   timeBetweenShots: 0
-  magazineSizeInitial: 35
+  magazineSizeInitial: 4
   bulletsPerTap: 2
-  AmmoReserve: 20
+  AmmoReserve: 16
   allowButtonHold: 0
   infiniteAmmo: 0
   _rb: {fileID: 0}
@@ -267,8 +267,9 @@ MonoBehaviour:
   audioPitch: {x: 0.9, y: 1.1}
   LayerMaskRaycast:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 1088
   muzzlePrefab: {fileID: 1336949550903370, guid: b7d944e2852026f459b30e8b54fab523, type: 3}
   muzzlePosition: {fileID: 6932632590366743825}
   bulletLeft: 0
   bulletsShot: 0
+  CanInput: 1
