@@ -799,6 +799,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9034951789301454574, guid: bd64c0fafe1e0104bba3ff81d086c2aa, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9034951789301454579, guid: bd64c0fafe1e0104bba3ff81d086c2aa, type: 3}
       propertyPath: m_Name
       value: HPbar
