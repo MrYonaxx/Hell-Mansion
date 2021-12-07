@@ -37,7 +37,7 @@ public class Ennemy3 : Entity
     public override void Start()
     {
         base.Start();
-        //doit être le même nom dans l'animator
+        //doit Ãªtre le mÃªme nom dans l'animator
         moveState = new E3_moveState(this, stateMachine, "Move", moveStateData, this);
         idleState = new E3_idleState(this, stateMachine, "idle", idleStateData, this);
         playerDetectedState = new E3_playerDetectedState(this, stateMachine, "playerDetected", playerDetectedStateData, this);

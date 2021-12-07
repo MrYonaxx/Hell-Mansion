@@ -4,11 +4,61 @@
     <e p="C:\Users\marti\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\marti\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Hell-Mansion.-238346013.00" t="ExcludeRecursive" />
     <e p="D:\Martin\UQAC\MaitriseJeu\ConceptionJeuVidéo\Git Mansion\Hell-Mansion" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="3dassets" t="Include">
           <e p="kenney_platformerkit2" t="Include">
             <e p="License.txt" t="Include" />
+          </e>
+          <e p="Light Behavior" t="Include">
+            <e p="Light Behavior 1.1" t="Include">
+              <e p="Behaviors" t="Include">
+                <e p="BlinkBehavior.cs" t="Include" />
+                <e p="FireBehavior.cs" t="Include" />
+                <e p="FlickerBehavior.cs" t="Include" />
+                <e p="PoliceBehavior.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="BlinkBehaviorEditor.cs" t="Include" />
+                <e p="FireBehaviorEditor.cs" t="Include" />
+                <e p="FlickerBehaviorEditor.cs" t="Include" />
+                <e p="PoliceBehaviorEditor.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Blinking" t="Include">
+                <e p="Blink.cs" t="Include" />
+              </e>
+              <e p="Color Change" t="Include">
+                <e p="DualColor.cs" t="Include" />
+                <e p="DualColorSimple.cs" t="Include" />
+              </e>
+              <e p="Emergency" t="Include">
+                <e p="CalmEmergency.cs" t="Include" />
+                <e p="IntenseEmergency.cs" t="Include" />
+              </e>
+              <e p="Fire" t="Include">
+                <e p="Candle.cs" t="Include" />
+                <e p="Fire.cs" t="Include" />
+                <e p="Torch.cs" t="Include" />
+                <e p="VolatileFire.cs" t="Include" />
+              </e>
+              <e p="Flicker" t="Include">
+                <e p="Flicker.cs" t="Include" />
+                <e p="HorrorFlicker.cs" t="Include" />
+              </e>
+              <e p="Lerping.cs" t="Include" />
+              <e p="LightBehavior.cs" t="Include" />
+              <e p="Moving" t="Include">
+                <e p="MoveBetween.cs" t="Include" />
+                <e p="MoveOneWay.cs" t="Include" />
+              </e>
+              <e p="Thunder" t="Include">
+                <e p="Thunder.cs" t="Include" />
+                <e p="ThunderWindow.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
         <e p="Beautiful Progress Bar Free - CYKO" t="Include">
@@ -70,6 +120,7 @@
           <e p="Room.cs" t="Include" />
           <e p="RoomDatabase.cs" t="Include" />
           <e p="RoomManager.cs" t="Include" />
+          <e p="Shield.cs" t="Include" />
           <e p="SimulateEnnemy.cs" t="Include" />
           <e p="TextController.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />
@@ -89,11 +140,41 @@
             <e p="Brasero.cs" t="Include" />
             <e p="BraseroManager.cs" t="Include" />
             <e p="Door.cs" t="Include" />
+            <e p="IntroBoss.cs" t="Include" />
+            <e p="Introduction.cs" t="Include" />
             <e p="RandomEvents.cs" t="Include" />
+            <e p="StatueManager.cs" t="Include" />
             <e p="WaitZone.cs" t="Include" />
           </e>
           <e p="ennemies" t="Include">
+            <e p="Chest-Mimic" t="Include">
+              <e p="Animation.cs" t="Include" />
+              <e p="Mimic.cs" t="Include" />
+              <e p="TrueChest.cs" t="Include" />
+            </e>
             <e p="ennemiesSpecifics" t="Include">
+              <e p="Boss1" t="Include">
+                <e p="B1_chargeState.cs" t="Include" />
+                <e p="B1_deathState.cs" t="Include" />
+                <e p="B1_idleState.cs" t="Include" />
+                <e p="B1_lookForPlayerState.cs" t="Include" />
+                <e p="B1_meleeAttackState.cs" t="Include" />
+                <e p="B1_moveState.cs" t="Include" />
+                <e p="B1_playerDetectedState.cs" t="Include" />
+                <e p="B1_stunState.cs" t="Include" />
+                <e p="Boss1.cs" t="Include" />
+              </e>
+              <e p="Enemy3" t="Include">
+                <e p="E3_deathState.cs" t="Include" />
+                <e p="E3_idleState.cs" t="Include" />
+                <e p="E3_lookForPlayerState.cs" t="Include" />
+                <e p="E3_meleeAttackState.cs" t="Include" />
+                <e p="E3_moveState.cs" t="Include" />
+                <e p="E3_playerDetectedState.cs" t="Include" />
+                <e p="E3_rangedAttackState.cs" t="Include" />
+                <e p="E3_stunState.cs" t="Include" />
+                <e p="Ennemy3.cs" t="Include" />
+              </e>
               <e p="Ennemy1" t="Include">
                 <e p="E1_chargeState.cs" t="Include" />
                 <e p="E1_deathState.cs" t="Include" />
@@ -104,6 +185,29 @@
                 <e p="E1_playerDetectedState.cs" t="Include" />
                 <e p="E1_stunState.cs" t="Include" />
                 <e p="Ennemy1.cs" t="Include" />
+              </e>
+              <e p="Ennemy2" t="Include">
+                <e p="E2_chargeState.cs" t="Include" />
+                <e p="E2_deathState.cs" t="Include" />
+                <e p="E2_ExplosionState.cs" t="Include" />
+                <e p="E2_idleState.cs" t="Include" />
+                <e p="E2_lookForPlayerState.cs" t="Include" />
+                <e p="E2_MeleeAttackState.cs" t="Include" />
+                <e p="E2_moveState.cs" t="Include" />
+                <e p="E2_playerDetectedState.cs" t="Include" />
+                <e p="E2_stunState.cs" t="Include" />
+                <e p="Ennemy2.cs" t="Include" />
+              </e>
+              <e p="Ennemy4" t="Include">
+                <e p="E4_chargeState.cs" t="Include" />
+                <e p="E4_deathState.cs" t="Include" />
+                <e p="E4_ExplosionState.cs" t="Include" />
+                <e p="E4_idleState.cs" t="Include" />
+                <e p="E4_lookForPlayerState.cs" t="Include" />
+                <e p="E4_moveState.cs" t="Include" />
+                <e p="E4_playerDetectedState.cs" t="Include" />
+                <e p="E4_stunState.cs" t="Include" />
+                <e p="Ennemy4.cs" t="Include" />
               </e>
             </e>
             <e p="Entity.cs" t="Include" />
@@ -120,20 +224,24 @@
               <e p="data" t="Include">
                 <e p="D_chargeState.cs" t="Include" />
                 <e p="D_deathState.cs" t="Include" />
+                <e p="D_explosionState.cs" t="Include" />
                 <e p="D_idleState.cs" t="Include" />
                 <e p="D_LookForPlayerState.cs" t="Include" />
                 <e p="D_meleeAttackState.cs" t="Include" />
                 <e p="D_moveState.cs" t="Include" />
                 <e p="D_PlayerDetected.cs" t="Include" />
+                <e p="D_rangedAttackState.cs" t="Include" />
                 <e p="D_StunState.cs" t="Include" />
                 <e p="D_temporayEntity.cs" t="Include" />
               </e>
               <e p="DeathState.cs" t="Include" />
+              <e p="ExplosionState.cs" t="Include" />
               <e p="IdleState.cs" t="Include" />
               <e p="LookForPlayerState.cs" t="Include" />
               <e p="MeleeAttackState.cs" t="Include" />
               <e p="MoveState.cs" t="Include" />
               <e p="PlayerDetectedState.cs" t="Include" />
+              <e p="RangedAttackState.cs" t="Include" />
               <e p="StunState.cs" t="Include" />
             </e>
             <e p="Structs" t="Include">
@@ -146,9 +254,12 @@
             <e p="AnimationEvent.cs" t="Include" />
             <e p="BlinkScript.cs" t="Include" />
             <e p="FeedbackManager.cs" t="Include" />
+            <e p="IKShake.cs" t="Include" />
+            <e p="IKShoot.cs" t="Include" />
             <e p="IMotionSpeed.cs" t="Include" />
             <e p="Shake.cs" t="Include" />
             <e p="ShakeSprite.cs" t="Include" />
+            <e p="TrailShoot.cs" t="Include" />
           </e>
           <e p="GUI" t="Include">
             <e p="HealthGUI.cs" t="Include" />
@@ -162,6 +273,9 @@
           </e>
           <e p="Options.cs" t="Include" />
           <e p="PlayerInteraction.cs" t="Include" />
+          <e p="Projectiles" t="Include">
+            <e p="Projectile.cs" t="Include" />
+          </e>
           <e p="Stats" t="Include">
             <e p="ElementalResistance.cs" t="Include" />
             <e p="Stat.cs" t="Include" />

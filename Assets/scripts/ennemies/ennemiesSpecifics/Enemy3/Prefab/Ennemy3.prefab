@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Bits: 256
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1024
   fieldOfViewMinOrMax: 0
   visibleTargets: []
 --- !u!114 &4236227255652010133
@@ -148,7 +148,7 @@ MonoBehaviour:
     m_Bits: 256
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1024
   fieldOfViewMinOrMax: 1
   visibleTargets: []
 --- !u!114 &4541502161320849010
@@ -1514,7 +1514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 359259228899284855, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}
       propertyPath: whatIsGround.m_Bits
-      value: 136
+      value: 1152
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}

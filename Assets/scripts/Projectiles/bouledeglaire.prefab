@@ -49,6 +49,9 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1152
   damagePosition: {fileID: 359259230091016018}
 --- !u!54 &359259228899284854
 Rigidbody:

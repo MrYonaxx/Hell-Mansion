@@ -15,7 +15,7 @@ public class FieldOfView : MonoBehaviour
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
-    public FieldOfViewMinOrMax fieldOfViewMinOrMax=FieldOfViewMinOrMax.isMinFieldOfView; //nécéssaire pour les différencier lorsque qu'on utilise plusieurs field of view dans 
+    public FieldOfViewMinOrMax fieldOfViewMinOrMax=FieldOfViewMinOrMax.isMinFieldOfView; //nÃ©cÃ©ssaire pour les diffÃ©rencier lorsque qu'on utilise plusieurs field of view dans 
     public List<Transform> visibleTargets = new List<Transform>();
 
     private void Start()
@@ -42,12 +42,14 @@ public class FieldOfView : MonoBehaviour
             Vector3 dirToTarget = (target.position - transform.position).normalized;
             if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
             {
+               
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
                 {
                     visibleTargets.Add(target);
                 }
             }
+           
         }
     }
 

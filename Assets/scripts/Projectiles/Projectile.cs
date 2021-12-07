@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,6 +43,8 @@ public class Projectile : MonoBehaviour
 
                 collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount);
             }
+
+            Debug.Log("boule hit");
             Destroy(gameObject);
         } else if(detectedGround.Length>0)
         {

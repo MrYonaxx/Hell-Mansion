@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15eda7a2-37ed-4014-b8bc-9b9c40a4f4f0" name="Default Changelist" comment="" />
+    <list default="true" id="15eda7a2-37ed-4014-b8bc-9b9c40a4f4f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hell-Mansion/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovementMartin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MovementMartin.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GunSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GunSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Projectiles/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Projectiles/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Projectiles/bouledeglaire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Projectiles/bouledeglaire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Enemy3/Ennemy3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Enemy3/Ennemy3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Enemy3/Prefab/Ennemy3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Enemy3/Prefab/Ennemy3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +30,6 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfViewEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfView.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Ennemy1.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/Cursor.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/CursorController.cs" />
@@ -32,9 +42,11 @@
       <option value="$PROJECT_DIR$/Assets/Script/FlashObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/EnnemySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/HUDController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Script/GunSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/PlayerInteraction.cs" />
+      <option value="$PROJECT_DIR$/Assets/Script/GunSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Projectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/ennemies/FieldOfView.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="20sr6Nrt1nenmtoPruFAxqG40KO" />
@@ -86,6 +98,7 @@
       <workItem from="1638245286469" duration="2146000" />
       <workItem from="1638317933894" duration="16114000" />
       <workItem from="1638646037454" duration="386000" />
+      <workItem from="1638902613627" duration="4441000" />
     </task>
     <servers />
   </component>

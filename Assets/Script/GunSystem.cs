@@ -59,12 +59,20 @@ public class GunSystem : MonoBehaviour
                 shooting = Input.GetButton("Fire1");
             else
                 shooting = Input.GetButtonDown("Fire1");
+            if (bulletLeft < magazineSizeInitial)
+            {
+                _hud.OpenMessagePanelReload();
+            }
+            else
+            {
+                _hud.CloseMessagePanelReload();
+            }
             // Reload
             if (Input.GetButton("Reload") && bulletLeft < magazineSizeInitial && !reloading && AmmoReserve > 0)
             {
                 Reload();
             }
-
+            
             //Shoot
             if (readyToShoot && shooting && !reloading && (bulletLeft > 0 || infiniteAmmo ))
             {
@@ -172,9 +180,11 @@ public class GunSystem : MonoBehaviour
         {
             Invoke("ResetShoot", timeBetweenShooting);
         }
+
+        
         if(bulletLeft == 0 && AmmoReserve > 0)
         {
-            _hud.OpenMessagePanelReload();
+            Reload();
         }
         
     }
