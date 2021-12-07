@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Fire
+  - candle
+  - fire
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Obstacles
   - Targets
   - Glow
-  - 
+  - Wall
   - Interaction
   - 
   - 
@@ -39,7 +41,6 @@ TagManager:
   - 
   - 
   - PostProcess
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0

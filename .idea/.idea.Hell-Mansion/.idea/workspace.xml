@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15eda7a2-37ed-4014-b8bc-9b9c40a4f4f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Enemy3/Data/E3_deathStateData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Enemy3/Data/E3_deathStateData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Data/E1_deathStateData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy1/Data/E1_deathStateData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy2/Data/E2_deathStateData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy2/Data/E2_deathStateData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy4/data/E4_deathStateData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ennemies/ennemiesSpecifics/Ennemy4/data/E4_deathStateData.asset" afterDir="false" />
-    </list>
+    <list default="true" id="15eda7a2-37ed-4014-b8bc-9b9c40a4f4f0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +34,7 @@
       <option value="$PROJECT_DIR$/Assets/Script/HUDController.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/GunSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/PlayerInteraction.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="20sr6Nrt1nenmtoPruFAxqG40KO" />
