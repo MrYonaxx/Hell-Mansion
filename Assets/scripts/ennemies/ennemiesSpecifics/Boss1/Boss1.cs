@@ -67,12 +67,12 @@ public B1_MeleeAttackState meleeAttackStateFirst { get; private set; }
         {
             stateMachine.changeState(stunState);
         }
-        /*
+        
         else if (checkPlayerInMinRangeAgro())
         {
-            stateMachine.changeState(rangedAttackState);
+            stateMachine.changeState(meleeAttackStateFirst);
         }
-        */
+        
 
     }
 }
