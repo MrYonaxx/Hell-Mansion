@@ -2413,12 +2413,12 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.9684855, b: 0.8392157, a: 1}
   m_Intensity: 3
-  m_Range: 6
+  m_Range: 4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2446,7 +2446,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10585,8 +10585,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
-  m_Range: 5
+  m_Intensity: 2
+  m_Range: 10
   m_SpotAngle: 80
   m_InnerSpotAngle: 6
   m_CookieSize: 10
@@ -10619,7 +10619,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -15552,7 +15552,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3451016244074962440}
   neckBone: {fileID: 1858229682168173896}
-  test: {fileID: 0}
 --- !u!65 &2891861128672865078
 BoxCollider:
   m_ObjectHideFlags: 0

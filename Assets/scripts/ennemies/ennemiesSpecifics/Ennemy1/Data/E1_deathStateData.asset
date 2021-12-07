@@ -23,3 +23,5 @@ MonoBehaviour:
     dropChance: 30
   - drop: {fileID: 287090012035998203, guid: 0411c8c2f2e6207478ca827b8668b0e9, type: 3}
     dropChance: 50
+  - drop: {fileID: 5530469524583344748, guid: e627af352880cc04c84407adedb5afbb, type: 3}
+    dropChance: 65

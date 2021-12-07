@@ -23,8 +23,8 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0
-  m_AmbientMode: 1
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -7306,6 +7306,10 @@ PrefabInstance:
     - target: {fileID: 4346522655281663845, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.10352194
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460767872483646875, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4483530876183332964, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
       propertyPath: m_LocalPosition.y

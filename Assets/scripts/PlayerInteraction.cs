@@ -8,8 +8,7 @@ public class PlayerInteraction : MonoBehaviour
     PlayerControl player;
     [SerializeField]
     Transform neckBone;
-    [SerializeField]
-    Transform test;
+
 
     List<IInteractable> interactables = new List<IInteractable>();
     IInteractable objInteractable = null;

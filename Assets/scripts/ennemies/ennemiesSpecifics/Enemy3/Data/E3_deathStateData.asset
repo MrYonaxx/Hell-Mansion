@@ -14,4 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathChunckParticules: {fileID: 0}
   deathBloodParticules: {fileID: 0}
-  drops: []
+  drops:
+  - drop: {fileID: 287090012035998203, guid: 777060a5a5f57cb4fa9b4380f9f619b0, type: 3}
+    dropChance: 10
+  - drop: {fileID: 287090012035998203, guid: 54970d69518ff4242a352322dba07d11, type: 3}
+    dropChance: 20
+  - drop: {fileID: 287090012035998203, guid: db685b5d7965d854eb376aba8b8b478d, type: 3}
+    dropChance: 30
+  - drop: {fileID: 287090012035998203, guid: 0411c8c2f2e6207478ca827b8668b0e9, type: 3}
+    dropChance: 50
+  - drop: {fileID: 5530469524583344748, guid: e627af352880cc04c84407adedb5afbb, type: 3}
+    dropChance: 65
