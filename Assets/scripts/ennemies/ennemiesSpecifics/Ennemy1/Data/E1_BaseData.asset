@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3fb7ac75f469a409c4cc2e56359101, type: 3}
   m_Name: E1_BaseData
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 15
   damageHopSpeed: 3
   MonsterName: Bouboule
   power: 1
