@@ -33,6 +33,12 @@ public class ExplosionState : AttackState
     public override void finishAttack()
     {
         base.finishAttack();
+        Collider[] detectedObjects = Physics.OverlapSphere(attackPosition.position, stateDate.attackRadius,stateDate.whatIsPlayer);
+
+        foreach(Collider collider in detectedObjects)
+        {
+            collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount);
+        }
     }
 
     public override void logicUpdate()
@@ -49,12 +55,6 @@ public class ExplosionState : AttackState
     {
         base.triggerAttack();
 
-        Collider[] detectedObjects = Physics.OverlapSphere(attackPosition.position, stateDate.attackRadius,stateDate.whatIsPlayer);
 
-        foreach(Collider collider in detectedObjects)
-        {
-            collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount); //TODO : à revoir pour adapter au player de martin
-
-        }
     }
 }
