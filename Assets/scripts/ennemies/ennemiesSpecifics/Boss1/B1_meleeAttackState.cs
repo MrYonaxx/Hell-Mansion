@@ -54,5 +54,10 @@ public class B1_MeleeAttackState : MeleeAttackState
     public override void triggerAttack()
     {
         base.triggerAttack();
+        this.ennemy.numberOfAttacks++;
+        if(this.ennemy.numberOfAttacks>=3)
+        {
+            this.ennemy.numberOfAttacks = 0;
+        }
     }
 }

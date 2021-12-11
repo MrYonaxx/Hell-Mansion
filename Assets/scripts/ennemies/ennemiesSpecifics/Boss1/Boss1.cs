@@ -37,6 +37,7 @@ public B1_MeleeAttackState meleeAttackStateFirst { get; private set; }
     private D_deathState deathStateData;
     [SerializeField]
     private Transform meleeAttackPosition;
+    public int numberOfAttacks=0;
     public override void Start()
     {
         base.Start();
@@ -46,8 +47,8 @@ public B1_MeleeAttackState meleeAttackStateFirst { get; private set; }
         playerDetectedState = new B1_playerDetectedState(this, stateMachine, "playerDetected", playerDetectedStateData, this);
         lookForPlayerState = new B1_lookForPlayerState(this, stateMachine, "look", lookForPlayerStateData, this);
         meleeAttackStateFirst = new B1_MeleeAttackState(this, stateMachine, "meleeAttack1", meleeAttackPosition, firstMeleeAttackStateDate, this);
-        meleeAttackStateSecond = new B1_MeleeAttackState(this, stateMachine, "meleeAttack1", meleeAttackPosition, secondMeleeAttackStateDate, this);
-        meleeAttackStateThird = new B1_MeleeAttackState(this, stateMachine, "meleeAttack1", meleeAttackPosition, thirdMeleeAttackStateDate, this);
+        meleeAttackStateSecond = new B1_MeleeAttackState(this, stateMachine, "meleeAttack2", meleeAttackPosition, secondMeleeAttackStateDate, this);
+        meleeAttackStateThird = new B1_MeleeAttackState(this, stateMachine, "meleeAttack3", meleeAttackPosition, thirdMeleeAttackStateDate, this);
 
         stunState = new B1_stunState(this, stateMachine, "stun", stunStateData, this);
         deathState = new B1_deathState(this, stateMachine, "dead", deathStateData, this);

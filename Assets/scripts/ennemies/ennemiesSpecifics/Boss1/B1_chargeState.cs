@@ -30,7 +30,18 @@ public class B1_chargeState : ChargeState
         base.logicUpdate();
         if (performCloseRangeAction)
         {
-            stateMachine.changeState(ennemy.meleeAttackStateFirst);
+            switch (this.ennemy.numberOfAttacks)
+            {
+                case 0:
+                    stateMachine.changeState(ennemy.meleeAttackStateFirst);
+                    break;
+                case 1:
+                    stateMachine.changeState(ennemy.meleeAttackStateSecond);
+                    break;
+                case 2:
+                    stateMachine.changeState(ennemy.meleeAttackStateThird);
+                    break;
+            }
         }
         else if (isDetectingWall)
         {
