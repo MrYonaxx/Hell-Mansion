@@ -35,7 +35,12 @@ public class Projectile : MonoBehaviour
 
         Collider[] detectedObjects = Physics.OverlapSphere(damagePosition.position, damageRadius, whatIsPlayer);
         Collider[] detectedGround = Physics.OverlapSphere(transform.position, damageRadius, whatIsGround);
-        if (detectedObjects.Length>0)
+        if (detectedGround.Length > 0)
+        {
+            Debug.Log("je touche un mur");
+            Destroy(gameObject);
+        }
+        else if (detectedObjects.Length>0)
         {
             foreach (Collider collider in detectedObjects)
             {
@@ -46,10 +51,7 @@ public class Projectile : MonoBehaviour
 
             Debug.Log("boule hit");
             Destroy(gameObject);
-        } else if(detectedGround.Length>0)
-        {
-            Destroy(gameObject);
-        }
+        } 
         else if ((transform.position - startPosition).magnitude >= travelDistance)
         {
             Destroy(gameObject);

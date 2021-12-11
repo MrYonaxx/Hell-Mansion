@@ -1514,7 +1514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 359259228899284855, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}
       propertyPath: whatIsGround.m_Bits
-      value: 1152
+      value: 1160
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba4fda43a941914e9019a7e1b5d75eb, type: 3}
