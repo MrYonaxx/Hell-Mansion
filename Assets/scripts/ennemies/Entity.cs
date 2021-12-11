@@ -7,7 +7,7 @@ public class Entity : MonoBehaviour
 {
     public FSM stateMachine;
     public D_temporayEntity entityData;
-    
+
     public int facingDirection { get; private set; } //is useless for now but maybe useful
     public Rigidbody rb { get; private set; }
     public RaycastHit rayHit;
@@ -28,6 +28,10 @@ public class Entity : MonoBehaviour
     private Transform groundCheck;
     protected bool isStunned;
     protected bool isDead;
+
+    bool m_HitDetect;
+    RaycastHit m_Hit;
+
     public int lastDamageDirection { get; private set; }
     private float currentHealth;
     private float currentStunResistance;
@@ -53,12 +57,13 @@ public class Entity : MonoBehaviour
         stateMachine = new FSM();
         currentStunResistance = entityData.stunResistance;
         FieldOfView[] fieldOfViews = aliveGameObject.GetComponents<FieldOfView>();
-        foreach(FieldOfView fieldOfView in fieldOfViews)
+        foreach (FieldOfView fieldOfView in fieldOfViews)
         {
-            if(fieldOfView.fieldOfViewMinOrMax==FieldOfViewMinOrMax.isMinFieldOfView)
+            if (fieldOfView.fieldOfViewMinOrMax == FieldOfViewMinOrMax.isMinFieldOfView)
             {
                 this.minFieldOfView = fieldOfView;
-            } else if (fieldOfView.fieldOfViewMinOrMax == FieldOfViewMinOrMax.isMaxFieldOfView)
+            }
+            else if (fieldOfView.fieldOfViewMinOrMax == FieldOfViewMinOrMax.isMaxFieldOfView)
             {
                 this.maxFieldOfView = fieldOfView;
             }
@@ -70,7 +75,7 @@ public class Entity : MonoBehaviour
     {
         stateMachine.currentState.logicUpdate();
 
-        if(Time.time>=lastDamageTime+entityData.stunRecoveryTime)
+        if (Time.time >= lastDamageTime + entityData.stunRecoveryTime)
         {
             resetStunResistance();
         }
@@ -83,20 +88,29 @@ public class Entity : MonoBehaviour
 
     public virtual void setVelocity(float velocity)
     {
-        velocityWorkSpace = rb.transform.forward*velocity;
+        velocityWorkSpace = rb.transform.forward * velocity;
         rb.velocity = velocityWorkSpace;
-
         //characterController.Move(velocityWorkSpace * Time.deltaTime);
     }
 
     public virtual bool checkWall()
     {
-        return Physics.Raycast(wallCheck.position, aliveGameObject.transform.forward, entityData.wallCheckDistance, entityData.whatisground);
+
+         m_HitDetect = Physics.BoxCast(wallCheck.position, wallCheck.localScale, wallCheck.forward, out m_Hit, wallCheck.rotation, entityData.wallCheckDistance,entityData.whatisground);
+        Debug.Log(m_HitDetect);
+        if(m_HitDetect)
+        {
+            Debug.Log("Hit : " + m_Hit.collider.name);
+
+        }
+        return m_HitDetect;
+        // return Physics.BoxCast(wallCheck.position, new Vector3(entityData.wallCheckDistance, entityData.wallCheckDistance, entityData.wallCheckDistance), aliveGameObject.transform.forward, aliveGameObject.transform.rotation, entityData.whatisground);
+        //return Physics.Raycast(wallCheck.position, aliveGameObject.transform.forward, entityData.wallCheckDistance, entityData.whatisground);
     }
 
     public virtual bool checkLedge()
     {
-        return Physics2D.Raycast(ledgeCheck.position,Vector2.down, entityData.ledgeCheckDistance, entityData.whatisground);
+        return Physics2D.Raycast(ledgeCheck.position, Vector2.down, entityData.ledgeCheckDistance, entityData.whatisground);
 
     }
 
@@ -111,7 +125,7 @@ public class Entity : MonoBehaviour
     public virtual bool checkPlayerInMaxRangeAgro()
     {
         this.maxFieldOfView.FindVisibleTargets();
-       //Debug.Log("maxFieldOfView");
+        //Debug.Log("maxFieldOfView");
         //Debug.Log(maxFieldOfView.visibleTargets.Count);
         return maxFieldOfView.visibleTargets.Count > 0;
     }
@@ -123,7 +137,7 @@ public class Entity : MonoBehaviour
     }
     public virtual bool checkGround()
     {
-        return Physics.OverlapSphere(groundCheck.position, entityData.groundCheckRadius, entityData.whatisground).Length>0;
+        return Physics.OverlapSphere(groundCheck.position, entityData.groundCheckRadius, entityData.whatisground).Length > 0;
     }
     public virtual void flip()
     {
@@ -136,7 +150,7 @@ public class Entity : MonoBehaviour
 
     public virtual void RotateToFacePlayer()
     {
-        if(minFieldOfView.visibleTargets.Count>0 || this.maxFieldOfView.visibleTargets.Count>0)
+        if (minFieldOfView.visibleTargets.Count > 0 || this.maxFieldOfView.visibleTargets.Count > 0)
         {
             rb.transform.LookAt(maxFieldOfView.visibleTargets[0]);
         }
@@ -162,17 +176,17 @@ public class Entity : MonoBehaviour
 
         currentHealth -= attackDetails.damageAmount;
         currentStunResistance -= attackDetails.stunDamageAmount;
-       // DamageHop(entityData.damageHopSpeed);
+        // DamageHop(entityData.damageHopSpeed);
         healthBar.setHealth(currentHealth);
         //TODO : voir pour partiules quand il est endommagé
         //Instantiate(entityData.hitParticule, aliveGameObject.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360)));
 
-        if(currentStunResistance<=0)
+        if (currentStunResistance <= 0)
         {
             isStunned = true;
         }
         if (currentHealth <= 0)
-        {   
+        {
             isDead = true;
             OnDead?.Invoke(this);
         }
@@ -184,11 +198,25 @@ public class Entity : MonoBehaviour
     {
         isDead = false;
     }
-    public virtual void SetVelocity(float velocity,Vector2 angle,int direction)
+    public virtual void SetVelocity(float velocity, Vector2 angle, int direction)
     {
         angle.Normalize();
-        velocityWorkSpace = direction*rb.transform.forward * velocity;
+        velocityWorkSpace = direction * rb.transform.forward * velocity;
         rb.velocity = velocityWorkSpace;
+    }
+
+    void OnDrawGizmos()
+    {
+        if (m_HitDetect)
+        {
+            //Draw a Ray forward from GameObject toward the hit
+            Gizmos.DrawRay(wallCheck.position, aliveGameObject.transform.forward * m_Hit.distance);
+            //Draw a cube that extends to where the hit exists
+            Gizmos.DrawWireCube(wallCheck.position + aliveGameObject.transform.forward * m_Hit.distance, wallCheck.localScale);
+        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(wallCheck.position +wallCheck.forward * entityData.wallCheckDistance, wallCheck.localScale);
+
     }
 }
 

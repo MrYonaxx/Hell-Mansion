@@ -16,7 +16,7 @@ MonoBehaviour:
   damageHopSpeed: 3
   MonsterName: Bouboule
   power: 1
-  wallCheckDistance: 0.8
+  wallCheckDistance: 0.5
   ledgeCheckDistance: 0.4
   groundCheckRadius: 0.2
   closeRangeActionDistance: 0.5
@@ -25,7 +25,7 @@ MonoBehaviour:
   hitParticule: {fileID: 0}
   whatisground:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 1152
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
