@@ -166,8 +166,7 @@ namespace Audio
         public void SetMusicVolume(float value)
         {
             musicVolumeMax = value;
-            if(audioMusic.volume != 0)
-                audioMusic.volume = musicVolumeMax;
+            audioMusic.volume = musicVolumeMax;
         }
 
         public void SetSoundVolume(float value)

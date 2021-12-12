@@ -780,8 +780,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "To move forward you need to cover the door with your darkness. \nA deep
-    darkness."
+  m_text: "Pour avancer tu dois utiliser tes t\xE9n\xE8bres pour recouvrir la porte.
+    Tes t\xE9n\xE8bres les plus sombres."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

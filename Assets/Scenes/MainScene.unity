@@ -7233,7 +7233,7 @@ PrefabInstance:
       objectReference: {fileID: 881702554}
     - target: {fileID: 3451016244074962440, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
       propertyPath: startNoWeapon
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3451016244074962446, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
       propertyPath: GameOver
