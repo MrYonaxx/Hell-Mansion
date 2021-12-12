@@ -11,6 +11,10 @@ public class IntroBoss : MonoBehaviour
     AnimationClip animationClip = null;
     [SerializeField]
     Transform focus = null;
+    [SerializeField]
+    AudioClip sound = null;
+
+    Transform enemyT = null;
 
     private void Start()
     {
@@ -23,6 +27,7 @@ public class IntroBoss : MonoBehaviour
     }
     private IEnumerator IntroBossCoroutine()
     {
+        Audio.AudioManager.Instance?.PlayMusic(sound, 10);
 
         PlayerControl playerControl = FindObjectOfType<PlayerControl>();
         CameraController cameraController = FindObjectOfType<CameraController>();
@@ -34,6 +39,7 @@ public class IntroBoss : MonoBehaviour
         enemy.gameObject.SetActive(true);
         enemy.healthBar.gameObject.SetActive(false);
         yield return new WaitForSeconds(2f);
+  
 
         cameraController.GetComponentInChildren<Feedbacks.Shake>().ShakeEffect(0.05f, 180);
         yield return new WaitForSeconds(3f);
@@ -41,11 +47,24 @@ public class IntroBoss : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         cameraController.RemoveTarget(focus);
-        cameraController.AddTarget(enemy.transform.Find("Alive"), 0);
+        enemyT = enemy.transform.Find("Alive");
+        cameraController.AddTarget(enemyT, 0);
         yield return new WaitForSeconds(1f);
         playerControl.CanInputPlayer(true);
         enemy.enabled = true;
         enemy.GetComponentInChildren<Rigidbody>().isKinematic = false;
         enemy.healthBar.gameObject.SetActive(true);
+        enemy.OnDead += ResetCamera;
+    }
+
+    void ResetCamera(Entity e)
+    {
+        enemy.OnDead -= ResetCamera;
+
+        CameraController cameraController = FindObjectOfType<CameraController>();
+        cameraController.RemoveTarget(enemyT);
+
+        Audio.AudioManager.Instance.StopMusicWithScratch(5f);
+
     }
 }

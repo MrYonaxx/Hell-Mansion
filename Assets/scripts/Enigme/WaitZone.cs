@@ -38,7 +38,6 @@ public class WaitZone : MonoBehaviour
     {
         if (other.GetComponent<PlayerControl>())
         {
-            Debug.Log("Allo");
             inWaitZone = false;
             t = 0f;
         }

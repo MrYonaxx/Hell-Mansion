@@ -450,7 +450,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2098763500}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseHUD, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -6677,7 +6677,11 @@ PrefabInstance:
     - target: {fileID: 3765774831634551577, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
       propertyPath: OptionsMenu
       value: 
-      objectReference: {fileID: 1294748845}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460767872483646875, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4834396115796437986, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 1
@@ -6688,11 +6692,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
---- !u!1 &1294748845 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6012598578197630403, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
-  m_PrefabInstance: {fileID: 1294748844}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1338040305
 GameObject:
   m_ObjectHideFlags: 0
@@ -12022,17 +12021,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2098763500 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3765774831634551577, guid: 8a73b2a85d9d6a641900bb0423762dc3, type: 3}
-  m_PrefabInstance: {fileID: 1294748844}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 024043423dfd0ef4a86775023eb1bf06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3247926178844383512

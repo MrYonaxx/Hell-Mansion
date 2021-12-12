@@ -24,17 +24,14 @@ public class TrailShoot : MonoBehaviour
 
     void TrailDraw(Vector3 finalPos)
     {
-
         trailRenderer.Clear();
         trailRenderer.transform.position = playerControl.GetComponentInChildren<GunSystem>().muzzlePosition.transform.position;
-        finalPos.y = transform.position.y;
-        trailRenderer.Clear();
-
         if (finalPos == Vector3.zero)
         {
             finalPos = trailRenderer.transform.position + (playerControl.transform.forward * 4);
-            Debug.Log("Allo");
         }
+        finalPos.y = transform.position.y;
+        trailRenderer.Clear();
 
         StopAllCoroutines();
         StartCoroutine(TrailDrawcoroutine(trailRenderer.transform.position, finalPos, 5f));

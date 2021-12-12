@@ -43,8 +43,8 @@ public class IKShake : MonoBehaviour
         {
             t -= Time.deltaTime;
             bone.transform.position += new Vector3(UnityEngine.Random.Range(-shakeVal, shakeVal),
-                                                    UnityEngine.Random.Range(-shakeVal, shakeVal),
-                                                    UnityEngine.Random.Range(-shakeVal, shakeVal));
+                                                   UnityEngine.Random.Range(-shakeVal, shakeVal),
+                                                   UnityEngine.Random.Range(-shakeVal, shakeVal));
         }
     }
 }

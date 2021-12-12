@@ -97,7 +97,7 @@ public class Entity : MonoBehaviour
     {
 
          m_HitDetect = Physics.BoxCast(wallCheck.position, wallCheck.localScale, wallCheck.forward, out m_Hit, wallCheck.rotation, entityData.wallCheckDistance,entityData.whatisground);
-        Debug.Log(m_HitDetect);
+        //Debug.Log(m_HitDetect);
         if(m_HitDetect)
         {
             Debug.Log("Hit : " + m_Hit.collider.name);
@@ -181,6 +181,7 @@ public class Entity : MonoBehaviour
         //TODO : voir pour partiules quand il est endommagé
         //Instantiate(entityData.hitParticule, aliveGameObject.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0, 360)));
 
+        //Debug.Log("Allo");
         if (currentStunResistance <= 0)
         {
             isStunned = true;
