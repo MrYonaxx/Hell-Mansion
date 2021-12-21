@@ -37,19 +37,19 @@ public class Projectile : MonoBehaviour
         Collider[] detectedGround = Physics.OverlapSphere(transform.position, damageRadius, whatIsGround);
         if (detectedGround.Length > 0)
         {
-            Debug.Log("je touche un mur");
+           // Debug.Log("je touche un mur");
             Destroy(gameObject);
         }
         else if (detectedObjects.Length>0)
         {
             foreach (Collider collider in detectedObjects)
             {
-                Debug.Log(attackDetails.damageAmount);
+               // Debug.Log(attackDetails.damageAmount);
 
                 collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount);
             }
 
-            Debug.Log("boule hit");
+           // Debug.Log("boule hit");
             Destroy(gameObject);
         } 
         else if ((transform.position - startPosition).magnitude >= travelDistance)

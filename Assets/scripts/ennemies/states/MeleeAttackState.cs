@@ -52,7 +52,7 @@ public class MeleeAttackState : AttackState
 
         foreach(Collider collider in detectedObjects)
         {
-            Debug.Log(attackDetails.damageAmount);
+            //Debug.Log(attackDetails.damageAmount);
 
             collider.transform.SendMessage("TakeDamage", attackDetails.damageAmount); //TODO : à revoir pour adapter au player de martin
 

@@ -100,7 +100,7 @@ public class Entity : MonoBehaviour
         //Debug.Log(m_HitDetect);
         if(m_HitDetect)
         {
-            Debug.Log("Hit : " + m_Hit.collider.name);
+            //Debug.Log("Hit : " + m_Hit.collider.name);
 
         }
         return m_HitDetect;

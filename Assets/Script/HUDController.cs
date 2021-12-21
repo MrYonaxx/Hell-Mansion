@@ -51,7 +51,7 @@ public class HUDController : MonoBehaviour
     
     public IEnumerator StartReload(float reloadtime)
     {
-	    Debug.Log("anim reload");
+	    //Debug.Log("anim reload");
 	    reloadGameObject.SetActive(true);
 	    float normalizedTime = 0;
 

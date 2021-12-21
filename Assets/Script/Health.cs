@@ -68,7 +68,7 @@ public class Health : MonoBehaviour
         
         if(isVulnerable)
         {
-            Debug.Log("damage  Take");
+            //Debug.Log("damage  Take");
             if(currentShield > 0)
             { // Gestion du bouclier
                 currentShield -= amount;

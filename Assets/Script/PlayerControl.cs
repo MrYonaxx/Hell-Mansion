@@ -264,7 +264,7 @@ public class PlayerControl : MonoBehaviour
 
 				if (arsenal[i].PlayerBones.childCount > 0)
 				{
-					Debug.Log("destroy");
+					//Debug.Log("destroy");
 					Destroy(arsenal[i].PlayerBones.GetChild(0).gameObject);
 				}
 					
